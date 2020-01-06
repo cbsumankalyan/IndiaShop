@@ -1,0 +1,101 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3797835774,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.Setup()"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "Shopping Cart Applciation Order Submit",
+        "description": "",
+        "id": "application-login;shopping-cart-applciation-order-submit;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 172800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinition.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11966473785,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"https://shop.unicity.com/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://shop.unicity.com/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "stepDefinition.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 10676709697,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters 108639101 and 1234 to login",
+            "match": {
+              "arguments": [
+                {
+                  "val": "108639101",
+                  "offset": 12
+                },
+                {
+                  "val": "1234",
+                  "offset": 26
+                }
+              ],
+              "location": "stepDefinition.user_enters_and_to_login(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5899630847,
+              "error_message": "junit.framework.ComparisonFailure: expected:\u003cBIOS LIFE [COFFEE 30 IN]\u003e but was:\u003cBIOS LIFE [AIR FILTER]\u003e\r\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\r\n\tat junit.framework.Assert.assertEquals(Assert.java:107)\r\n\tat POM.Home.HomePage(Home.java:59)\r\n\tat stepDefinitions.stepDefinition.Suman(stepDefinition.java:46)\r\n\tat ✽.Then Check products(Hooks.feature:7)\r\n",
+              "status": "failed"
+            },
+            "line": 7,
+            "name": "Check products",
+            "match": {
+              "location": "stepDefinition.Suman()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Application Login",
+    "description": "",
+    "id": "application-login",
+    "keyword": "Feature",
+    "uri": "Hooks.feature"
+  }
+]

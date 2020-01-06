@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="32.340823">
+<testcase classname="Application Login" name="Shopping Cart Applciation Order Submit" time="32.340823">
+<failure message="junit.framework.ComparisonFailure: expected:&lt;BIOS LIFE [COFFEE 30 IN]&gt; but was:&lt;BIOS LIFE [AIR FILTER]&gt;&#13;&#10;&#9;at junit.framework.Assert.assertEquals(Assert.java:100)&#13;&#10;&#9;at junit.framework.Assert.assertEquals(Assert.java:107)&#13;&#10;&#9;at POM.Home.HomePage(Home.java:59)&#13;&#10;&#9;at stepDefinitions.stepDefinition.Suman(stepDefinition.java:46)&#13;&#10;&#9;at ✽.Then Check products(Hooks.feature:7)&#13;&#10;"><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+When user enters 108639101 and 1234 to login................................passed
+Then Check products.........................................................failed
+
+StackTrace:
+junit.framework.ComparisonFailure: expected:<BIOS LIFE [COFFEE 30 IN]> but was:<BIOS LIFE [AIR FILTER]>
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at POM.Home.HomePage(Home.java:59)
+	at stepDefinitions.stepDefinition.Suman(stepDefinition.java:46)
+	at ✽.Then Check products(Hooks.feature:7)
+]]></failure>
+</testcase>
+</testsuite>
