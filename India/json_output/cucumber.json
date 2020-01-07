@@ -3,59 +3,58 @@
     "line": 1,
     "elements": [
       {
-        "before": [
-          {
-            "result": {
-              "duration": 3797835774,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepDefinition.Setup()"
-            }
-          }
-        ],
-        "line": 13,
-        "name": "Shopping Cart Applciation Order Submit",
+        "line": 3,
+        "name": "",
         "description": "",
-        "id": "application-login;shopping-cart-applciation-order-submit;;2",
-        "after": [
-          {
-            "result": {
-              "duration": 172800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepDefinition.tearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario Outline",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 11966473785,
+              "duration": 3844985040,
               "status": "passed"
             },
-            "line": 5,
-            "name": "Navigate to the \"https://shop.unicity.com/#/home\" application",
+            "line": 4,
+            "name": "Open the browser",
             "match": {
-              "arguments": [
-                {
-                  "val": "https://shop.unicity.com/#/home",
-                  "offset": 17
-                }
-              ],
-              "location": "stepDefinition.navigate_to_the_application(String)"
+              "location": "stepDefinition.Open_the_browser()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 10676709697,
+              "duration": 11650763649,
               "status": "passed"
             },
-            "line": 6,
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "stepDefinition.navigate_to_the_application(String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "line": 15,
+        "name": "Shopping Cart Applciation Order Submit",
+        "description": "",
+        "id": "application-login;shopping-cart-applciation-order-submit;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 10652697303,
+              "status": "passed"
+            },
+            "line": 8,
             "name": "user enters 108639101 and 1234 to login",
             "match": {
               "arguments": [
@@ -68,7 +67,7 @@
                   "offset": 26
                 }
               ],
-              "location": "stepDefinition.user_enters_and_to_login(String,String)"
+              "location": "Login.user_enters_and_to_login(String,String)"
             },
             "matchedColumns": [
               0,
@@ -78,14 +77,13 @@
           },
           {
             "result": {
-              "duration": 5899630847,
-              "error_message": "junit.framework.ComparisonFailure: expected:\u003cBIOS LIFE [COFFEE 30 IN]\u003e but was:\u003cBIOS LIFE [AIR FILTER]\u003e\r\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\r\n\tat junit.framework.Assert.assertEquals(Assert.java:107)\r\n\tat POM.Home.HomePage(Home.java:59)\r\n\tat stepDefinitions.stepDefinition.Suman(stepDefinition.java:46)\r\n\tat ✽.Then Check products(Hooks.feature:7)\r\n",
-              "status": "failed"
+              "duration": 15830262042,
+              "status": "passed"
             },
-            "line": 7,
+            "line": 9,
             "name": "Check products",
             "match": {
-              "location": "stepDefinition.Suman()"
+              "location": "Home.Check_products()"
             },
             "keyword": "Then "
           }

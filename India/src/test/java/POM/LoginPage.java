@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Login  extends Base {
+public class LoginPage  extends BasePage {
 	
 	@FindBy(xpath = "//div[contains(@onclick, 'gdpr')]")
 	private WebElement CookieClose;
@@ -25,7 +25,7 @@ public class Login  extends Base {
 	@FindBy(xpath = "//div[@class='modal-content']//button[@type='submit']")
 	private WebElement UserLogin;
 	
-	public Login(WebDriver driver){
+	public LoginPage(WebDriver driver){
 		PageFactory.initElements(driver, this);
 	}
 	

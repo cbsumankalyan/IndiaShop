@@ -1,8 +1,10 @@
 Feature: Application Login
 
-Scenario Outline: Shopping Cart Applciation Order Submit
+Background:
+Given Open the browser
+And Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application
 
-Given Navigate to the "https://shop.unicity.com/#/home" application
+Scenario Outline: Shopping Cart Applciation Order Submit
 When user enters <username> and <password> to login
 Then Check products
 

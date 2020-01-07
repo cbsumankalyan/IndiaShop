@@ -7,7 +7,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/java/features",
-		glue = "stepDefinitions", dryRun =true, strict = true, monochrome = true,
+		glue = "stepDefinitions",strict = true, monochrome = true,
 		plugin= {"pretty","html:test-outout", "json:json_output/cucumber.json", "junit:junit_xml/cucumber.xml"}
 		)
 public class TestRunner {

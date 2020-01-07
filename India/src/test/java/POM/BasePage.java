@@ -3,7 +3,7 @@ package POM;
 
 import org.openqa.selenium.WebDriver;
 
-public class Base {
+public class BasePage {
 	
 	public static WebDriver driver;
 	

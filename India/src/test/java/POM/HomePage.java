@@ -12,10 +12,13 @@ import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 import junit.framework.Assert;
 
-public class Home extends Base {
+public class HomePage extends BasePage {
 
 	@FindBy(xpath = "//translate[text()= 'All Products']")
 	private WebElement ALLProducts;
+	
+	@FindBy(xpath = "//a[@href='#/home/Products']")
+	private WebElement ProductsOnly;
 
 	@FindBys(@FindBy(xpath = "//a[@class='name-text uppercase ng-binding']"))
 	List<WebElement> Products;
@@ -32,17 +35,17 @@ public class Home extends Base {
 	@FindBy(xpath = "//div[contains(@class, 'message')]")
 	private WebElement CurrentState;
 
-	public Home(WebDriver driver) {
+	public HomePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void HomePage() throws InterruptedException, IOException {
+	public void Home() throws InterruptedException, IOException {
 		Thread.sleep(5000);
 
 		Assert.assertEquals(CurrentState.getText(), "You are currently viewing product in Karnataka");
 		ALLProducts.click();
 
-		String[] products = { "BIOS LIFE AIR FILTER", "BLENDER BOTTLE W/AGITATOR", "CALCIUM MAGNESIUM COMPLEX",
+		String[] allproducts = { "BIOS LIFE AIR FILTER", "BLENDER BOTTLE W/AGITATOR", "CALCIUM MAGNESIUM COMPLEX",
 				"CAP REVOLUTION GREEN IND", "CATALOGUE KIT INDIA", "KIDDO SACHETS 16", "LEAN COMPLETE VANILLA 25 IND",
 				"NATURE'S TEA", "NEIGENE BAG", "NEIGENE COLLAGEN PLUS", "PARAWAY PLUS", "PIN UNICITY LAPEL IN",
 				"REVOLUTION GREEN PACK", "SUPER CHLOROPHYLL PACK", "T-SHIRT MATCHA LAUNCH SMALL",
@@ -55,23 +58,40 @@ public class Home extends Base {
 		Properties p = new Properties();
 		p.load(type);
 
+		for (int i = 0; i < allproducts.length; i++) {
+			Assert.assertEquals(Products.get(i).getText(), allproducts[i]);
+			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "CODE"),
+					ProductItemCode.get(i).getText());
+
+			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "PRICE"),
+					ProductPrices.get(i).getText());
+
+			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "PV"),
+					ProductPV.get(i).getText().replace("PV: ", ""));
+
+		}
+
+		ProductsOnly.click();
+		String[] products = { "BIOS LIFE AIR FILTER", "CALCIUM MAGNESIUM COMPLEX", "KIDDO SACHETS 16",
+				"LEAN COMPLETE VANILLA 25 IND", "NATURE'S TEA", "NEIGENE COLLAGEN PLUS", "PARAWAY PLUS", "PIN UNICITY LAPEL IN",
+				"REVOLUTION GREEN PACK", "SUPER CHLOROPHYLL PACK", "UNICITY ACTIVATE (INDIA)", "UNICITY BALANCE 30",
+				"UNICITY BIO REISHI S COFFEE", "UNICITY BIOS LIFE SLIM", "UNICITY CLEAR START KIT", "UNICITY FAMILY PACK",
+				"UNICITY LIFIBER 28 IN", "UNICITY PREMIUM MATCHA IN", "UNICITY PREMIUM SUPER CHLOROPHYLL IN"
+		};
+		
 		for (int i = 0; i < products.length; i++) {
 			Assert.assertEquals(Products.get(i).getText(), products[i]);
 			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "CODE"),
 					ProductItemCode.get(i).getText());
-			System.out.println(p.getProperty(Products.get(i).getText().replace(" ", "") + "CODE"));
-			System.out.println(ProductItemCode.get(i).getText());
-			
+
 			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "PRICE"),
 					ProductPrices.get(i).getText());
-			System.out.println(p.getProperty(Products.get(i).getText().replace(" ", "") + "PRICE"));
-			System.out.println(ProductPrices.get(i).getText());
 
 			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "PV"),
 					ProductPV.get(i).getText().replace("PV: ", ""));
-			System.out.println(p.getProperty(Products.get(i).getText().replace(" ", "") + "PV"));
-			System.out.println(ProductPV.get(i).getText());
+
 		}
+
 	}
 
 }
