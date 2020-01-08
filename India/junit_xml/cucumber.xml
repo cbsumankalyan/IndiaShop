@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="41.978708">
-<testcase classname="Application Login" name="Shopping Cart Applciation Order Submit" time="41.978708">
-<system-out><![CDATA[Given Open the browser......................................................passed
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="27.233665">
+<testcase classname="Application Login" name="Shopping Cart Applciation Order Submit" time="27.233665">
+<failure message="The scenario has pending or undefined step(s)"><![CDATA[Given Open the browser......................................................passed
 And Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
 When user enters 108639101 and 1234 to login................................passed
+Then Check Topmenu 108639101................................................passed
+Then SearchOption...........................................................passed
 Then Check products.........................................................passed
-]]></system-out>
+Then Listview...............................................................passed
+Then AddProductsToCart......................................................undefined
+]]></failure>
 </testcase>
 </testsuite>

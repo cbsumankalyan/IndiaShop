@@ -11,19 +11,19 @@
         "steps": [
           {
             "result": {
-              "duration": 3844985040,
+              "duration": 4324205930,
               "status": "passed"
             },
             "line": 4,
             "name": "Open the browser",
             "match": {
-              "location": "stepDefinition.Open_the_browser()"
+              "location": "BrowserInitiate.Open_the_browser()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 11650763649,
+              "duration": 12167270543,
               "status": "passed"
             },
             "line": 5,
@@ -35,14 +35,14 @@
                   "offset": 17
                 }
               ],
-              "location": "stepDefinition.navigate_to_the_application(String)"
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
             },
             "keyword": "And "
           }
         ]
       },
       {
-        "line": 15,
+        "line": 20,
         "name": "Shopping Cart Applciation Order Submit",
         "description": "",
         "id": "application-login;shopping-cart-applciation-order-submit;;2",
@@ -51,7 +51,7 @@
         "steps": [
           {
             "result": {
-              "duration": 10652697303,
+              "duration": 10729733743,
               "status": "passed"
             },
             "line": 8,
@@ -77,14 +77,68 @@
           },
           {
             "result": {
-              "duration": 15830262042,
+              "duration": 12406624,
               "status": "passed"
             },
             "line": 9,
+            "name": "Check Topmenu 108639101",
+            "match": {
+              "arguments": [
+                {
+                  "val": "108639101",
+                  "offset": 14
+                }
+              ],
+              "location": "Home.check_topmenu(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 16214,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "SearchOption",
+            "match": {
+              "location": "Home.SearchOption()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 18347,
+              "status": "passed"
+            },
+            "line": 11,
             "name": "Check products",
             "match": {
               "location": "Home.Check_products()"
             },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 13227,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Listview",
+            "match": {
+              "location": "Home.Listview()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "AddProductsToCart",
+            "match": {},
             "keyword": "Then "
           }
         ]

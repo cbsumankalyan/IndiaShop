@@ -6,7 +6,12 @@ And Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application
 
 Scenario Outline: Shopping Cart Applciation Order Submit
 When user enters <username> and <password> to login
+Then Check Topmenu <username>
+Then SearchOption
 Then Check products
+Then Listview
+
+Then AddProductsToCart
 
 
 Examples:
