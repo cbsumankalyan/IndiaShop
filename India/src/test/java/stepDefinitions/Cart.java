@@ -1,14 +1,16 @@
 package stepDefinitions;
 
+import POM.BasePage;
 import POM.CartPage;
 import cucumber.api.java.en.Then;
 
-public class Cart {
+public class Cart extends BasePage{
 	
-	CartPage Cart = new CartPage();
+	CartPage cartpage = new CartPage(driver);
 	
-	@Then("^AddProductsToCart$")
-	public void  AddProductsToCart() {
-		Cart.cart();
+	@Then("^AddProductsToCart CalciumMagnesium$")
+	public void  AddProductsToCart_CalciumMagnesium() {
+		cartpage.cart();
 	}
+	
 }

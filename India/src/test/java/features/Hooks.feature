@@ -11,7 +11,7 @@ Then SearchOption
 Then Check products
 Then Listview
 
-Then AddProductsToCart
+Then AddProductsToCart CalciumMagnesium
 
 
 Examples:
