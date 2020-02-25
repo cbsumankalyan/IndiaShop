@@ -29,7 +29,8 @@ public class LoginPage  extends BasePage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void LoginDistributor(String username, String password){
+	public void LoginDistributor(String username, String password) throws InterruptedException{
+		Thread.sleep(3000);
 		CookieClose.click();
 		Country.click();
 		CountrySelect.click();

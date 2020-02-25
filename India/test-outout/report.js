@@ -24,27 +24,25 @@ formatter.step({
   "name": "Check Topmenu \u003cusername\u003e",
   "keyword": "Then "
 });
-formatter.step({
-  "line": 10,
-  "name": "SearchOption",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 11,
-  "name": "Check products",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 12,
-  "name": "Listview",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 14,
-  "name": "AddProductsToCart",
-  "keyword": "Then "
-});
 formatter.examples({
+  "comments": [
+    {
+      "line": 10,
+      "value": "#Then SearchOption"
+    },
+    {
+      "line": 11,
+      "value": "#Then Check products"
+    },
+    {
+      "line": 12,
+      "value": "#Then Listview"
+    },
+    {
+      "line": 14,
+      "value": "#Then AddProductsToCart CalciumMagnesium"
+    }
+  ],
   "line": 17,
   "name": "",
   "description": "",
@@ -90,7 +88,7 @@ formatter.match({
   "location": "BrowserInitiate.Open_the_browser()"
 });
 formatter.result({
-  "duration": 4324205930,
+  "duration": 4396815272,
   "status": "passed"
 });
 formatter.match({
@@ -103,7 +101,7 @@ formatter.match({
   "location": "BrowserInitiate.navigate_to_the_application(String)"
 });
 formatter.result({
-  "duration": 12167270543,
+  "duration": 11797346387,
   "status": "passed"
 });
 formatter.scenario({
@@ -131,26 +129,6 @@ formatter.step({
   ],
   "keyword": "Then "
 });
-formatter.step({
-  "line": 10,
-  "name": "SearchOption",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 11,
-  "name": "Check products",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 12,
-  "name": "Listview",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 14,
-  "name": "AddProductsToCart",
-  "keyword": "Then "
-});
 formatter.match({
   "arguments": [
     {
@@ -165,7 +143,7 @@ formatter.match({
   "location": "Login.user_enters_and_to_login(String,String)"
 });
 formatter.result({
-  "duration": 10729733743,
+  "duration": 13821546087,
   "status": "passed"
 });
 formatter.match({
@@ -178,32 +156,7 @@ formatter.match({
   "location": "Home.check_topmenu(String)"
 });
 formatter.result({
-  "duration": 12406624,
+  "duration": 3813242294,
   "status": "passed"
-});
-formatter.match({
-  "location": "Home.SearchOption()"
-});
-formatter.result({
-  "duration": 16214,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Home.Check_products()"
-});
-formatter.result({
-  "duration": 18347,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Home.Listview()"
-});
-formatter.result({
-  "duration": 13227,
-  "status": "passed"
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
 });
 });

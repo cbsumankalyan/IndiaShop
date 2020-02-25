@@ -138,6 +138,9 @@ public class HomePage extends BasePage {
 	@FindBy(xpath = "//button[@title='Add to Cart']")
 	private WebElement SingleAddtoCart;
 	
+	@FindBy(xpath = "//span[contains(@class, 'icon-cart')]")
+	private WebElement Cart;
+	
 	@FindBy(xpath="//div[contains(@title,'in a List')]")
 	private WebElement ListView;
 	
@@ -161,13 +164,13 @@ public class HomePage extends BasePage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void Menu(String username) {
+	public void Menu(String username) throws InterruptedException {
 
 		String[] languages = { "EN", "HI", };
 		for (int i = 0; i < languages.length; i++) {
 			Assert.assertEquals(languages[i], Languages.get(i).getText());
 		}
-
+		Thread.sleep(3000);
 		Country.click();
 		Assert.assertEquals(SelectedCountry.getText(), "India");
 		
@@ -277,6 +280,11 @@ public class HomePage extends BasePage {
 			jse.executeScript("window.scrollBy(0,250)", "");
 			Assert.assertEquals(ProductDescription.getText(), p.getProperty(ProductName.getText().replace(" ", "")));
 			Back.click();
+//			SingleAddtoCart.click();
+//			Cart.click();
+			
+			
+			
 		}
 
 		ProductsOnly.click();
