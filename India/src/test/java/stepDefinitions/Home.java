@@ -5,28 +5,46 @@ import java.io.IOException;
 import POM.BasePage;
 import POM.HomePage;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 
 public class Home extends BasePage{
 	
 	HomePage Home = new HomePage(driver);
 	
-	@Then("^Check Topmenu (.+)$")
-    public void check_topmenu(String username) throws Throwable {
-		Home.Menu(username);
+	@Then("^All Products$")
+	public void all_producst() throws InterruptedException, IOException {
+		Home.AllProducts();
 	}
 	
-	@Then("^SearchOption$")
-	public void SearchOption() throws IOException, InterruptedException {
+	@Then("^Products$")
+	public void products() throws IOException, InterruptedException {
+		Home.Products();
+	}
+	
+	@Then("^Accessories$")
+	public void accessories() throws IOException, InterruptedException {
+		Home.Accessories();
+	}
+	
+	@When("^Search Product$")
+	public void search_product() throws IOException, InterruptedException {
 		Home.Search();
 	}
-	@Then("^Check products$")
-	public void Check_products() throws Throwable {
-		Home.Home();
+	
+	@Then("^All Products in List View$")
+	public void all_products_in_list_view() throws IOException, InterruptedException {
+		Home.ALLProductsList();
 	}
 	
-	@Then("^Listview$")
-	public void Listview() throws IOException, InterruptedException {
-		Home.List();
+	@Then("^Products in List View$")
+	public void products_in_list_view() throws IOException, InterruptedException {
+		Home.ProductsList();
 	}
-
+	
+	@Then("^Accessories in List View")
+	public void accessories_in_list_view() throws IOException, InterruptedException {
+		Home.AccessoriesList();
+	}
+	
+	
 }

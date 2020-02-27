@@ -1,15 +1,24 @@
 package stepDefinitions;
 
 import POM.BasePage;
+import POM.HomePage;
 import POM.LoginPage;
-import cucumber.api.java.en.When;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 
-public class Login extends BasePage{
+public class Login extends BasePage {
 	
-	@When("^user enters (.+) and (.+) to login$")
-	public void user_enters_and_to_login(String username, String password) throws Throwable {
-		LoginPage Login = new LoginPage(driver);
-		Login.LoginDistributor(username, password);
+	LoginPage Login = new LoginPage(driver);
+	HomePage Home = new HomePage(driver);
+	
+	@Given("^Enter username and Password$")
+	public void enter_username_and_password() throws Throwable {
+		Login.LoginDistributor();
 		Thread.sleep(10000);
-	}	
+	}
+	
+	@Then("^Check Login details and menu$")
+    public void check_login_details_and_menu() throws Throwable {
+		Home.Menu();
+	}
 }

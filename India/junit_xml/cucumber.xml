@@ -1,10 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="33.82895">
-<testcase classname="Application Login" name="Shopping Cart Applciation Order Submit" time="33.82895">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="8" time="62.878397">
+<testcase classname="Application Login" name="Intiate the browser" time="15.999693">
 <system-out><![CDATA[Given Open the browser......................................................passed
 And Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-When user enters 108639101 and 1234 to login................................passed
-Then Check Topmenu 108639101................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Application Login" name="LoginPage" time="17.408353">
+<system-out><![CDATA[Given Enter username and Password...........................................passed
+And Check Login details and menu............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Application Login" name="CartPage" time="7.346437">
+<system-out><![CDATA[When Product Added to Cart..................................................passed
+Then Check the Cart Details.................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Application Login" name="RemoveProducts" time="8.78868">
+<system-out><![CDATA[When Remove Products from Cart..............................................passed
+Then Add Products To Cart...................................................passed
+Then Check Product..........................................................passed
+Then Check Cart.............................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Application Login" name="CheckoutPage" time="1.410303">
+<system-out><![CDATA[When Check Out..............................................................passed
+Then Check Form Fields......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Application Login" name="PaymentPage" time="6.049289">
+<system-out><![CDATA[When Payment Fields.........................................................passed
+Then Banks Names............................................................passed
+Then Order Summary..........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Application Login" name="ReviewPage" time="0.353762">
+<system-out><![CDATA[When Review Fields..........................................................passed
+Then Shipping Information...................................................passed
+Then Contact Information....................................................passed
+Then Payment Information....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Application Login" name="OrderDetails" time="5.52188">
+<system-out><![CDATA[Then Review Orders..........................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

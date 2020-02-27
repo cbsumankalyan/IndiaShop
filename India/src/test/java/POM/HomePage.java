@@ -4,7 +4,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -164,7 +163,7 @@ public class HomePage extends BasePage {
 		PageFactory.initElements(driver, this);
 	}
 
-	public void Menu(String username) throws InterruptedException {
+	public void Menu() throws InterruptedException {
 
 		String[] languages = { "EN", "HI", };
 		for (int i = 0; i < languages.length; i++) {
@@ -185,10 +184,7 @@ public class HomePage extends BasePage {
 		Assert.assertTrue(Library.isDisplayed());
 
 		Assert.assertEquals(DistributorName.getText(), "INDIA TRAINING");
-		Assert.assertEquals(DistributorID.getText(), "#" + username);
-		
-		
-
+		Assert.assertEquals(DistributorID.getText(), "#108639101");
 	}
 	
 	public void Search() throws IOException, InterruptedException {
@@ -233,7 +229,7 @@ public class HomePage extends BasePage {
 		Back.click();
 	}
 	
-	public void Home() throws InterruptedException, IOException {
+	public void AllProducts() throws InterruptedException, IOException {
 		Thread.sleep(5000);
 
 		Assert.assertEquals(CurrentState.getText(), "You are currently viewing product in Karnataka");
@@ -281,14 +277,19 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(ProductDescription.getText(), p.getProperty(ProductName.getText().replace(" ", "")));
 			Back.click();
 //			SingleAddtoCart.click();
-//			Cart.click();
-			
-			
-			
+//			Cart.click();	
 		}
-
-		ProductsOnly.click();
+	}
 	
+	public void Products() throws IOException, InterruptedException {
+		
+		FileReader type = new FileReader(
+				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
+		Properties p = new Properties();
+		p.load(type);
+		
+		ProductsOnly.click();
+		
 		for (int i = 0; i < products.length; i++) {
 			Assert.assertEquals(Products.get(i).getText(), products[i]);
 			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "CODE"),
@@ -327,7 +328,15 @@ public class HomePage extends BasePage {
 			Back.click();
 
 		}
-
+	}
+	
+	public void Accessories() throws IOException, InterruptedException {
+		
+		FileReader type = new FileReader(
+				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
+		Properties p = new Properties();
+		p.load(type);
+		
 		Accessories.click();
 
 		for (int i = 0; i < accessories.length; i++) {
@@ -368,8 +377,8 @@ public class HomePage extends BasePage {
 			Back.click();
 		}
 	}
-
-	public void List() throws IOException, InterruptedException {
+	
+	public void ALLProductsList() throws IOException, InterruptedException {
 		ListView.click();
 		ALLProducts.click();
 		
@@ -415,6 +424,14 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(ProductDescription.getText(), p.getProperty(ProductName.getText().replace(" ", "")));
 			Back.click();
 		}
+	}
+	
+	public void ProductsList()throws IOException, InterruptedException {
+		
+		FileReader type = new FileReader(
+				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
+		Properties p = new Properties();
+		p.load(type);
 		
 		ProductsOnly.click();
 		Assert.assertTrue(AddtoCart.isDisplayed());
@@ -454,6 +471,14 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(ProductDescription.getText(), p.getProperty(ProductName.getText().replace(" ", "")));
 			Back.click();
 		}
+	}
+	
+	public void AccessoriesList()throws IOException, InterruptedException {
+		
+		FileReader type = new FileReader(
+				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
+		Properties p = new Properties();
+		p.load(type);
 		
 		Accessories.click();
 		Assert.assertTrue(AddtoCart.isDisplayed());
@@ -493,7 +518,6 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(ProductDescription.getText(), p.getProperty(ProductName.getText().replace(" ", "")));
 			Back.click();
 		}
-		
 	}
 
 }

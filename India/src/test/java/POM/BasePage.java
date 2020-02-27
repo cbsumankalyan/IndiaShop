@@ -1,6 +1,8 @@
 package POM;
 
 
+import java.util.HashMap;
+import java.util.Map;
 import org.openqa.selenium.WebDriver;
 
 public class BasePage {
@@ -24,6 +26,7 @@ public class BasePage {
 	public static String[] accessories = { "BLENDER BOTTLE W/AGITATOR", "CAP REVOLUTION GREEN IND", "CATALOGUE KIT INDIA",
 			"NEIGENE BAG", "T-SHIRT MATCHA LAUNCH SMALL", "T-SHIRT REVOLUTION GREEN MED IND",
 			"T-SHIRT REVOLUTION GREEN XL IND" };
+	public static Map<String, String> productdetails = new HashMap<String, String>();
 	
 	
 	

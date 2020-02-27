@@ -29,13 +29,13 @@ public class LoginPage  extends BasePage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void LoginDistributor(String username, String password) throws InterruptedException{
+	public void LoginDistributor() throws InterruptedException{
 		Thread.sleep(3000);
 		CookieClose.click();
 		Country.click();
 		CountrySelect.click();
-		Username.sendKeys(username);
-		Password.sendKeys(password);
+		Username.sendKeys("108639101");
+		Password.sendKeys("1234");
 		UserLogin.click();
 	}
 }

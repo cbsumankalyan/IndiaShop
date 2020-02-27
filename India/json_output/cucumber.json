@@ -4,14 +4,15 @@
     "elements": [
       {
         "line": 3,
-        "name": "",
+        "name": "Intiate the browser",
         "description": "",
-        "type": "background",
-        "keyword": "Background",
+        "id": "application-login;intiate-the-browser",
+        "type": "scenario",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 4396815272,
+              "duration": 4398200233,
               "status": "passed"
             },
             "line": 4,
@@ -23,7 +24,7 @@
           },
           {
             "result": {
-              "duration": 11797346387,
+              "duration": 11601492567,
               "status": "passed"
             },
             "line": 5,
@@ -42,58 +43,337 @@
         ]
       },
       {
-        "line": 20,
-        "name": "Shopping Cart Applciation Order Submit",
+        "line": 7,
+        "name": "LoginPage",
         "description": "",
-        "id": "application-login;shopping-cart-applciation-order-submit;;2",
+        "id": "application-login;loginpage",
         "type": "scenario",
-        "keyword": "Scenario Outline",
+        "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "duration": 13821546087,
+              "duration": 13775647382,
               "status": "passed"
             },
             "line": 8,
-            "name": "user enters 108639101 and 1234 to login",
+            "name": "Enter username and Password",
             "match": {
-              "arguments": [
-                {
-                  "val": "108639101",
-                  "offset": 12
-                },
-                {
-                  "val": "1234",
-                  "offset": 26
-                }
-              ],
-              "location": "Login.user_enters_and_to_login(String,String)"
+              "location": "Login.enter_username_and_password()"
             },
-            "matchedColumns": [
-              0,
-              1
-            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3632705820,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Check Login details and menu",
+            "match": {
+              "location": "Login.check_login_details_and_menu()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "comments": [
+          {
+            "line": 11,
+            "value": "#Scenario: HomePage"
+          },
+          {
+            "line": 12,
+            "value": "#Then All Products"
+          },
+          {
+            "line": 13,
+            "value": "#And Products"
+          },
+          {
+            "line": 14,
+            "value": "#And Accessories"
+          },
+          {
+            "line": 15,
+            "value": "#"
+          },
+          {
+            "line": 16,
+            "value": "#Scenario: SearchOption"
+          },
+          {
+            "line": 17,
+            "value": "#When Search Product"
+          },
+          {
+            "line": 18,
+            "value": "#"
+          },
+          {
+            "line": 19,
+            "value": "#Scenario: List View"
+          },
+          {
+            "line": 20,
+            "value": "#Then All Products in List View"
+          },
+          {
+            "line": 21,
+            "value": "#And Products in List View"
+          },
+          {
+            "line": 22,
+            "value": "#And Accessories in List View"
+          }
+        ],
+        "line": 24,
+        "name": "CartPage",
+        "description": "",
+        "id": "application-login;cartpage",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6166777742,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "Product Added to Cart",
+            "match": {
+              "location": "Cart.product_added_to_cart()"
+            },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 3813242294,
+              "duration": 1179659246,
               "status": "passed"
             },
-            "line": 9,
-            "name": "Check Topmenu 108639101",
+            "line": 26,
+            "name": "Check the Cart Details",
             "match": {
-              "arguments": [
-                {
-                  "val": "108639101",
-                  "offset": 14
-                }
-              ],
-              "location": "Home.check_topmenu(String)"
+              "location": "Cart.check_the_cart_details()"
             },
-            "matchedColumns": [
-              0
-            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 28,
+        "name": "RemoveProducts",
+        "description": "",
+        "id": "application-login;removeproducts",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 332089030,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "Remove Products from Cart",
+            "match": {
+              "location": "Cart.remove_products_from_cart()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 6869316582,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "Add Products To Cart",
+            "match": {
+              "location": "Cart.add_products_to_cart()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 509026568,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "Check Product",
+            "match": {
+              "location": "Cart.check_product()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1078247746,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "Check Cart",
+            "match": {
+              "location": "Cart.check_cart()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 34,
+        "name": "CheckoutPage",
+        "description": "",
+        "id": "application-login;checkoutpage",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 226883607,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "Check Out",
+            "match": {
+              "location": "CheckOut.check_out()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1183419890,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "Check Form Fields",
+            "match": {
+              "location": "CheckOut.check_form_fields()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 38,
+        "name": "PaymentPage",
+        "description": "",
+        "id": "application-login;paymentpage",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 138575905,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "Payment Fields",
+            "match": {
+              "location": "Payment.payment_fields()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 132801393,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "Banks Names",
+            "match": {
+              "location": "Payment.banks_names()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5777911704,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "Order Summary",
+            "match": {
+              "location": "Payment.order_summary()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 43,
+        "name": "ReviewPage",
+        "description": "",
+        "id": "application-login;reviewpage",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 241403086,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "Review Fields",
+            "match": {
+              "location": "Review.review_fields()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 39415073,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "Shipping Information",
+            "match": {
+              "location": "Review.shipping_information()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 37146059,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "Contact Information",
+            "match": {
+              "location": "Review.contact_information()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 35798218,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "Payment Information",
+            "match": {
+              "location": "Review.payment_information()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 49,
+        "name": "OrderDetails",
+        "description": "",
+        "id": "application-login;orderdetails",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5521880339,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "Review Orders",
+            "match": {
+              "location": "Review.review_orders()"
+            },
             "keyword": "Then "
           }
         ]

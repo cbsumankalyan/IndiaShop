@@ -1,20 +1,52 @@
 Feature: Application Login
 
-Background:
+Scenario: Intiate the browser
 Given Open the browser
 And Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application
 
-Scenario Outline: Shopping Cart Applciation Order Submit
-When user enters <username> and <password> to login
-Then Check Topmenu <username>
-#Then SearchOption
-#Then Check products
-#Then Listview
+Scenario: LoginPage
+Given Enter username and Password
+And Check Login details and menu
 
-#Then AddProductsToCart CalciumMagnesium
+#Scenario: HomePage
+#Then All Products
+#And Products
+#And Accessories
+#
+#Scenario: SearchOption
+#When Search Product
+#
+#Scenario: List View
+#Then All Products in List View
+#And Products in List View
+#And Accessories in List View
+
+Scenario: CartPage
+When Product Added to Cart
+Then Check the Cart Details
+
+Scenario: RemoveProducts
+When Remove Products from Cart
+Then Add Products To Cart
+Then Check Product
+Then Check Cart
+
+Scenario: CheckoutPage
+When Check Out
+Then Check Form Fields
+
+Scenario: PaymentPage
+When Payment Fields
+Then Banks Names
+Then Order Summary
+
+Scenario: ReviewPage
+When Review Fields
+Then Shipping Information
+Then Contact Information
+Then Payment Information
+
+Scenario: OrderDetails
+Then Review Orders
 
 
-Examples:
-
-|username   |password   |
-|108639101  |1234       |
