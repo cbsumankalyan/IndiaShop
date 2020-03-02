@@ -46,5 +46,15 @@ public class Home extends BasePage{
 		Home.AccessoriesList();
 	}
 	
+	@When("^Logout$")
+	public void logout(){
+		Home.Logout();
+	}
+	
+	@Then("^Home Page")
+	public void homepage(){
+		Home.CommonMenu();
+	}
+	
 	
 }

@@ -1,16 +1,19 @@
 package stepDefinitions;
 
 import POM.BasePage;
+import POM.HomePage;
 import POM.ReviewPage;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class Review extends BasePage {
 	
+	HomePage Home = new HomePage(driver);
 	ReviewPage review = new ReviewPage(driver);
 	
 	@When("^Review Fields$")
 	public void review_fields(){
+		Home.CommonMenu();
 		review.review();
 	}
 	

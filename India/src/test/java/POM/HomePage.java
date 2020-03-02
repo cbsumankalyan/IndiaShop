@@ -13,6 +13,15 @@ import org.openqa.selenium.support.PageFactory;
 import junit.framework.Assert;
 
 public class HomePage extends BasePage {
+	
+	@FindBy(xpath = "//a[@ng-click='app.logoRedirect()']")
+	private WebElement UnicityLogo;
+
+	@FindBy(xpath = "//div[@class='message ng-binding']")
+	private WebElement ViewingProducts;
+
+	@FindBy(xpath = "//a[@class='action']//span")
+	private WebElement SelectState;
 
 	@FindBy(xpath = "//div[contains(@title, 'Grid')]")
 	private WebElement Grid;
@@ -158,9 +167,18 @@ public class HomePage extends BasePage {
 	@FindBys(@FindBy(xpath="//span[contains(@class, 'icon-plus')]"))
 	List<WebElement> ListViewPlus;
 	
+	@FindBy(xpath = "//a[@ng-click='app.logout()']")
+	private WebElement LogOut;
+	
 
 	public HomePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
+	}
+	
+	public void CommonMenu(){
+		Assert.assertTrue(UnicityLogo.isDisplayed());
+		Assert.assertEquals(ViewingProducts.getText(), "You are currently viewing product in Karnataka");
+		Assert.assertEquals(SelectState.getText(), "Select State");
 	}
 
 	public void Menu() throws InterruptedException {
@@ -518,6 +536,10 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(ProductDescription.getText(), p.getProperty(ProductName.getText().replace(" ", "")));
 			Back.click();
 		}
+	}
+	
+	public void Logout(){
+		LogOut.click();
 	}
 
 }

@@ -93,6 +93,11 @@ public class PaymentPage extends BasePage {
 	public PaymentPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
+	
+	public void GoBack() throws InterruptedException{
+		Thread.sleep(5000);
+		GoBack.click();
+	}
 
 	public void paymentfields() {
 

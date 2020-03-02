@@ -32,10 +32,12 @@ Then Check Product
 Then Check Cart
 
 Scenario: CheckoutPage
+When Check Out Go Back
 When Check Out
 Then Check Form Fields
 
 Scenario: PaymentPage
+When Payment Go Back
 When Payment Fields
 Then Banks Names
 Then Order Summary
@@ -49,4 +51,18 @@ Then Payment Information
 Scenario: OrderDetails
 Then Review Orders
 
+Scenario: PlaceOrderPage
+When Placed Order Fields
+Then Placed Shipping Information
+Then Placed Contact Information
+Then Placed Payment Information
 
+Scenario: OrderDetails
+Then Placed Orders
+
+Scenario: ReturnHomePage
+When Return Home
+
+Scenario: LogOut
+When Logout
+Then Home Page

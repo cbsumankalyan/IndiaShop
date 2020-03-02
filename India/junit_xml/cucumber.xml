@@ -1,47 +1,284 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="8" time="62.878397">
-<testcase classname="Application Login" name="Intiate the browser" time="15.999693">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="12" time="93.115113">
+<testcase classname="Application Login" name="Intiate the browser" time="16.865358">
 <system-out><![CDATA[Given Open the browser......................................................passed
 And Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="LoginPage" time="17.408353">
+<testcase classname="Application Login" name="LoginPage" time="17.76612">
 <system-out><![CDATA[Given Enter username and Password...........................................passed
 And Check Login details and menu............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="CartPage" time="7.346437">
+<testcase classname="Application Login" name="CartPage" time="7.822946">
 <system-out><![CDATA[When Product Added to Cart..................................................passed
 Then Check the Cart Details.................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="RemoveProducts" time="8.78868">
+<testcase classname="Application Login" name="RemoveProducts" time="9.395173">
 <system-out><![CDATA[When Remove Products from Cart..............................................passed
 Then Add Products To Cart...................................................passed
 Then Check Product..........................................................passed
 Then Check Cart.............................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="CheckoutPage" time="1.410303">
-<system-out><![CDATA[When Check Out..............................................................passed
+<testcase classname="Application Login" name="CheckoutPage" time="2.492307">
+<system-out><![CDATA[When Check Out Go Back......................................................passed
+When Check Out..............................................................passed
 Then Check Form Fields......................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="PaymentPage" time="6.049289">
-<system-out><![CDATA[When Payment Fields.........................................................passed
+<testcase classname="Application Login" name="PaymentPage" time="12.595372">
+<system-out><![CDATA[When Payment Go Back........................................................passed
+When Payment Fields.........................................................passed
 Then Banks Names............................................................passed
 Then Order Summary..........................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="ReviewPage" time="0.353762">
+<testcase classname="Application Login" name="ReviewPage" time="0.418976">
 <system-out><![CDATA[When Review Fields..........................................................passed
 Then Shipping Information...................................................passed
 Then Contact Information....................................................passed
 Then Payment Information....................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="OrderDetails" time="5.52188">
+<testcase classname="Application Login" name="OrderDetails" time="5.522117">
 <system-out><![CDATA[Then Review Orders..........................................................passed
 ]]></system-out>
+</testcase>
+<testcase classname="Application Login" name="PlaceOrderPage" time="5.590389">
+<system-out><![CDATA[When Placed Order Fields....................................................passed
+Then Placed Shipping Information............................................passed
+Then Placed Contact Information.............................................passed
+Then Placed Payment Information.............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Application Login" name="OrderDetails" time="5.467515">
+<system-out><![CDATA[Then Placed Orders..........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Application Login" name="ReturnHomePage" time="9.016303">
+<system-out><![CDATA[When Return Home............................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Application Login" name="LogOut" time="0.162537">
+<system-out><![CDATA[When Logout.................................................................passed
+Then Home Page..............................................................passed
+]]></system-out>
+</testcase>
+</testsuite>
+.RemoteWebElement.execute(RemoteWebElement.java:285)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)&#13;&#10;&#9;at sun.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)&#13;&#10;&#9;at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;&#10;&#9;at java.lang.reflect.Method.invoke(Unknown Source)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)&#13;&#10;&#9;at com.sun.proxy.$Proxy15.click(Unknown Source)&#13;&#10;&#9;at POM.PaymentPage.GoBack(PaymentPage.java:98)&#13;&#10;&#9;at stepDefinitions.Payment.payment_go_back(Payment.java:18)&#13;&#10;&#9;at ✽.When Payment Go Back(Hooks.feature:40)&#13;&#10;"><![CDATA[When Payment Go Back........................................................failed
+When Payment Fields.........................................................skipped
+Then Banks Names............................................................skipped
+Then Order Summary..........................................................skipped
+
+StackTrace:
+org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a ng-click="orderInfo2Methods.back()">...</a> is not clickable at point (164, 154). Other element would receive the click: <div class="backdrop"></div>
+  (Session info: chrome=80.0.3987.122)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e864af0f06ebddca2995cf0e93eb4274
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sun.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy15.click(Unknown Source)
+	at POM.PaymentPage.GoBack(PaymentPage.java:98)
+	at stepDefinitions.Payment.payment_go_back(Payment.java:18)
+	at ✽.When Payment Go Back(Hooks.feature:40)
+]]></failure>
+</testcase>
+<testcase classname="Application Login" name="ReviewPage" time="20.168014">
+<failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@ng-click= 'review.goBack()']&quot;}&#10;  (Session info: chrome=80.0.3987.122)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_231'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: e864af0f06ebddca2995cf0e93eb4274&#10;*** Element info: {Using=xpath, value=//a[@ng-click= 'review.goBack()']}&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Unknown Source)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)&#13;&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:353)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;&#10;&#9;at com.sun.proxy.$Proxy15.isDisplayed(Unknown Source)&#13;&#10;&#9;at POM.ReviewPage.review(ReviewPage.java:95)&#13;&#10;&#9;at stepDefinitions.Review.review_fields(Review.java:17)&#13;&#10;&#9;at ✽.When Review Fields(Hooks.feature:46)&#13;&#10;"><![CDATA[When Review Fields..........................................................failed
+Then Shipping Information...................................................skipped
+Then Contact Information....................................................skipped
+Then Payment Information....................................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@ng-click= 'review.goBack()']"}
+  (Session info: chrome=80.0.3987.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e864af0f06ebddca2995cf0e93eb4274
+*** Element info: {Using=xpath, value=//a[@ng-click= 'review.goBack()']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy15.isDisplayed(Unknown Source)
+	at POM.ReviewPage.review(ReviewPage.java:95)
+	at stepDefinitions.Review.review_fields(Review.java:17)
+	at ✽.When Review Fields(Hooks.feature:46)
+]]></failure>
+</testcase>
+<testcase classname="Application Login" name="OrderDetails" time="5.092747">
+<failure message="java.lang.AssertionError: expected [#28993] but found [PV: 8]&#13;&#10;&#9;at org.testng.Assert.fail(Assert.java:96)&#13;&#10;&#9;at org.testng.Assert.failNotEquals(Assert.java:776)&#13;&#10;&#9;at org.testng.Assert.assertEqualsImpl(Assert.java:137)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:118)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:453)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:463)&#13;&#10;&#9;at POM.ReviewPage.Orders(ReviewPage.java:122)&#13;&#10;&#9;at stepDefinitions.Review.review_orders(Review.java:37)&#13;&#10;&#9;at ✽.Then Review Orders(Hooks.feature:52)&#13;&#10;"><![CDATA[Then Review Orders..........................................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [#28993] but found [PV: 8]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at POM.ReviewPage.Orders(ReviewPage.java:122)
+	at stepDefinitions.Review.review_orders(Review.java:37)
+	at ✽.Then Review Orders(Hooks.feature:52)
+]]></failure>
+</testcase>
+<testcase classname="Application Login" name="PlaceOrderPage" time="25.154186">
+<failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@ng-click= 'review.goHome()']&quot;}&#10;  (Session info: chrome=80.0.3987.122)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_231'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: e864af0f06ebddca2995cf0e93eb4274&#10;*** Element info: {Using=xpath, value=//a[@ng-click= 'review.goHome()']}&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Unknown Source)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)&#13;&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:353)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;&#10;&#9;at com.sun.proxy.$Proxy15.isDisplayed(Unknown Source)&#13;&#10;&#9;at POM.PlaceOrderPage.PlaceOrderFields(PlaceOrderPage.java:104)&#13;&#10;&#9;at stepDefinitions.PlaceOrder.placed_order_fields(PlaceOrder.java:17)&#13;&#10;&#9;at ✽.When Placed Order Fields(Hooks.feature:55)&#13;&#10;"><![CDATA[When Placed Order Fields....................................................failed
+Then Placed Shipping Information............................................skipped
+Then Placed Contact Information.............................................skipped
+Then Placed Payment Information.............................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@ng-click= 'review.goHome()']"}
+  (Session info: chrome=80.0.3987.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e864af0f06ebddca2995cf0e93eb4274
+*** Element info: {Using=xpath, value=//a[@ng-click= 'review.goHome()']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy15.isDisplayed(Unknown Source)
+	at POM.PlaceOrderPage.PlaceOrderFields(PlaceOrderPage.java:104)
+	at stepDefinitions.PlaceOrder.placed_order_fields(PlaceOrder.java:17)
+	at ✽.When Placed Order Fields(Hooks.feature:55)
+]]></failure>
+</testcase>
+<testcase classname="Application Login" name="OrderDetails" time="5.077514">
+<failure message="java.lang.AssertionError: expected [#28993] but found [PV: 8]&#13;&#10;&#9;at org.testng.Assert.fail(Assert.java:96)&#13;&#10;&#9;at org.testng.Assert.failNotEquals(Assert.java:776)&#13;&#10;&#9;at org.testng.Assert.assertEqualsImpl(Assert.java:137)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:118)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:453)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:463)&#13;&#10;&#9;at POM.PlaceOrderPage.Orders(PlaceOrderPage.java:135)&#13;&#10;&#9;at stepDefinitions.PlaceOrder.placed(PlaceOrder.java:37)&#13;&#10;&#9;at ✽.Then Placed Orders(Hooks.feature:61)&#13;&#10;"><![CDATA[Then Placed Orders..........................................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [#28993] but found [PV: 8]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at POM.PlaceOrderPage.Orders(PlaceOrderPage.java:135)
+	at stepDefinitions.PlaceOrder.placed(PlaceOrder.java:37)
+	at ✽.Then Placed Orders(Hooks.feature:61)
+]]></failure>
+</testcase>
+<testcase classname="Application Login" name="ReturnHomePage" time="20.039113">
+<failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@ng-click= 'review.goHome()']&quot;}&#10;  (Session info: chrome=80.0.3987.122)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_231'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: e864af0f06ebddca2995cf0e93eb4274&#10;*** Element info: {Using=xpath, value=//a[@ng-click= 'review.goHome()']}&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Unknown Source)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)&#13;&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:353)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;&#10;&#9;at com.sun.proxy.$Proxy15.click(Unknown Source)&#13;&#10;&#9;at POM.PlaceOrderPage.ReturnHome(PlaceOrderPage.java:156)&#13;&#10;&#9;at stepDefinitions.PlaceOrder.return_home(PlaceOrder.java:42)&#13;&#10;&#9;at ✽.When Return Home(Hooks.feature:64)&#13;&#10;"><![CDATA[When Return Home............................................................failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@ng-click= 'review.goHome()']"}
+  (Session info: chrome=80.0.3987.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e864af0f06ebddca2995cf0e93eb4274
+*** Element info: {Using=xpath, value=//a[@ng-click= 'review.goHome()']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy15.click(Unknown Source)
+	at POM.PlaceOrderPage.ReturnHome(PlaceOrderPage.java:156)
+	at stepDefinitions.PlaceOrder.return_home(PlaceOrder.java:42)
+	at ✽.When Return Home(Hooks.feature:64)
+]]></failure>
+</testcase>
+<testcase classname="Application Login" name="LogOut" time="20.033012">
+<failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@ng-click='app.logout()']&quot;}&#10;  (Session info: chrome=80.0.3987.122)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_231'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: e864af0f06ebddca2995cf0e93eb4274&#10;*** Element info: {Using=xpath, value=//a[@ng-click='app.logout()']}&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Unknown Source)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)&#13;&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:353)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;&#10;&#9;at com.sun.proxy.$Proxy15.click(Unknown Source)&#13;&#10;&#9;at POM.HomePage.Logout(HomePage.java:542)&#13;&#10;&#9;at stepDefinitions.Home.logout(Home.java:51)&#13;&#10;&#9;at ✽.When Logout(Hooks.feature:67)&#13;&#10;"><![CDATA[When Logout.................................................................failed
+Then Home Page..............................................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@ng-click='app.logout()']"}
+  (Session info: chrome=80.0.3987.122)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: e864af0f06ebddca2995cf0e93eb4274
+*** Element info: {Using=xpath, value=//a[@ng-click='app.logout()']}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy15.click(Unknown Source)
+	at POM.HomePage.Logout(HomePage.java:542)
+	at stepDefinitions.Home.logout(Home.java:51)
+	at ✽.When Logout(Hooks.feature:67)
+]]></failure>
 </testcase>
 </testsuite>

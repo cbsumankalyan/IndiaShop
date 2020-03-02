@@ -35,6 +35,10 @@ public class CheckOutPage extends BasePage {
 		PageFactory.initElements(driver, this);
 	}
 	
+	public void GoBack(){
+		GoBack.click();
+	}
+	
 	public void checkout(){
 		Assert.assertTrue(GoBack.isDisplayed());
 		Assert.assertEquals(CheckOut.getText(), "CHECKOUT");
@@ -73,5 +77,6 @@ public class CheckOutPage extends BasePage {
 		
 		Continue.click();
 	}
+	
 	
 }

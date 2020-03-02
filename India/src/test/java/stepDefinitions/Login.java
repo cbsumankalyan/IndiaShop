@@ -19,6 +19,7 @@ public class Login extends BasePage {
 	
 	@Then("^Check Login details and menu$")
     public void check_login_details_and_menu() throws Throwable {
+		Home.CommonMenu();
 		Home.Menu();
 	}
 }

@@ -262,31 +262,40 @@ public class CartPage extends BasePage {
 		
 		Assert.assertTrue(Back.isDisplayed());
 		Assert.assertTrue(Share.isDisplayed());
-	}
-	
-	public void checkcart() throws IOException{
-		
-		FileReader type = new FileReader(
-				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
-		Properties p = new Properties();
-		p.load(type);
 		
 		String name = "CALCIUM MAGNESIUM COMPLEX";
 		String itemcode = ProductItemNumber.getText();
 		String price = PPrice.getText();
 		String pv = Productpv.getText();
+		
+		productdetails.put("name", name);
+		productdetails.put("price", price);
+		productdetails.put("pv", pv);
+		productdetails.put("itemcode", itemcode);
+		productdetails.put("qty", "1");
+		
 		PInCart.click();
+	}
+	
+	public void checkcart() throws IOException, InterruptedException{
+	
+		FileReader type = new FileReader(
+				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
+		Properties p = new Properties();
+		p.load(type);
+		
+		
 		Assert.assertTrue(ContinueShoping.isDisplayed());
 		Assert.assertTrue(YourCartItems.isDisplayed());
 
-		Assert.assertEquals(ProductName.getText(), name);
+		Assert.assertEquals(ProductName.getText(), productdetails.get("name"));
 		String[] ProductInfo = ProductPricePV.getText().split(" ");
-		Assert.assertEquals(itemcode, ProductInfo[0]);
-		Assert.assertEquals(pv, ("PV: " + ProductInfo[2]));
+		Assert.assertEquals(productdetails.get("itemcode"), ProductInfo[0]);
+		Assert.assertEquals(productdetails.get("pv"), ("PV: " + ProductInfo[2]));
 
 		Assert.assertEquals(p.getProperty("CALCIUM MAGNESIUM COMPLEX".replace(" ", "") + "PRICE"),
 				ProductCost.getText().toUpperCase());
-		Assert.assertEquals(price.replace(" ", ""), CartCost.getText().replace("Tax Included", "").trim());
+		Assert.assertEquals(productdetails.get("price").replace(" ", ""), CartCost.getText().replace("Tax Included", "").trim());
 		for (int j = 0; j < qty.length; j++) {
 			Assert.assertEquals(ProductQty.get(j).getText(), qty[j]);
 		}
@@ -295,16 +304,10 @@ public class CartPage extends BasePage {
 		Assert.assertEquals(Subtotal.getText(), "Subtotal");
 
 		Assert.assertEquals(p.getProperty("CALCIUM MAGNESIUM COMPLEX".replace(" ", "") + "PV"), TOTALPV.getText());
-		Assert.assertEquals(price.replace(" ", ""), SUBTOTAL.getText());
+		Assert.assertEquals(productdetails.get("price").replace(" ", ""), SUBTOTAL.getText());
 		
 		Assert.assertEquals(ShippingReflect.getText(), "Total does not\nreflect shipping");
-		
-		productdetails.put("name", name);
-		productdetails.put("price", price);
-		productdetails.put("pv", pv);
-		productdetails.put("itemcode", itemcode);
-		productdetails.put("qty", "1");
-		
+	
 		Continue.click();
 	}
 }
