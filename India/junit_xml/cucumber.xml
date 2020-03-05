@@ -1,284 +1,183 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="12" time="93.115113">
-<testcase classname="Application Login" name="Intiate the browser" time="16.865358">
-<system-out><![CDATA[Given Open the browser......................................................passed
-And Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="30" time="1069.839636">
+<testcase classname="Application Login" name="LoginPage" time="36.499356">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 108639101 and 1234....................................................passed
+Then Home Page 108639101....................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="LoginPage" time="17.76612">
-<system-out><![CDATA[Given Enter username and Password...........................................passed
-And Check Login details and menu............................................passed
+<testcase classname="User Login" name="LoginPage" time="35.788524">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 314237491 and youc@nw1n...............................................passed
+Then Home Page 314237491....................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="CartPage" time="7.822946">
-<system-out><![CDATA[When Product Added to Cart..................................................passed
-Then Check the Cart Details.................................................passed
+<testcase classname="User Login" name="LoginPage_2" time="36.165642">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 314852591 and asiaaktar...............................................passed
+Then Home Page 314852591....................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="RemoveProducts" time="9.395173">
-<system-out><![CDATA[When Remove Products from Cart..............................................passed
-Then Add Products To Cart...................................................passed
-Then Check Product..........................................................passed
-Then Check Cart.............................................................passed
+<testcase classname="User Login" name="LoginPage_3" time="36.17972">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 312579891 and FXmpqm..................................................passed
+Then Home Page 312579891....................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="CheckoutPage" time="2.492307">
-<system-out><![CDATA[When Check Out Go Back......................................................passed
-When Check Out..............................................................passed
-Then Check Form Fields......................................................passed
+<testcase classname="User Login" name="LoginPage_4" time="36.039522">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 205146001 and baba69..................................................passed
+Then Home Page 205146001....................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="PaymentPage" time="12.595372">
-<system-out><![CDATA[When Payment Go Back........................................................passed
-When Payment Fields.........................................................passed
-Then Banks Names............................................................passed
-Then Order Summary..........................................................passed
+<testcase classname="User Login" name="LoginPage_5" time="36.010561">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 312709091 and JjQtYS..................................................passed
+Then Home Page 312709091....................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="ReviewPage" time="0.418976">
-<system-out><![CDATA[When Review Fields..........................................................passed
-Then Shipping Information...................................................passed
-Then Contact Information....................................................passed
-Then Payment Information....................................................passed
+<testcase classname="User Login" name="LoginPage_6" time="35.981889">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 313979091 and acSjac..................................................passed
+Then Home Page 313979091....................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="OrderDetails" time="5.522117">
-<system-out><![CDATA[Then Review Orders..........................................................passed
+<testcase classname="User Login" name="LoginPage_7" time="36.539867">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 314573291 and 1985....................................................passed
+Then Home Page 314573291....................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="PlaceOrderPage" time="5.590389">
-<system-out><![CDATA[When Placed Order Fields....................................................passed
-Then Placed Shipping Information............................................passed
-Then Placed Contact Information.............................................passed
-Then Placed Payment Information.............................................passed
+<testcase classname="User Login" name="LoginPage_8" time="35.855225">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 314304891 and PQU5RF..................................................passed
+Then Home Page 314304891....................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="OrderDetails" time="5.467515">
-<system-out><![CDATA[Then Placed Orders..........................................................passed
+<testcase classname="User Login" name="LoginPage_9" time="36.114701">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 312837491 and wGn7C9..................................................passed
+Then Home Page 312837491....................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="ReturnHomePage" time="9.016303">
-<system-out><![CDATA[When Return Home............................................................passed
+<testcase classname="User Login" name="LoginPage_10" time="35.657761">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 310141491 and ttR8Jy..................................................passed
+Then Home Page 310141491....................................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="LogOut" time="0.162537">
-<system-out><![CDATA[When Logout.................................................................passed
-Then Home Page..............................................................passed
+<testcase classname="User Login" name="LoginPage_11" time="33.486446">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 314195991 and 9vnaTy..................................................passed
+Then Home Page 314195991....................................................passed
 ]]></system-out>
 </testcase>
-</testsuite>
-.RemoteWebElement.execute(RemoteWebElement.java:285)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)&#13;&#10;&#9;at sun.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)&#13;&#10;&#9;at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)&#13;&#10;&#9;at java.lang.reflect.Method.invoke(Unknown Source)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)&#13;&#10;&#9;at com.sun.proxy.$Proxy15.click(Unknown Source)&#13;&#10;&#9;at POM.PaymentPage.GoBack(PaymentPage.java:98)&#13;&#10;&#9;at stepDefinitions.Payment.payment_go_back(Payment.java:18)&#13;&#10;&#9;at ✽.When Payment Go Back(Hooks.feature:40)&#13;&#10;"><![CDATA[When Payment Go Back........................................................failed
-When Payment Fields.........................................................skipped
-Then Banks Names............................................................skipped
-Then Order Summary..........................................................skipped
-
-StackTrace:
-org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <a ng-click="orderInfo2Methods.back()">...</a> is not clickable at point (164, 154). Other element would receive the click: <div class="backdrop"></div>
-  (Session info: chrome=80.0.3987.122)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: e864af0f06ebddca2995cf0e93eb4274
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at sun.reflect.GeneratedMethodAccessor9.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy15.click(Unknown Source)
-	at POM.PaymentPage.GoBack(PaymentPage.java:98)
-	at stepDefinitions.Payment.payment_go_back(Payment.java:18)
-	at ✽.When Payment Go Back(Hooks.feature:40)
-]]></failure>
+<testcase classname="User Login" name="LoginPage_12" time="35.787082">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 301941991 and sonu3264................................................passed
+Then Home Page 301941991....................................................passed
+]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="ReviewPage" time="20.168014">
-<failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@ng-click= 'review.goBack()']&quot;}&#10;  (Session info: chrome=80.0.3987.122)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_231'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: e864af0f06ebddca2995cf0e93eb4274&#10;*** Element info: {Using=xpath, value=//a[@ng-click= 'review.goBack()']}&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Unknown Source)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)&#13;&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:353)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;&#10;&#9;at com.sun.proxy.$Proxy15.isDisplayed(Unknown Source)&#13;&#10;&#9;at POM.ReviewPage.review(ReviewPage.java:95)&#13;&#10;&#9;at stepDefinitions.Review.review_fields(Review.java:17)&#13;&#10;&#9;at ✽.When Review Fields(Hooks.feature:46)&#13;&#10;"><![CDATA[When Review Fields..........................................................failed
-Then Shipping Information...................................................skipped
-Then Contact Information....................................................skipped
-Then Payment Information....................................................skipped
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@ng-click= 'review.goBack()']"}
-  (Session info: chrome=80.0.3987.122)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: e864af0f06ebddca2995cf0e93eb4274
-*** Element info: {Using=xpath, value=//a[@ng-click= 'review.goBack()']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy15.isDisplayed(Unknown Source)
-	at POM.ReviewPage.review(ReviewPage.java:95)
-	at stepDefinitions.Review.review_fields(Review.java:17)
-	at ✽.When Review Fields(Hooks.feature:46)
-]]></failure>
+<testcase classname="User Login" name="LoginPage_13" time="35.323249">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 314573491 and 7982701596..............................................passed
+Then Home Page 314573491....................................................passed
+]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="OrderDetails" time="5.092747">
-<failure message="java.lang.AssertionError: expected [#28993] but found [PV: 8]&#13;&#10;&#9;at org.testng.Assert.fail(Assert.java:96)&#13;&#10;&#9;at org.testng.Assert.failNotEquals(Assert.java:776)&#13;&#10;&#9;at org.testng.Assert.assertEqualsImpl(Assert.java:137)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:118)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:453)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:463)&#13;&#10;&#9;at POM.ReviewPage.Orders(ReviewPage.java:122)&#13;&#10;&#9;at stepDefinitions.Review.review_orders(Review.java:37)&#13;&#10;&#9;at ✽.Then Review Orders(Hooks.feature:52)&#13;&#10;"><![CDATA[Then Review Orders..........................................................failed
-
-StackTrace:
-java.lang.AssertionError: expected [#28993] but found [PV: 8]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at POM.ReviewPage.Orders(ReviewPage.java:122)
-	at stepDefinitions.Review.review_orders(Review.java:37)
-	at ✽.Then Review Orders(Hooks.feature:52)
-]]></failure>
+<testcase classname="User Login" name="LoginPage_14" time="35.604997">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 309938991 and pratik143...............................................passed
+Then Home Page 309938991....................................................passed
+]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="PlaceOrderPage" time="25.154186">
-<failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@ng-click= 'review.goHome()']&quot;}&#10;  (Session info: chrome=80.0.3987.122)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_231'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: e864af0f06ebddca2995cf0e93eb4274&#10;*** Element info: {Using=xpath, value=//a[@ng-click= 'review.goHome()']}&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Unknown Source)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)&#13;&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:353)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;&#10;&#9;at com.sun.proxy.$Proxy15.isDisplayed(Unknown Source)&#13;&#10;&#9;at POM.PlaceOrderPage.PlaceOrderFields(PlaceOrderPage.java:104)&#13;&#10;&#9;at stepDefinitions.PlaceOrder.placed_order_fields(PlaceOrder.java:17)&#13;&#10;&#9;at ✽.When Placed Order Fields(Hooks.feature:55)&#13;&#10;"><![CDATA[When Placed Order Fields....................................................failed
-Then Placed Shipping Information............................................skipped
-Then Placed Contact Information.............................................skipped
-Then Placed Payment Information.............................................skipped
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@ng-click= 'review.goHome()']"}
-  (Session info: chrome=80.0.3987.122)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: e864af0f06ebddca2995cf0e93eb4274
-*** Element info: {Using=xpath, value=//a[@ng-click= 'review.goHome()']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy15.isDisplayed(Unknown Source)
-	at POM.PlaceOrderPage.PlaceOrderFields(PlaceOrderPage.java:104)
-	at stepDefinitions.PlaceOrder.placed_order_fields(PlaceOrder.java:17)
-	at ✽.When Placed Order Fields(Hooks.feature:55)
-]]></failure>
+<testcase classname="User Login" name="LoginPage_15" time="35.432246">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 314195391 and 37yud5..................................................passed
+Then Home Page 314195391....................................................passed
+]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="OrderDetails" time="5.077514">
-<failure message="java.lang.AssertionError: expected [#28993] but found [PV: 8]&#13;&#10;&#9;at org.testng.Assert.fail(Assert.java:96)&#13;&#10;&#9;at org.testng.Assert.failNotEquals(Assert.java:776)&#13;&#10;&#9;at org.testng.Assert.assertEqualsImpl(Assert.java:137)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:118)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:453)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:463)&#13;&#10;&#9;at POM.PlaceOrderPage.Orders(PlaceOrderPage.java:135)&#13;&#10;&#9;at stepDefinitions.PlaceOrder.placed(PlaceOrder.java:37)&#13;&#10;&#9;at ✽.Then Placed Orders(Hooks.feature:61)&#13;&#10;"><![CDATA[Then Placed Orders..........................................................failed
-
-StackTrace:
-java.lang.AssertionError: expected [#28993] but found [PV: 8]
-	at org.testng.Assert.fail(Assert.java:96)
-	at org.testng.Assert.failNotEquals(Assert.java:776)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-	at org.testng.Assert.assertEquals(Assert.java:118)
-	at org.testng.Assert.assertEquals(Assert.java:453)
-	at org.testng.Assert.assertEquals(Assert.java:463)
-	at POM.PlaceOrderPage.Orders(PlaceOrderPage.java:135)
-	at stepDefinitions.PlaceOrder.placed(PlaceOrder.java:37)
-	at ✽.Then Placed Orders(Hooks.feature:61)
-]]></failure>
+<testcase classname="User Login" name="LoginPage_16" time="35.388212">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 313691891 and 44f85294480c............................................passed
+Then Home Page 313691891....................................................passed
+]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="ReturnHomePage" time="20.039113">
-<failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@ng-click= 'review.goHome()']&quot;}&#10;  (Session info: chrome=80.0.3987.122)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_231'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: e864af0f06ebddca2995cf0e93eb4274&#10;*** Element info: {Using=xpath, value=//a[@ng-click= 'review.goHome()']}&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Unknown Source)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)&#13;&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:353)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;&#10;&#9;at com.sun.proxy.$Proxy15.click(Unknown Source)&#13;&#10;&#9;at POM.PlaceOrderPage.ReturnHome(PlaceOrderPage.java:156)&#13;&#10;&#9;at stepDefinitions.PlaceOrder.return_home(PlaceOrder.java:42)&#13;&#10;&#9;at ✽.When Return Home(Hooks.feature:64)&#13;&#10;"><![CDATA[When Return Home............................................................failed
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@ng-click= 'review.goHome()']"}
-  (Session info: chrome=80.0.3987.122)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: e864af0f06ebddca2995cf0e93eb4274
-*** Element info: {Using=xpath, value=//a[@ng-click= 'review.goHome()']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy15.click(Unknown Source)
-	at POM.PlaceOrderPage.ReturnHome(PlaceOrderPage.java:156)
-	at stepDefinitions.PlaceOrder.return_home(PlaceOrder.java:42)
-	at ✽.When Return Home(Hooks.feature:64)
-]]></failure>
+<testcase classname="User Login" name="LoginPage_17" time="36.104336">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 313307391 and VuNqZj..................................................passed
+Then Home Page 313307391....................................................passed
+]]></system-out>
 </testcase>
-<testcase classname="Application Login" name="LogOut" time="20.033012">
-<failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//a[@ng-click='app.logout()']&quot;}&#10;  (Session info: chrome=80.0.3987.122)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_231'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: e864af0f06ebddca2995cf0e93eb4274&#10;*** Element info: {Using=xpath, value=//a[@ng-click='app.logout()']}&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Unknown Source)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)&#13;&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:353)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;&#10;&#9;at com.sun.proxy.$Proxy15.click(Unknown Source)&#13;&#10;&#9;at POM.HomePage.Logout(HomePage.java:542)&#13;&#10;&#9;at stepDefinitions.Home.logout(Home.java:51)&#13;&#10;&#9;at ✽.When Logout(Hooks.feature:67)&#13;&#10;"><![CDATA[When Logout.................................................................failed
-Then Home Page..............................................................skipped
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//a[@ng-click='app.logout()']"}
-  (Session info: chrome=80.0.3987.122)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: e864af0f06ebddca2995cf0e93eb4274
-*** Element info: {Using=xpath, value=//a[@ng-click='app.logout()']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy15.click(Unknown Source)
-	at POM.HomePage.Logout(HomePage.java:542)
-	at stepDefinitions.Home.logout(Home.java:51)
-	at ✽.When Logout(Hooks.feature:67)
-]]></failure>
+<testcase classname="User Login" name="LoginPage_18" time="35.4326">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 305652791 and mTVWRq..................................................passed
+Then Home Page 305652791....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="LoginPage_19" time="35.54395">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 314893991 and W67UN9..................................................passed
+Then Home Page 314893991....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="LoginPage_20" time="33.367712">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 314224491 and UXtRBx..................................................passed
+Then Home Page 314224491....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="LoginPage_21" time="35.498019">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 310586191 and v3BRT5..................................................passed
+Then Home Page 310586191....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="LoginPage_22" time="35.62623">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 304000191 and 7YbrPa..................................................passed
+Then Home Page 304000191....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="LoginPage_23" time="36.32891">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 200357401 and unicity1234.............................................passed
+Then Home Page 200357401....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="LoginPage_24" time="35.980881">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 311846191 and 7666....................................................passed
+Then Home Page 311846191....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="LoginPage_25" time="35.572783">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 314504491 and xHAQQY..................................................passed
+Then Home Page 314504491....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="LoginPage_26" time="35.51192">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 313909791 and Qn8KyY..................................................passed
+Then Home Page 313909791....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="LoginPage_27" time="35.855614">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 314573191 and UrT8nK..................................................passed
+Then Home Page 314573191....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="LoginPage_28" time="35.650212">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 312289691 and GC7Jcy..................................................passed
+Then Home Page 312289691....................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="LoginPage_29" time="35.511469">
+<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+Given 312930091 and C7P59f..................................................passed
+Then Home Page 312930091....................................................passed
+]]></system-out>
 </testcase>
 </testsuite>

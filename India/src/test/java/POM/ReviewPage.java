@@ -85,6 +85,30 @@ public class ReviewPage extends BasePage {
 
 	@FindBy(xpath = "//button[@ng-click='review.submitOrder()']")
 	private WebElement Continue;
+	
+	@FindBy(xpath = "//h4[@class='review-h3-def']//button[@class='btn-update']")
+	private WebElement UpdateShipping;
+	
+	@FindBy(id = "shippingStreet1")
+	private WebElement Street1;
+	
+	@FindBy(id = "shippingStreet2")
+	private WebElement Street2;
+	
+	@FindBy(id = "phone")
+	private WebElement Phone;
+	
+	@FindBy(id = "email")
+	private WebElement Email;
+	
+	@FindBy(xpath = "//h4[@class='review-h3']//button[@ui-sref='orderInfo']")
+	private WebElement UpdateContact;
+	
+	@FindBy(xpath = "//h4[@class='review-h3']//button[@ui-sref='orderInfo2']")
+	private WebElement UpdatePayment;
+	
+	@FindBy(xpath = "//button[@ng-click='orderInfo.nextPage()']")
+	private WebElement CheckOutContinue;
 
 	public ReviewPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -106,10 +130,20 @@ public class ReviewPage extends BasePage {
 		Assert.assertEquals(Shipping.getText(),
 				"SHIPPING INFORMATION Update\nIndia Training\nNo 999 Marine Drive\nBANGALORE, KA, 560042, IN");
 	}
-
+	
+	public void updateshippingaddress() {
+		Assert.assertEquals(Shipping.getText(),
+				"SHIPPING INFORMATION Update\nIndia Training\n23/2 2nd floor Khandari Parc Haudin Road\nBANGALORE, KA, 560042, IN");
+	}
+	
 	public void contact() {
 		Assert.assertEquals(Contact.getText(),
 				"CONTACT INFORMATION Update\nPhone: 9845574725\nEmail: Manjunath.Shekhar@unicity.com");
+	}
+	
+	public void updatecontactdetails() {
+		Assert.assertEquals(Contact.getText(),
+				"CONTACT INFORMATION Update\nPhone: 9019185440\nEmail: suman.cb@unicity.com");
 	}
 
 	public void payment() {
@@ -117,19 +151,17 @@ public class ReviewPage extends BasePage {
 	}
 
 	public void Orders() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		Assert.assertEquals(ProductName.getText(), productdetails.get("name"));
 		Assert.assertEquals(ProductCode.getText(), productdetails.get("itemcode"));
 //		Assert.assertEquals(PPPrice.getText().trim(), productdetails.get("price") + "TaxIncluded");
 		Assert.assertEquals(Qty.getText().replace("QTY: ", ""), productdetails.get("qty"));
-		System.out.println("dsafasfsadf");
 		float pp = Float.parseFloat(ProductPrice.getText().replace("₹", ""));
 		float sp = Float.parseFloat(ShippingPrice.getText().replace("₹", ""));
 		float tp = Float.parseFloat(TaxPrice.getText().replace("₹", ""));
 		float ttp = Float.parseFloat(TotalPrice.getText().replace("₹", "").replace(",", ""));
 
 		Assert.assertEquals(ttp, pp + sp + tp);
-
 		Assert.assertEquals(SUBTOTAL.getText(), "SUBTOTAL**:");
 		Assert.assertEquals(SHIPPING.getText(), "SHIPPING**:");
 		Assert.assertEquals(TAXES.getText(), "TAXES:");
@@ -141,4 +173,38 @@ public class ReviewPage extends BasePage {
 		Continue.click();
 	}
 
+	public void updateshipping() throws InterruptedException{
+		Thread.sleep(5000);
+		UpdateShipping.click();
+		Street1.clear();
+		Street2.clear();
+		
+		Street1.sendKeys("23/2 2nd floor Khandari Parc");
+		Street2.sendKeys("Haudin Road");
+		
+		CheckOutContinue.click();
+	}
+	
+	public void updatecontact() throws InterruptedException{
+		Thread.sleep(5000);
+		UpdateContact.click();
+		Phone.clear();
+		Email.clear();
+		
+		Phone.sendKeys("9019185440");
+		Email.sendKeys("suman.cb@unicity.com");
+		
+		CheckOutContinue.click();
+		
+	}
+	
+	public void updatepayment() throws InterruptedException{
+		Thread.sleep(10000);
+		UpdatePayment.click();
+	}
+	
+	public void goback() throws InterruptedException{
+		Thread.sleep(10000);
+		GoBack.click();
+	}
 }

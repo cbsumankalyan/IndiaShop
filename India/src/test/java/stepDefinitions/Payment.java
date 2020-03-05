@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import java.io.IOException;
+
 import POM.BasePage;
 import POM.CheckOutPage;
 import POM.HomePage;
@@ -21,8 +23,8 @@ public class Payment extends BasePage {
 	}
 	
 	@When("^Payment Fields$")
-	public void payment_fields(){
-		Home.CommonMenu();
+	public void payment_fields(String username) throws InterruptedException, IOException{
+		Home.CommonMenu(username);
 		payment.paymentfields();
 	}
 	

@@ -11,6 +11,13 @@ public class Home extends BasePage{
 	
 	HomePage Home = new HomePage(driver);
 	
+	@Then("^Home Page (.+)")
+	public void homepage(String username) throws InterruptedException, IOException{
+		Home.CommonMenu(username);
+		Home.Menu(username);
+	}
+	
+	
 	@Then("^All Products$")
 	public void all_producst() throws InterruptedException, IOException {
 		Home.AllProducts();
@@ -50,11 +57,5 @@ public class Home extends BasePage{
 	public void logout(){
 		Home.Logout();
 	}
-	
-	@Then("^Home Page")
-	public void homepage(){
-		Home.CommonMenu();
-	}
-	
-	
+
 }

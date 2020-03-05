@@ -14,9 +14,9 @@ public class Cart extends BasePage{
 	CartPage cartpage = new CartPage(driver);
 	
 	@When("^Product Added to Cart$")
-	public void  product_added_to_cart() throws InterruptedException, IOException {
+	public void  product_added_to_cart(String username) throws InterruptedException, IOException {
 		cartpage.cart();
-		Home.CommonMenu();
+		Home.CommonMenu(username);
 	}
 	
 	@Then("^Check the Cart Details$")
@@ -30,8 +30,8 @@ public class Cart extends BasePage{
 	}
 	
 	@Then("^Add Products To Cart$")
-	public void add_products_to_cart() throws InterruptedException, IOException {
-		Home.CommonMenu();
+	public void add_products_to_cart(String username) throws InterruptedException, IOException {
+		Home.CommonMenu(username);
 		cartpage.addproduct();
 	}
 	

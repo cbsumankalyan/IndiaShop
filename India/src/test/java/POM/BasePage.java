@@ -1,12 +1,24 @@
 package POM;
 
 
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 
 public class BasePage {
 	
+	protected String getTranslation(String value) throws IOException {
+		
+		Properties p = new Properties();
+		p.load(new FileReader(
+				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties"));
+		return p.getProperty(value);
+	}
+			
+
 	public static WebDriver driver;
 	public static String[] qty = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10+" };
 	public static String[] allproducts = { "BIOS LIFE AIR FILTER", "BLENDER BOTTLE W/AGITATOR", "CALCIUM MAGNESIUM COMPLEX",
@@ -27,8 +39,5 @@ public class BasePage {
 			"NEIGENE BAG", "T-SHIRT MATCHA LAUNCH SMALL", "T-SHIRT REVOLUTION GREEN MED IND",
 			"T-SHIRT REVOLUTION GREEN XL IND" };
 	public static Map<String, String> productdetails = new HashMap<String, String>();
-	
-	
-	
-	
+	public static Map<String, String> userdata = new HashMap<String, String>();	
 }

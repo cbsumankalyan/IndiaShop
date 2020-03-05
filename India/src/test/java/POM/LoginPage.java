@@ -30,12 +30,23 @@ public class LoginPage  extends BasePage {
 	}
 	
 	public void LoginDistributor() throws InterruptedException{
-		Thread.sleep(3000);
+		Thread.sleep(10000);
 		CookieClose.click();
 		Country.click();
 		CountrySelect.click();
 		Username.sendKeys("108639101");
 		Password.sendKeys("1234");
 		UserLogin.click();
+	}
+	
+	public void Login(String username, String password) throws InterruptedException{
+		Thread.sleep(3000);
+		CookieClose.click();
+		Country.click();
+		CountrySelect.click();
+		Username.sendKeys(username);
+		Password.sendKeys(password);
+		UserLogin.click();
+		userdata.put("id", username);
 	}
 }

@@ -117,12 +117,12 @@ public class PlaceOrderPage extends BasePage {
 	
 	public void shipping() {
 		Assert.assertEquals(Shipping.getText(),
-				"SHIPPING INFORMATION\nIndia Training\nNo 999 Marine Drive\nBANGALORE, KA, 560042, IN");
+				"SHIPPING INFORMATION\nIndia Training\n23/2 2nd floor Khandari Parc Haudin Road\nBANGALORE, KA, 560042, IN");
 	}
 
 	public void contact() {
 		Assert.assertEquals(Contact.getText(),
-				"CONTACT INFORMATION\nPhone: 9845574725\nEmail: Manjunath.Shekhar@unicity.com");
+				"CONTACT INFORMATION\nPhone: 9019185440\nEmail: suman.cb@unicity.com");
 	}
 
 	public void payment() {

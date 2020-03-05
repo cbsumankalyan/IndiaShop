@@ -3,28 +3,38 @@
     "line": 1,
     "elements": [
       {
-        "line": 3,
-        "name": "Intiate the browser",
+        "before": [
+          {
+            "result": {
+              "duration": 4653850158,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 12,
+        "name": "LoginPage",
         "description": "",
-        "id": "application-login;intiate-the-browser",
+        "id": "application-login;loginpage;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 2331052229,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 4317851578,
-              "status": "passed"
-            },
-            "line": 4,
-            "name": "Open the browser",
-            "match": {
-              "location": "BrowserInitiate.Open_the_browser()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 12547506387,
+              "duration": 11896735058,
               "status": "passed"
             },
             "line": 5,
@@ -38,722 +48,2885 @@
               ],
               "location": "BrowserInitiate.navigate_to_the_application(String)"
             },
-            "keyword": "And "
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3756575365,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "108639101 and 1234",
+            "match": {
+              "arguments": [
+                {
+                  "val": "108639101",
+                  "offset": 0
+                },
+                {
+                  "val": "1234",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13861142922,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 108639101",
+            "match": {
+              "arguments": [
+                {
+                  "val": "108639101",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
           }
         ]
-      },
+      }
+    ],
+    "name": "Application Login",
+    "description": "",
+    "id": "application-login",
+    "keyword": "Feature",
+    "uri": "Hooks.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
       {
-        "line": 7,
+        "before": [
+          {
+            "result": {
+              "duration": 3817406991,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 12,
         "name": "LoginPage",
         "description": "",
-        "id": "application-login;loginpage",
+        "id": "user-login;loginpage;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 2345276882,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 13863642764,
+              "duration": 12032513308,
               "status": "passed"
             },
-            "line": 8,
-            "name": "Enter username and Password",
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
             "match": {
-              "location": "Login.enter_username_and_password()"
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 3902477143,
+              "duration": 3674479509,
               "status": "passed"
             },
-            "line": 9,
-            "name": "Check Login details and menu",
+            "line": 6,
+            "name": "314237491 and youc@nw1n",
             "match": {
-              "location": "Login.check_login_details_and_menu()"
+              "arguments": [
+                {
+                  "val": "314237491",
+                  "offset": 0
+                },
+                {
+                  "val": "youc@nw1n",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
             },
-            "keyword": "And "
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13918847077,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 314237491",
+            "match": {
+              "arguments": [
+                {
+                  "val": "314237491",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
           }
         ]
       },
       {
-        "comments": [
+        "before": [
           {
-            "line": 11,
-            "value": "#Scenario: HomePage"
+            "result": {
+              "duration": 4392111268,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 2344928722,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11741376206,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
           },
           {
-            "line": 12,
-            "value": "#Then All Products"
+            "result": {
+              "duration": 3723649044,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "314852591 and asiaaktar",
+            "match": {
+              "arguments": [
+                {
+                  "val": "314852591",
+                  "offset": 0
+                },
+                {
+                  "val": "asiaaktar",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
           },
           {
-            "line": 13,
-            "value": "#And Products"
+            "result": {
+              "duration": 13963576715,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 314852591",
+            "match": {
+              "arguments": [
+                {
+                  "val": "314852591",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3980584943,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 2343681147,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 12246173650,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
           },
           {
-            "line": 14,
-            "value": "#And Accessories"
+            "result": {
+              "duration": 3707221937,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "312579891 and FXmpqm",
+            "match": {
+              "arguments": [
+                {
+                  "val": "312579891",
+                  "offset": 0
+                },
+                {
+                  "val": "FXmpqm",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
           },
           {
-            "line": 15,
-            "value": "#"
+            "result": {
+              "duration": 13902058156,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 312579891",
+            "match": {
+              "arguments": [
+                {
+                  "val": "312579891",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3845283281,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 15,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 2378777923,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 12215182264,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
           },
           {
-            "line": 16,
-            "value": "#Scenario: SearchOption"
+            "result": {
+              "duration": 3743888421,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "205146001 and baba69",
+            "match": {
+              "arguments": [
+                {
+                  "val": "205146001",
+                  "offset": 0
+                },
+                {
+                  "val": "baba69",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
           },
           {
-            "line": 17,
-            "value": "#When Search Product"
+            "result": {
+              "duration": 13856390278,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 205146001",
+            "match": {
+              "arguments": [
+                {
+                  "val": "205146001",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3733340786,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;6",
+        "after": [
+          {
+            "result": {
+              "duration": 2329791002,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 12263723318,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
           },
           {
-            "line": 18,
-            "value": "#"
+            "result": {
+              "duration": 3709480285,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "312709091 and JjQtYS",
+            "match": {
+              "arguments": [
+                {
+                  "val": "312709091",
+                  "offset": 0
+                },
+                {
+                  "val": "JjQtYS",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
           },
           {
-            "line": 19,
-            "value": "#Scenario: List View"
+            "result": {
+              "duration": 13974225898,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 312709091",
+            "match": {
+              "arguments": [
+                {
+                  "val": "312709091",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4412822539,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;7",
+        "after": [
+          {
+            "result": {
+              "duration": 2373773119,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11693731579,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
           },
           {
-            "line": 20,
-            "value": "#Then All Products in List View"
+            "result": {
+              "duration": 3705561349,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "313979091 and acSjac",
+            "match": {
+              "arguments": [
+                {
+                  "val": "313979091",
+                  "offset": 0
+                },
+                {
+                  "val": "acSjac",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
           },
           {
-            "line": 21,
-            "value": "#And Products in List View"
+            "result": {
+              "duration": 13796000680,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 313979091",
+            "match": {
+              "arguments": [
+                {
+                  "val": "313979091",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4127589229,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;8",
+        "after": [
+          {
+            "result": {
+              "duration": 2340792611,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 12538698273,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
           },
           {
-            "line": 22,
-            "value": "#And Accessories in List View"
+            "result": {
+              "duration": 3759894835,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "314573291 and 1985",
+            "match": {
+              "arguments": [
+                {
+                  "val": "314573291",
+                  "offset": 0
+                },
+                {
+                  "val": "1985",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13772891966,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 314573291",
+            "match": {
+              "arguments": [
+                {
+                  "val": "314573291",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3968692027,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;9",
+        "after": [
+          {
+            "result": {
+              "duration": 2342620453,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 12075536277,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3683253063,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "314304891 and PQU5RF",
+            "match": {
+              "arguments": [
+                {
+                  "val": "314304891",
+                  "offset": 0
+                },
+                {
+                  "val": "PQU5RF",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13785122803,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 314304891",
+            "match": {
+              "arguments": [
+                {
+                  "val": "314304891",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4107675825,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;10",
+        "after": [
+          {
+            "result": {
+              "duration": 2343970000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 12154233732,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3732984945,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "312837491 and wGn7C9",
+            "match": {
+              "arguments": [
+                {
+                  "val": "312837491",
+                  "offset": 0
+                },
+                {
+                  "val": "wGn7C9",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13775836396,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 312837491",
+            "match": {
+              "arguments": [
+                {
+                  "val": "312837491",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3961645620,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 21,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;11",
+        "after": [
+          {
+            "result": {
+              "duration": 2333016178,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11819114939,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3778415171,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "310141491 and ttR8Jy",
+            "match": {
+              "arguments": [
+                {
+                  "val": "310141491",
+                  "offset": 0
+                },
+                {
+                  "val": "ttR8Jy",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13765568653,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 310141491",
+            "match": {
+              "arguments": [
+                {
+                  "val": "310141491",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3859507934,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 22,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;12",
+        "after": [
+          {
+            "result": {
+              "duration": 36532512,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 12106077958,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3745890770,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "314195991 and 9vnaTy",
+            "match": {
+              "arguments": [
+                {
+                  "val": "314195991",
+                  "offset": 0
+                },
+                {
+                  "val": "9vnaTy",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13738436897,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 314195991",
+            "match": {
+              "arguments": [
+                {
+                  "val": "314195991",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3993813755,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;13",
+        "after": [
+          {
+            "result": {
+              "duration": 2383410247,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11965317091,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3691690404,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "301941991 and sonu3264",
+            "match": {
+              "arguments": [
+                {
+                  "val": "301941991",
+                  "offset": 0
+                },
+                {
+                  "val": "sonu3264",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13752850136,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 301941991",
+            "match": {
+              "arguments": [
+                {
+                  "val": "301941991",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3748110719,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
           }
         ],
         "line": 24,
-        "name": "CartPage",
+        "name": "LoginPage",
         "description": "",
-        "id": "application-login;cartpage",
+        "id": "user-login;loginpage;;14",
+        "after": [
+          {
+            "result": {
+              "duration": 2351412780,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 6431048901,
+              "duration": 11622600211,
               "status": "passed"
             },
-            "line": 25,
-            "name": "Product Added to Cart",
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
             "match": {
-              "location": "Cart.product_added_to_cart()"
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
             },
-            "keyword": "When "
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1391897080,
+              "duration": 3866334179,
               "status": "passed"
             },
-            "line": 26,
-            "name": "Check the Cart Details",
+            "line": 6,
+            "name": "314573491 and 7982701596",
             "match": {
-              "location": "Cart.check_the_cart_details()"
+              "arguments": [
+                {
+                  "val": "314573491",
+                  "offset": 0
+                },
+                {
+                  "val": "7982701596",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
             },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13734791027,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 314573491",
+            "match": {
+              "arguments": [
+                {
+                  "val": "314573491",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
             "keyword": "Then "
           }
         ]
       },
       {
+        "before": [
+          {
+            "result": {
+              "duration": 3468008506,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;15",
+        "after": [
+          {
+            "result": {
+              "duration": 2364594657,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 12264015586,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3707520177,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "309938991 and pratik143",
+            "match": {
+              "arguments": [
+                {
+                  "val": "309938991",
+                  "offset": 0
+                },
+                {
+                  "val": "pratik143",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13800858283,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 309938991",
+            "match": {
+              "arguments": [
+                {
+                  "val": "309938991",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3497046184,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;16",
+        "after": [
+          {
+            "result": {
+              "duration": 2375464427,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 12123930559,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3651011116,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "314195391 and 37yud5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "314195391",
+                  "offset": 0
+                },
+                {
+                  "val": "37yud5",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13784793843,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 314195391",
+            "match": {
+              "arguments": [
+                {
+                  "val": "314195391",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3631820913,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 27,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;17",
+        "after": [
+          {
+            "result": {
+              "duration": 2385596489,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11756349232,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3755150724,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "313691891 and 44f85294480c",
+            "match": {
+              "arguments": [
+                {
+                  "val": "313691891",
+                  "offset": 0
+                },
+                {
+                  "val": "44f85294480c",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13859294173,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 313691891",
+            "match": {
+              "arguments": [
+                {
+                  "val": "313691891",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3811643572,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
         "line": 28,
-        "name": "RemoveProducts",
+        "name": "LoginPage",
         "description": "",
-        "id": "application-login;removeproducts",
+        "id": "user-login;loginpage;;18",
+        "after": [
+          {
+            "result": {
+              "duration": 2333592604,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 269694950,
+              "duration": 12293203450,
               "status": "passed"
             },
-            "line": 29,
-            "name": "Remove Products from Cart",
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
             "match": {
-              "location": "Cart.remove_products_from_cart()"
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
             },
-            "keyword": "When "
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 7227025687,
+              "duration": 3800595456,
               "status": "passed"
             },
-            "line": 30,
-            "name": "Add Products To Cart",
+            "line": 6,
+            "name": "313307391 and VuNqZj",
             "match": {
-              "location": "Cart.add_products_to_cart()"
+              "arguments": [
+                {
+                  "val": "313307391",
+                  "offset": 0
+                },
+                {
+                  "val": "VuNqZj",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
             },
-            "keyword": "Then "
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 886807797,
+              "duration": 13865300792,
               "status": "passed"
             },
-            "line": 31,
-            "name": "Check Product",
+            "line": 7,
+            "name": "Home Page 313307391",
             "match": {
-              "location": "Cart.check_product()"
+              "arguments": [
+                {
+                  "val": "313307391",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
             },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1011645023,
-              "status": "passed"
-            },
-            "line": 32,
-            "name": "Check Cart",
-            "match": {
-              "location": "Cart.check_cart()"
-            },
+            "matchedColumns": [
+              0
+            ],
             "keyword": "Then "
           }
         ]
       },
       {
+        "before": [
+          {
+            "result": {
+              "duration": 3814487735,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 29,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;19",
+        "after": [
+          {
+            "result": {
+              "duration": 2358390066,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11852490114,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3630778139,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "305652791 and mTVWRq",
+            "match": {
+              "arguments": [
+                {
+                  "val": "305652791",
+                  "offset": 0
+                },
+                {
+                  "val": "mTVWRq",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13776453782,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 305652791",
+            "match": {
+              "arguments": [
+                {
+                  "val": "305652791",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3828854467,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 30,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;20",
+        "after": [
+          {
+            "result": {
+              "duration": 2355462703,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11885792329,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3712963169,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "314893991 and W67UN9",
+            "match": {
+              "arguments": [
+                {
+                  "val": "314893991",
+                  "offset": 0
+                },
+                {
+                  "val": "W67UN9",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13760877449,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 314893991",
+            "match": {
+              "arguments": [
+                {
+                  "val": "314893991",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3778571331,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;21",
+        "after": [
+          {
+            "result": {
+              "duration": 42723450,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 12029018051,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3793141157,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "314224491 and UXtRBx",
+            "match": {
+              "arguments": [
+                {
+                  "val": "314224491",
+                  "offset": 0
+                },
+                {
+                  "val": "UXtRBx",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13724257898,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 314224491",
+            "match": {
+              "arguments": [
+                {
+                  "val": "314224491",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3657984988,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;22",
+        "after": [
+          {
+            "result": {
+              "duration": 2392742735,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11980993690,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3677070231,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "310586191 and v3BRT5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "310586191",
+                  "offset": 0
+                },
+                {
+                  "val": "v3BRT5",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13789227766,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 310586191",
+            "match": {
+              "arguments": [
+                {
+                  "val": "310586191",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3734612680,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 33,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;23",
+        "after": [
+          {
+            "result": {
+              "duration": 2371358183,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11730779930,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3857685639,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "304000191 and 7YbrPa",
+            "match": {
+              "arguments": [
+                {
+                  "val": "304000191",
+                  "offset": 0
+                },
+                {
+                  "val": "7YbrPa",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13931793862,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 304000191",
+            "match": {
+              "arguments": [
+                {
+                  "val": "304000191",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 4005613232,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
         "line": 34,
-        "name": "CheckoutPage",
+        "name": "LoginPage",
         "description": "",
-        "id": "application-login;checkoutpage",
+        "id": "user-login;loginpage;;24",
+        "after": [
+          {
+            "result": {
+              "duration": 2383414087,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1046919720,
+              "duration": 12184220317,
               "status": "passed"
             },
-            "line": 35,
-            "name": "Check Out Go Back",
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
             "match": {
-              "location": "CheckOut.check_out_go_back()"
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
             },
-            "keyword": "When "
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 267825722,
+              "duration": 3836096714,
               "status": "passed"
             },
-            "line": 36,
-            "name": "Check Out",
+            "line": 6,
+            "name": "200357401 and unicity1234",
             "match": {
-              "location": "CheckOut.check_out()"
+              "arguments": [
+                {
+                  "val": "200357401",
+                  "offset": 0
+                },
+                {
+                  "val": "unicity1234",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
             },
-            "keyword": "When "
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1177561752,
+              "duration": 13919565158,
               "status": "passed"
             },
-            "line": 37,
-            "name": "Check Form Fields",
+            "line": 7,
+            "name": "Home Page 200357401",
             "match": {
-              "location": "CheckOut.check_form_fields()"
+              "arguments": [
+                {
+                  "val": "200357401",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
             },
+            "matchedColumns": [
+              0
+            ],
             "keyword": "Then "
           }
         ]
       },
       {
+        "before": [
+          {
+            "result": {
+              "duration": 3827352173,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 35,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;25",
+        "after": [
+          {
+            "result": {
+              "duration": 2353469741,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 12136951584,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3823617129,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "311846191 and 7666",
+            "match": {
+              "arguments": [
+                {
+                  "val": "311846191",
+                  "offset": 0
+                },
+                {
+                  "val": "7666",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13839490849,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 311846191",
+            "match": {
+              "arguments": [
+                {
+                  "val": "311846191",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3830055535,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 36,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;26",
+        "after": [
+          {
+            "result": {
+              "duration": 2382956699,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11916681316,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3676021483,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "314504491 and xHAQQY",
+            "match": {
+              "arguments": [
+                {
+                  "val": "314504491",
+                  "offset": 0
+                },
+                {
+                  "val": "xHAQQY",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13767068388,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 314504491",
+            "match": {
+              "arguments": [
+                {
+                  "val": "314504491",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3505856432,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 37,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;27",
+        "after": [
+          {
+            "result": {
+              "duration": 2361681802,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 12132497180,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3684478877,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "313909791 and Qn8KyY",
+            "match": {
+              "arguments": [
+                {
+                  "val": "313909791",
+                  "offset": 0
+                },
+                {
+                  "val": "Qn8KyY",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13827405933,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 313909791",
+            "match": {
+              "arguments": [
+                {
+                  "val": "313909791",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3748274985,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
+        "line": 38,
+        "name": "LoginPage",
+        "description": "",
+        "id": "user-login;loginpage;;28",
+        "after": [
+          {
+            "result": {
+              "duration": 2382588913,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 11998957226,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+            "match": {
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3772457620,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "314573191 and UrT8nK",
+            "match": {
+              "arguments": [
+                {
+                  "val": "314573191",
+                  "offset": 0
+                },
+                {
+                  "val": "UrT8nK",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13953335000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Home Page 314573191",
+            "match": {
+              "arguments": [
+                {
+                  "val": "314573191",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 3752545922,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
+          }
+        ],
         "line": 39,
-        "name": "PaymentPage",
+        "name": "LoginPage",
         "description": "",
-        "id": "application-login;paymentpage",
+        "id": "user-login;loginpage;;29",
+        "after": [
+          {
+            "result": {
+              "duration": 2363964897,
+              "status": "passed"
+            },
+            "match": {
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
+          }
+        ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 6463554955,
+              "duration": 11883620168,
               "status": "passed"
             },
-            "line": 40,
-            "name": "Payment Go Back",
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
             "match": {
-              "location": "Payment.payment_go_back()"
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
             },
-            "keyword": "When "
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 190067362,
+              "duration": 3757492273,
               "status": "passed"
             },
-            "line": 41,
-            "name": "Payment Fields",
+            "line": 6,
+            "name": "312289691 and GC7Jcy",
             "match": {
-              "location": "Payment.payment_fields()"
+              "arguments": [
+                {
+                  "val": "312289691",
+                  "offset": 0
+                },
+                {
+                  "val": "GC7Jcy",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
             },
-            "keyword": "When "
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 146004605,
+              "duration": 13892588708,
               "status": "passed"
             },
-            "line": 42,
-            "name": "Banks Names",
+            "line": 7,
+            "name": "Home Page 312289691",
             "match": {
-              "location": "Payment.banks_names()"
+              "arguments": [
+                {
+                  "val": "312289691",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
             },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 5795745532,
-              "status": "passed"
-            },
-            "line": 43,
-            "name": "Order Summary",
-            "match": {
-              "location": "Payment.order_summary()"
-            },
+            "matchedColumns": [
+              0
+            ],
             "keyword": "Then "
           }
         ]
       },
       {
-        "line": 45,
-        "name": "ReviewPage",
-        "description": "",
-        "id": "application-login;reviewpage",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
+        "before": [
           {
             "result": {
-              "duration": 318139152,
+              "duration": 3812845920,
               "status": "passed"
             },
-            "line": 46,
-            "name": "Review Fields",
             "match": {
-              "location": "Review.review_fields()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 34321523,
-              "status": "passed"
-            },
-            "line": 47,
-            "name": "Shipping Information",
-            "match": {
-              "location": "Review.shipping_information()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 32101148,
-              "status": "passed"
-            },
-            "line": 48,
-            "name": "Contact Information",
-            "match": {
-              "location": "Review.contact_information()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 34414536,
-              "status": "passed"
-            },
-            "line": 49,
-            "name": "Payment Information",
-            "match": {
-              "location": "Review.payment_information()"
-            },
-            "keyword": "Then "
+              "location": "BrowserInitiate.Open_the_browser()"
+            }
           }
-        ]
-      },
-      {
-        "line": 51,
-        "name": "OrderDetails",
+        ],
+        "line": 40,
+        "name": "LoginPage",
         "description": "",
-        "id": "application-login;orderdetails",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
+        "id": "user-login;loginpage;;30",
+        "after": [
           {
             "result": {
-              "duration": 5522116712,
+              "duration": 2340678264,
               "status": "passed"
             },
-            "line": 52,
-            "name": "Review Orders",
             "match": {
-              "location": "Review.review_orders()"
-            },
-            "keyword": "Then "
+              "location": "BrowserInitiate.tearDown(Scenario)"
+            }
           }
-        ]
-      },
-      {
-        "line": 54,
-        "name": "PlaceOrderPage",
-        "description": "",
-        "id": "application-login;placeorderpage",
+        ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 5503701336,
+              "duration": 11716464398,
               "status": "passed"
             },
-            "line": 55,
-            "name": "Placed Order Fields",
+            "line": 5,
+            "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
             "match": {
-              "location": "PlaceOrder.placed_order_fields()"
+              "arguments": [
+                {
+                  "val": "http://shop.ng.unicityqa.com/master/#/home",
+                  "offset": 17
+                }
+              ],
+              "location": "BrowserInitiate.navigate_to_the_application(String)"
             },
-            "keyword": "When "
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 25819329,
+              "duration": 3756688433,
               "status": "passed"
             },
-            "line": 56,
-            "name": "Placed Shipping Information",
+            "line": 6,
+            "name": "312930091 and C7P59f",
             "match": {
-              "location": "PlaceOrder.placed_shipping_information()"
+              "arguments": [
+                {
+                  "val": "312930091",
+                  "offset": 0
+                },
+                {
+                  "val": "C7P59f",
+                  "offset": 14
+                }
+              ],
+              "location": "Login.and(String,String)"
             },
-            "keyword": "Then "
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 27519170,
+              "duration": 13884791795,
               "status": "passed"
             },
-            "line": 57,
-            "name": "Placed Contact Information",
+            "line": 7,
+            "name": "Home Page 312930091",
             "match": {
-              "location": "PlaceOrder.placed_contact_information()"
+              "arguments": [
+                {
+                  "val": "312930091",
+                  "offset": 10
+                }
+              ],
+              "location": "Home.homepage(String)"
             },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 33348722,
-              "status": "passed"
-            },
-            "line": 58,
-            "name": "Placed Payment Information",
-            "match": {
-              "location": "PlaceOrder.placed_payment_information()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "line": 60,
-        "name": "OrderDetails",
-        "description": "",
-        "id": "application-login;orderdetails",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 5467514852,
-              "status": "passed"
-            },
-            "line": 61,
-            "name": "Placed Orders",
-            "match": {
-              "location": "PlaceOrder.placed()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "line": 63,
-        "name": "ReturnHomePage",
-        "description": "",
-        "id": "application-login;returnhomepage",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 9016302521,
-              "status": "passed"
-            },
-            "line": 64,
-            "name": "Return Home",
-            "match": {
-              "location": "PlaceOrder.return_home()"
-            },
-            "keyword": "When "
-          }
-        ]
-      },
-      {
-        "line": 66,
-        "name": "LogOut",
-        "description": "",
-        "id": "application-login;logout",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 102038700,
-              "status": "passed"
-            },
-            "line": 67,
-            "name": "Logout",
-            "match": {
-              "location": "Home.logout()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 60498398,
-              "status": "passed"
-            },
-            "line": 68,
-            "name": "Home Page",
-            "match": {
-              "location": "Home.homepage()"
-            },
+            "matchedColumns": [
+              0
+            ],
             "keyword": "Then "
           }
         ]
       }
     ],
-    "name": "Application Login",
+    "name": "User Login",
     "description": "",
-    "id": "application-login",
+    "id": "user-login",
     "keyword": "Feature",
-    "uri": "Hooks.feature"
-  }
-].openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy15.isDisplayed(Unknown Source)\r\n\tat POM.ReviewPage.review(ReviewPage.java:95)\r\n\tat stepDefinitions.Review.review_fields(Review.java:17)\r\n\tat ✽.When Review Fields(Hooks.feature:46)\r\n",
-              "status": "failed"
-            },
-            "line": 46,
-            "name": "Review Fields",
-            "match": {
-              "location": "Review.review_fields()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 47,
-            "name": "Shipping Information",
-            "match": {
-              "location": "Review.shipping_information()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 48,
-            "name": "Contact Information",
-            "match": {
-              "location": "Review.contact_information()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 49,
-            "name": "Payment Information",
-            "match": {
-              "location": "Review.payment_information()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "line": 51,
-        "name": "OrderDetails",
-        "description": "",
-        "id": "application-login;orderdetails",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 5092747172,
-              "error_message": "java.lang.AssertionError: expected [#28993] but found [PV: 8]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:453)\r\n\tat org.testng.Assert.assertEquals(Assert.java:463)\r\n\tat POM.ReviewPage.Orders(ReviewPage.java:122)\r\n\tat stepDefinitions.Review.review_orders(Review.java:37)\r\n\tat ✽.Then Review Orders(Hooks.feature:52)\r\n",
-              "status": "failed"
-            },
-            "line": 52,
-            "name": "Review Orders",
-            "match": {
-              "location": "Review.review_orders()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "line": 54,
-        "name": "PlaceOrderPage",
-        "description": "",
-        "id": "application-login;placeorderpage",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 25154185945,
-              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@ng-click\u003d \u0027review.goHome()\u0027]\"}\n  (Session info: chrome\u003d80.0.3987.122)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027QASERVER01\u0027, ip: \u002710.2.0.23\u0027, os.name: \u0027Windows Server 2012 R2\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.3\u0027, java.version: \u00271.8.0_231\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\\Users\\sumancb\\AppData\\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: e864af0f06ebddca2995cf0e93eb4274\n*** Element info: {Using\u003dxpath, value\u003d//a[@ng-click\u003d \u0027review.goHome()\u0027]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy15.isDisplayed(Unknown Source)\r\n\tat POM.PlaceOrderPage.PlaceOrderFields(PlaceOrderPage.java:104)\r\n\tat stepDefinitions.PlaceOrder.placed_order_fields(PlaceOrder.java:17)\r\n\tat ✽.When Placed Order Fields(Hooks.feature:55)\r\n",
-              "status": "failed"
-            },
-            "line": 55,
-            "name": "Placed Order Fields",
-            "match": {
-              "location": "PlaceOrder.placed_order_fields()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 56,
-            "name": "Placed Shipping Information",
-            "match": {
-              "location": "PlaceOrder.placed_shipping_information()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 57,
-            "name": "Placed Contact Information",
-            "match": {
-              "location": "PlaceOrder.placed_contact_information()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 58,
-            "name": "Placed Payment Information",
-            "match": {
-              "location": "PlaceOrder.placed_payment_information()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "line": 60,
-        "name": "OrderDetails",
-        "description": "",
-        "id": "application-login;orderdetails",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 5077514306,
-              "error_message": "java.lang.AssertionError: expected [#28993] but found [PV: 8]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:453)\r\n\tat org.testng.Assert.assertEquals(Assert.java:463)\r\n\tat POM.PlaceOrderPage.Orders(PlaceOrderPage.java:135)\r\n\tat stepDefinitions.PlaceOrder.placed(PlaceOrder.java:37)\r\n\tat ✽.Then Placed Orders(Hooks.feature:61)\r\n",
-              "status": "failed"
-            },
-            "line": 61,
-            "name": "Placed Orders",
-            "match": {
-              "location": "PlaceOrder.placed()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "line": 63,
-        "name": "ReturnHomePage",
-        "description": "",
-        "id": "application-login;returnhomepage",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 20039113420,
-              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@ng-click\u003d \u0027review.goHome()\u0027]\"}\n  (Session info: chrome\u003d80.0.3987.122)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027QASERVER01\u0027, ip: \u002710.2.0.23\u0027, os.name: \u0027Windows Server 2012 R2\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.3\u0027, java.version: \u00271.8.0_231\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\\Users\\sumancb\\AppData\\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: e864af0f06ebddca2995cf0e93eb4274\n*** Element info: {Using\u003dxpath, value\u003d//a[@ng-click\u003d \u0027review.goHome()\u0027]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy15.click(Unknown Source)\r\n\tat POM.PlaceOrderPage.ReturnHome(PlaceOrderPage.java:156)\r\n\tat stepDefinitions.PlaceOrder.return_home(PlaceOrder.java:42)\r\n\tat ✽.When Return Home(Hooks.feature:64)\r\n",
-              "status": "failed"
-            },
-            "line": 64,
-            "name": "Return Home",
-            "match": {
-              "location": "PlaceOrder.return_home()"
-            },
-            "keyword": "When "
-          }
-        ]
-      },
-      {
-        "line": 66,
-        "name": "LogOut",
-        "description": "",
-        "id": "application-login;logout",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 20033012081,
-              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@ng-click\u003d\u0027app.logout()\u0027]\"}\n  (Session info: chrome\u003d80.0.3987.122)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027QASERVER01\u0027, ip: \u002710.2.0.23\u0027, os.name: \u0027Windows Server 2012 R2\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.3\u0027, java.version: \u00271.8.0_231\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\\Users\\sumancb\\AppData\\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: e864af0f06ebddca2995cf0e93eb4274\n*** Element info: {Using\u003dxpath, value\u003d//a[@ng-click\u003d\u0027app.logout()\u0027]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy15.click(Unknown Source)\r\n\tat POM.HomePage.Logout(HomePage.java:542)\r\n\tat stepDefinitions.Home.logout(Home.java:51)\r\n\tat ✽.When Logout(Hooks.feature:67)\r\n",
-              "status": "failed"
-            },
-            "line": 67,
-            "name": "Logout",
-            "match": {
-              "location": "Home.logout()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 68,
-            "name": "Home Page",
-            "match": {
-              "location": "Home.homepage()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      }
-    ],
-    "name": "Application Login",
-    "description": "",
-    "id": "application-login",
-    "keyword": "Feature",
-    "uri": "Hooks.feature"
+    "uri": "Smoke.feature"
   }
 ]

@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import java.io.IOException;
+
 import POM.BasePage;
 import POM.HomePage;
 import POM.PlaceOrderPage;
@@ -12,8 +14,8 @@ public class PlaceOrder extends BasePage {
 	PlaceOrderPage placeorder = new PlaceOrderPage(driver);
 	
 	@When("^Placed Order Fields$")
-	public void placed_order_fields() throws InterruptedException{
-		Home.CommonMenu();
+	public void placed_order_fields(String username) throws InterruptedException, IOException{
+		Home.CommonMenu(username);
 		placeorder.PlaceOrderFields();
 	}
 	
@@ -38,10 +40,10 @@ public class PlaceOrder extends BasePage {
 	}
 	
 	@When("^Return Home$")
-	public void return_home() throws InterruptedException{
+	public void return_home(String username) throws InterruptedException, IOException{
 		placeorder.ReturnHome();
 		Thread.sleep(5000);
-		Home.CommonMenu();
-		Home.Menu();
+		Home.CommonMenu(username);
+		Home.Menu(username);
 	}
 }

@@ -119,7 +119,7 @@ public class PaymentPage extends BasePage {
 	}
 	
 	public void summary() throws InterruptedException {
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		Assert.assertEquals(OrderSummary.getText(), "ORDER SUMMARY");
 		Assert.assertEquals(ProductName.getText(), productdetails.get("name"));
 		Assert.assertEquals(ProductPV.getText(), productdetails.get("pv"));

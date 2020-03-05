@@ -6,30 +6,87 @@ formatter.feature({
   "id": "application-login",
   "keyword": "Feature"
 });
-formatter.scenario({
+formatter.scenarioOutline({
   "line": 3,
-  "name": "Intiate the browser",
+  "name": "LoginPage",
   "description": "",
-  "id": "application-login;intiate-the-browser",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 4,
-  "name": "Open the browser",
-  "keyword": "Given "
+  "id": "application-login;loginpage",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline"
 });
 formatter.step({
   "line": 5,
   "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
-  "keyword": "And "
+  "keyword": "Given "
 });
-formatter.match({
-  "location": "BrowserInitiate.Open_the_browser()"
+formatter.step({
+  "line": 6,
+  "name": "\u003cusername\u003e and \u003cpassword\u003e",
+  "keyword": "Given "
 });
-formatter.result({
-  "duration": 4317851578,
+formatter.step({
+  "line": 7,
+  "name": "Home Page \u003cusername\u003e",
+  "keyword": "Then "
+});
+formatter.examples({
+  "line": 10,
+  "name": "",
+  "description": "",
+  "id": "application-login;loginpage;",
+  "rows": [
+    {
+      "cells": [
+        "username",
+        "password"
+      ],
+      "line": 11,
+      "id": "application-login;loginpage;;1"
+    },
+    {
+      "cells": [
+        "108639101",
+        "1234"
+      ],
+      "line": 12,
+      "id": "application-login;loginpage;;2"
+    }
+  ],
+  "keyword": "Examples"
+});
+formatter.before({
+  "duration": 4653850158,
   "status": "passed"
+});
+formatter.scenario({
+  "line": 12,
+  "name": "LoginPage",
+  "description": "",
+  "id": "application-login;loginpage;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "108639101 and 1234",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 108639101",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
@@ -41,518 +98,2670 @@ formatter.match({
   "location": "BrowserInitiate.navigate_to_the_application(String)"
 });
 formatter.result({
-  "duration": 12547506387,
+  "duration": 11896735058,
   "status": "passed"
 });
-formatter.scenario({
-  "line": 7,
+formatter.match({
+  "arguments": [
+    {
+      "val": "108639101",
+      "offset": 0
+    },
+    {
+      "val": "1234",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3756575365,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "108639101",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13861142922,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2331052229,
+  "status": "passed"
+});
+formatter.uri("Smoke.feature");
+formatter.feature({
+  "line": 1,
+  "name": "User Login",
+  "description": "",
+  "id": "user-login",
+  "keyword": "Feature"
+});
+formatter.scenarioOutline({
+  "line": 3,
   "name": "LoginPage",
   "description": "",
-  "id": "application-login;loginpage",
-  "type": "scenario",
-  "keyword": "Scenario"
+  "id": "user-login;loginpage",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 8,
-  "name": "Enter username and Password",
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 9,
-  "name": "Check Login details and menu",
-  "keyword": "And "
+  "line": 6,
+  "name": "\u003cusername\u003e and \u003cpassword\u003e",
+  "keyword": "Given "
 });
-formatter.match({
-  "location": "Login.enter_username_and_password()"
+formatter.step({
+  "line": 7,
+  "name": "Home Page \u003cusername\u003e",
+  "keyword": "Then "
 });
-formatter.result({
-  "duration": 13863642764,
-  "status": "passed"
+formatter.examples({
+  "line": 10,
+  "name": "",
+  "description": "",
+  "id": "user-login;loginpage;",
+  "rows": [
+    {
+      "cells": [
+        "username",
+        "password"
+      ],
+      "line": 11,
+      "id": "user-login;loginpage;;1"
+    },
+    {
+      "cells": [
+        "314237491",
+        "youc@nw1n"
+      ],
+      "line": 12,
+      "id": "user-login;loginpage;;2"
+    },
+    {
+      "cells": [
+        "314852591",
+        "asiaaktar"
+      ],
+      "line": 13,
+      "id": "user-login;loginpage;;3"
+    },
+    {
+      "cells": [
+        "312579891",
+        "FXmpqm"
+      ],
+      "line": 14,
+      "id": "user-login;loginpage;;4"
+    },
+    {
+      "cells": [
+        "205146001",
+        "baba69"
+      ],
+      "line": 15,
+      "id": "user-login;loginpage;;5"
+    },
+    {
+      "cells": [
+        "312709091",
+        "JjQtYS"
+      ],
+      "line": 16,
+      "id": "user-login;loginpage;;6"
+    },
+    {
+      "cells": [
+        "313979091",
+        "acSjac"
+      ],
+      "line": 17,
+      "id": "user-login;loginpage;;7"
+    },
+    {
+      "cells": [
+        "314573291",
+        "1985"
+      ],
+      "line": 18,
+      "id": "user-login;loginpage;;8"
+    },
+    {
+      "cells": [
+        "314304891",
+        "PQU5RF"
+      ],
+      "line": 19,
+      "id": "user-login;loginpage;;9"
+    },
+    {
+      "cells": [
+        "312837491",
+        "wGn7C9"
+      ],
+      "line": 20,
+      "id": "user-login;loginpage;;10"
+    },
+    {
+      "cells": [
+        "310141491",
+        "ttR8Jy"
+      ],
+      "line": 21,
+      "id": "user-login;loginpage;;11"
+    },
+    {
+      "cells": [
+        "314195991",
+        "9vnaTy"
+      ],
+      "line": 22,
+      "id": "user-login;loginpage;;12"
+    },
+    {
+      "cells": [
+        "301941991",
+        "sonu3264"
+      ],
+      "line": 23,
+      "id": "user-login;loginpage;;13"
+    },
+    {
+      "cells": [
+        "314573491",
+        "7982701596"
+      ],
+      "line": 24,
+      "id": "user-login;loginpage;;14"
+    },
+    {
+      "cells": [
+        "309938991",
+        "pratik143"
+      ],
+      "line": 25,
+      "id": "user-login;loginpage;;15"
+    },
+    {
+      "cells": [
+        "314195391",
+        "37yud5"
+      ],
+      "line": 26,
+      "id": "user-login;loginpage;;16"
+    },
+    {
+      "cells": [
+        "313691891",
+        "44f85294480c"
+      ],
+      "line": 27,
+      "id": "user-login;loginpage;;17"
+    },
+    {
+      "cells": [
+        "313307391",
+        "VuNqZj"
+      ],
+      "line": 28,
+      "id": "user-login;loginpage;;18"
+    },
+    {
+      "cells": [
+        "305652791",
+        "mTVWRq"
+      ],
+      "line": 29,
+      "id": "user-login;loginpage;;19"
+    },
+    {
+      "cells": [
+        "314893991",
+        "W67UN9"
+      ],
+      "line": 30,
+      "id": "user-login;loginpage;;20"
+    },
+    {
+      "cells": [
+        "314224491",
+        "UXtRBx"
+      ],
+      "line": 31,
+      "id": "user-login;loginpage;;21"
+    },
+    {
+      "cells": [
+        "310586191",
+        "v3BRT5"
+      ],
+      "line": 32,
+      "id": "user-login;loginpage;;22"
+    },
+    {
+      "cells": [
+        "304000191",
+        "7YbrPa"
+      ],
+      "line": 33,
+      "id": "user-login;loginpage;;23"
+    },
+    {
+      "cells": [
+        "200357401",
+        "unicity1234"
+      ],
+      "line": 34,
+      "id": "user-login;loginpage;;24"
+    },
+    {
+      "cells": [
+        "311846191",
+        "7666"
+      ],
+      "line": 35,
+      "id": "user-login;loginpage;;25"
+    },
+    {
+      "cells": [
+        "314504491",
+        "xHAQQY"
+      ],
+      "line": 36,
+      "id": "user-login;loginpage;;26"
+    },
+    {
+      "cells": [
+        "313909791",
+        "Qn8KyY"
+      ],
+      "line": 37,
+      "id": "user-login;loginpage;;27"
+    },
+    {
+      "cells": [
+        "314573191",
+        "UrT8nK"
+      ],
+      "line": 38,
+      "id": "user-login;loginpage;;28"
+    },
+    {
+      "cells": [
+        "312289691",
+        "GC7Jcy"
+      ],
+      "line": 39,
+      "id": "user-login;loginpage;;29"
+    },
+    {
+      "cells": [
+        "312930091",
+        "C7P59f"
+      ],
+      "line": 40,
+      "id": "user-login;loginpage;;30"
+    }
+  ],
+  "keyword": "Examples"
 });
-formatter.match({
-  "location": "Login.check_login_details_and_menu()"
-});
-formatter.result({
-  "duration": 3902477143,
+formatter.before({
+  "duration": 3817406991,
   "status": "passed"
 });
 formatter.scenario({
-  "comments": [
-    {
-      "line": 11,
-      "value": "#Scenario: HomePage"
-    },
-    {
-      "line": 12,
-      "value": "#Then All Products"
-    },
-    {
-      "line": 13,
-      "value": "#And Products"
-    },
-    {
-      "line": 14,
-      "value": "#And Accessories"
-    },
-    {
-      "line": 15,
-      "value": "#"
-    },
-    {
-      "line": 16,
-      "value": "#Scenario: SearchOption"
-    },
-    {
-      "line": 17,
-      "value": "#When Search Product"
-    },
-    {
-      "line": 18,
-      "value": "#"
-    },
-    {
-      "line": 19,
-      "value": "#Scenario: List View"
-    },
-    {
-      "line": 20,
-      "value": "#Then All Products in List View"
-    },
-    {
-      "line": 21,
-      "value": "#And Products in List View"
-    },
-    {
-      "line": 22,
-      "value": "#And Accessories in List View"
-    }
-  ],
-  "line": 24,
-  "name": "CartPage",
+  "line": 12,
+  "name": "LoginPage",
   "description": "",
-  "id": "application-login;cartpage",
+  "id": "user-login;loginpage;;2",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 25,
-  "name": "Product Added to Cart",
-  "keyword": "When "
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
 });
 formatter.step({
-  "line": 26,
-  "name": "Check the Cart Details",
+  "line": 6,
+  "name": "314237491 and youc@nw1n",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 314237491",
+  "matchedColumns": [
+    0
+  ],
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Cart.product_added_to_cart()"
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
 });
 formatter.result({
-  "duration": 6431048901,
+  "duration": 12032513308,
   "status": "passed"
 });
 formatter.match({
-  "location": "Cart.check_the_cart_details()"
+  "arguments": [
+    {
+      "val": "314237491",
+      "offset": 0
+    },
+    {
+      "val": "youc@nw1n",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
 });
 formatter.result({
-  "duration": 1391897080,
+  "duration": 3674479509,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "314237491",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13918847077,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2345276882,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 4392111268,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 13,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;3",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "314852591 and asiaaktar",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 314852591",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 11741376206,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "314852591",
+      "offset": 0
+    },
+    {
+      "val": "asiaaktar",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3723649044,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "314852591",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13963576715,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2344928722,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3980584943,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 14,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;4",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "312579891 and FXmpqm",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 312579891",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 12246173650,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "312579891",
+      "offset": 0
+    },
+    {
+      "val": "FXmpqm",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3707221937,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "312579891",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13902058156,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2343681147,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3845283281,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 15,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;5",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "205146001 and baba69",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 205146001",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 12215182264,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "205146001",
+      "offset": 0
+    },
+    {
+      "val": "baba69",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3743888421,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "205146001",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13856390278,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2378777923,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3733340786,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 16,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;6",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "312709091 and JjQtYS",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 312709091",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 12263723318,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "312709091",
+      "offset": 0
+    },
+    {
+      "val": "JjQtYS",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3709480285,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "312709091",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13974225898,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2329791002,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 4412822539,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 17,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;7",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "313979091 and acSjac",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 313979091",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 11693731579,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "313979091",
+      "offset": 0
+    },
+    {
+      "val": "acSjac",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3705561349,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "313979091",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13796000680,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2373773119,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 4127589229,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 18,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;8",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "314573291 and 1985",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 314573291",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 12538698273,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "314573291",
+      "offset": 0
+    },
+    {
+      "val": "1985",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3759894835,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "314573291",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13772891966,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2340792611,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3968692027,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 19,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;9",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "314304891 and PQU5RF",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 314304891",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 12075536277,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "314304891",
+      "offset": 0
+    },
+    {
+      "val": "PQU5RF",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3683253063,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "314304891",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13785122803,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2342620453,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 4107675825,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 20,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;10",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "312837491 and wGn7C9",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 312837491",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 12154233732,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "312837491",
+      "offset": 0
+    },
+    {
+      "val": "wGn7C9",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3732984945,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "312837491",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13775836396,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2343970000,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3961645620,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 21,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;11",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "310141491 and ttR8Jy",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 310141491",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 11819114939,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "310141491",
+      "offset": 0
+    },
+    {
+      "val": "ttR8Jy",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3778415171,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "310141491",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13765568653,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2333016178,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3859507934,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 22,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;12",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "314195991 and 9vnaTy",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 314195991",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 12106077958,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "314195991",
+      "offset": 0
+    },
+    {
+      "val": "9vnaTy",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3745890770,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "314195991",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13738436897,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 36532512,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3993813755,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 23,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;13",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "301941991 and sonu3264",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 301941991",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 11965317091,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "301941991",
+      "offset": 0
+    },
+    {
+      "val": "sonu3264",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3691690404,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "301941991",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13752850136,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2383410247,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3748110719,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 24,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;14",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "314573491 and 7982701596",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 314573491",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 11622600211,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "314573491",
+      "offset": 0
+    },
+    {
+      "val": "7982701596",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3866334179,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "314573491",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13734791027,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2351412780,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3468008506,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 25,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;15",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "309938991 and pratik143",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 309938991",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 12264015586,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "309938991",
+      "offset": 0
+    },
+    {
+      "val": "pratik143",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3707520177,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "309938991",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13800858283,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2364594657,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3497046184,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 26,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;16",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "314195391 and 37yud5",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 314195391",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 12123930559,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "314195391",
+      "offset": 0
+    },
+    {
+      "val": "37yud5",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3651011116,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "314195391",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13784793843,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2375464427,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3631820913,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 27,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;17",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "313691891 and 44f85294480c",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 313691891",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 11756349232,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "313691891",
+      "offset": 0
+    },
+    {
+      "val": "44f85294480c",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3755150724,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "313691891",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13859294173,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2385596489,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3811643572,
   "status": "passed"
 });
 formatter.scenario({
   "line": 28,
-  "name": "RemoveProducts",
+  "name": "LoginPage",
   "description": "",
-  "id": "application-login;removeproducts",
+  "id": "user-login;loginpage;;18",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario Outline"
 });
 formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "313307391 and VuNqZj",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 313307391",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 12293203450,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "313307391",
+      "offset": 0
+    },
+    {
+      "val": "VuNqZj",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3800595456,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "313307391",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13865300792,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2333592604,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3814487735,
+  "status": "passed"
+});
+formatter.scenario({
   "line": 29,
-  "name": "Remove Products from Cart",
-  "keyword": "When "
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;19",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
 });
 formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "305652791 and mTVWRq",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 305652791",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 11852490114,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "305652791",
+      "offset": 0
+    },
+    {
+      "val": "mTVWRq",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3630778139,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "305652791",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13776453782,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2358390066,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3828854467,
+  "status": "passed"
+});
+formatter.scenario({
   "line": 30,
-  "name": "Add Products To Cart",
-  "keyword": "Then "
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;20",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
 });
 formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "314893991 and W67UN9",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 314893991",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 11885792329,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "314893991",
+      "offset": 0
+    },
+    {
+      "val": "W67UN9",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3712963169,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "314893991",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13760877449,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2355462703,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3778571331,
+  "status": "passed"
+});
+formatter.scenario({
   "line": 31,
-  "name": "Check Product",
-  "keyword": "Then "
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;21",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 32,
-  "name": "Check Cart",
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "314224491 and UXtRBx",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 314224491",
+  "matchedColumns": [
+    0
+  ],
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Cart.remove_products_from_cart()"
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
 });
 formatter.result({
-  "duration": 269694950,
+  "duration": 12029018051,
   "status": "passed"
 });
 formatter.match({
-  "location": "Cart.add_products_to_cart()"
+  "arguments": [
+    {
+      "val": "314224491",
+      "offset": 0
+    },
+    {
+      "val": "UXtRBx",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
 });
 formatter.result({
-  "duration": 7227025687,
+  "duration": 3793141157,
   "status": "passed"
 });
 formatter.match({
-  "location": "Cart.check_product()"
+  "arguments": [
+    {
+      "val": "314224491",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
 });
 formatter.result({
-  "duration": 886807797,
+  "duration": 13724257898,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 42723450,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3657984988,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 32,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;22",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "310586191 and v3BRT5",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 310586191",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 11980993690,
   "status": "passed"
 });
 formatter.match({
-  "location": "Cart.check_cart()"
+  "arguments": [
+    {
+      "val": "310586191",
+      "offset": 0
+    },
+    {
+      "val": "v3BRT5",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
 });
 formatter.result({
-  "duration": 1011645023,
+  "duration": 3677070231,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "310586191",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13789227766,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2392742735,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3734612680,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 33,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;23",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "304000191 and 7YbrPa",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 304000191",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 11730779930,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "304000191",
+      "offset": 0
+    },
+    {
+      "val": "7YbrPa",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3857685639,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "304000191",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13931793862,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2371358183,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 4005613232,
   "status": "passed"
 });
 formatter.scenario({
   "line": 34,
-  "name": "CheckoutPage",
+  "name": "LoginPage",
   "description": "",
-  "id": "application-login;checkoutpage",
+  "id": "user-login;loginpage;;24",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 35,
-  "name": "Check Out Go Back",
-  "keyword": "When "
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
 });
 formatter.step({
-  "line": 36,
-  "name": "Check Out",
-  "keyword": "When "
+  "line": 6,
+  "name": "200357401 and unicity1234",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
 });
 formatter.step({
-  "line": 37,
-  "name": "Check Form Fields",
+  "line": 7,
+  "name": "Home Page 200357401",
+  "matchedColumns": [
+    0
+  ],
   "keyword": "Then "
 });
 formatter.match({
-  "location": "CheckOut.check_out_go_back()"
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
 });
 formatter.result({
-  "duration": 1046919720,
+  "duration": 12184220317,
   "status": "passed"
 });
 formatter.match({
-  "location": "CheckOut.check_out()"
+  "arguments": [
+    {
+      "val": "200357401",
+      "offset": 0
+    },
+    {
+      "val": "unicity1234",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
 });
 formatter.result({
-  "duration": 267825722,
+  "duration": 3836096714,
   "status": "passed"
 });
 formatter.match({
-  "location": "CheckOut.check_form_fields()"
+  "arguments": [
+    {
+      "val": "200357401",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
 });
 formatter.result({
-  "duration": 1177561752,
+  "duration": 13919565158,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2383414087,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3827352173,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 35,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;25",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "311846191 and 7666",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 311846191",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 12136951584,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "311846191",
+      "offset": 0
+    },
+    {
+      "val": "7666",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3823617129,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "311846191",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13839490849,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2353469741,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3830055535,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 36,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;26",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "314504491 and xHAQQY",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 314504491",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 11916681316,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "314504491",
+      "offset": 0
+    },
+    {
+      "val": "xHAQQY",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3676021483,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "314504491",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13767068388,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2382956699,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3505856432,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 37,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;27",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "313909791 and Qn8KyY",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 313909791",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 12132497180,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "313909791",
+      "offset": 0
+    },
+    {
+      "val": "Qn8KyY",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3684478877,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "313909791",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13827405933,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2361681802,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3748274985,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 38,
+  "name": "LoginPage",
+  "description": "",
+  "id": "user-login;loginpage;;28",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "314573191 and UrT8nK",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 314573191",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 11998957226,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "314573191",
+      "offset": 0
+    },
+    {
+      "val": "UrT8nK",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3772457620,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "314573191",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13953335000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2382588913,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3752545922,
   "status": "passed"
 });
 formatter.scenario({
   "line": 39,
-  "name": "PaymentPage",
+  "name": "LoginPage",
   "description": "",
-  "id": "application-login;paymentpage",
+  "id": "user-login;loginpage;;29",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario Outline"
 });
 formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "312289691 and GC7Jcy",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 312289691",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
+});
+formatter.result({
+  "duration": 11883620168,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "312289691",
+      "offset": 0
+    },
+    {
+      "val": "GC7Jcy",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
+});
+formatter.result({
+  "duration": 3757492273,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "312289691",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
+});
+formatter.result({
+  "duration": 13892588708,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 2363964897,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 3812845920,
+  "status": "passed"
+});
+formatter.scenario({
   "line": 40,
-  "name": "Payment Go Back",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 41,
-  "name": "Payment Fields",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 42,
-  "name": "Banks Names",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 43,
-  "name": "Order Summary",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Payment.payment_go_back()"
-});
-formatter.result({
-  "duration": 6463554955,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Payment.payment_fields()"
-});
-formatter.result({
-  "duration": 190067362,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Payment.banks_names()"
-});
-formatter.result({
-  "duration": 146004605,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Payment.order_summary()"
-});
-formatter.result({
-  "duration": 5795745532,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 45,
-  "name": "ReviewPage",
+  "name": "LoginPage",
   "description": "",
-  "id": "application-login;reviewpage",
+  "id": "user-login;loginpage;;30",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario Outline"
 });
 formatter.step({
-  "line": 46,
-  "name": "Review Fields",
-  "keyword": "When "
+  "line": 5,
+  "name": "Navigate to the \"http://shop.ng.unicityqa.com/master/#/home\" application",
+  "keyword": "Given "
 });
 formatter.step({
-  "line": 47,
-  "name": "Shipping Information",
-  "keyword": "Then "
+  "line": 6,
+  "name": "312930091 and C7P59f",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
 });
 formatter.step({
-  "line": 48,
-  "name": "Contact Information",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 49,
-  "name": "Payment Information",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Review.review_fields()"
-});
-formatter.result({
-  "duration": 318139152,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Review.shipping_information()"
-});
-formatter.result({
-  "duration": 34321523,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Review.contact_information()"
-});
-formatter.result({
-  "duration": 32101148,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Review.payment_information()"
-});
-formatter.result({
-  "duration": 34414536,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 51,
-  "name": "OrderDetails",
-  "description": "",
-  "id": "application-login;orderdetails",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 52,
-  "name": "Review Orders",
+  "line": 7,
+  "name": "Home Page 312930091",
+  "matchedColumns": [
+    0
+  ],
   "keyword": "Then "
 });
 formatter.match({
-  "location": "Review.review_orders()"
+  "arguments": [
+    {
+      "val": "http://shop.ng.unicityqa.com/master/#/home",
+      "offset": 17
+    }
+  ],
+  "location": "BrowserInitiate.navigate_to_the_application(String)"
 });
 formatter.result({
-  "duration": 5522116712,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 54,
-  "name": "PlaceOrderPage",
-  "description": "",
-  "id": "application-login;placeorderpage",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 55,
-  "name": "Placed Order Fields",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 56,
-  "name": "Placed Shipping Information",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 57,
-  "name": "Placed Contact Information",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 58,
-  "name": "Placed Payment Information",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "PlaceOrder.placed_order_fields()"
-});
-formatter.result({
-  "duration": 5503701336,
+  "duration": 11716464398,
   "status": "passed"
 });
 formatter.match({
-  "location": "PlaceOrder.placed_shipping_information()"
+  "arguments": [
+    {
+      "val": "312930091",
+      "offset": 0
+    },
+    {
+      "val": "C7P59f",
+      "offset": 14
+    }
+  ],
+  "location": "Login.and(String,String)"
 });
 formatter.result({
-  "duration": 25819329,
+  "duration": 3756688433,
   "status": "passed"
 });
 formatter.match({
-  "location": "PlaceOrder.placed_contact_information()"
+  "arguments": [
+    {
+      "val": "312930091",
+      "offset": 10
+    }
+  ],
+  "location": "Home.homepage(String)"
 });
 formatter.result({
-  "duration": 27519170,
+  "duration": 13884791795,
   "status": "passed"
 });
-formatter.match({
-  "location": "PlaceOrder.placed_payment_information()"
-});
-formatter.result({
-  "duration": 33348722,
+formatter.after({
+  "duration": 2340678264,
   "status": "passed"
-});
-formatter.scenario({
-  "line": 60,
-  "name": "OrderDetails",
-  "description": "",
-  "id": "application-login;orderdetails",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 61,
-  "name": "Placed Orders",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "PlaceOrder.placed()"
-});
-formatter.result({
-  "duration": 5467514852,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 63,
-  "name": "ReturnHomePage",
-  "description": "",
-  "id": "application-login;returnhomepage",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 64,
-  "name": "Return Home",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "PlaceOrder.return_home()"
-});
-formatter.result({
-  "duration": 9016302521,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 66,
-  "name": "LogOut",
-  "description": "",
-  "id": "application-login;logout",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 67,
-  "name": "Logout",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 68,
-  "name": "Home Page",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Home.logout()"
-});
-formatter.result({
-  "duration": 102038700,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Home.homepage()"
-});
-formatter.result({
-  "duration": 60498398,
-  "status": "passed"
-});
-});                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           formatter.result({
-  "duration": 20039113420,
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@ng-click\u003d \u0027review.goHome()\u0027]\"}\n  (Session info: chrome\u003d80.0.3987.122)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027QASERVER01\u0027, ip: \u002710.2.0.23\u0027, os.name: \u0027Windows Server 2012 R2\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.3\u0027, java.version: \u00271.8.0_231\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\\Users\\sumancb\\AppData\\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: e864af0f06ebddca2995cf0e93eb4274\n*** Element info: {Using\u003dxpath, value\u003d//a[@ng-click\u003d \u0027review.goHome()\u0027]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy15.click(Unknown Source)\r\n\tat POM.PlaceOrderPage.ReturnHome(PlaceOrderPage.java:156)\r\n\tat stepDefinitions.PlaceOrder.return_home(PlaceOrder.java:42)\r\n\tat ✽.When Return Home(Hooks.feature:64)\r\n",
-  "status": "failed"
-});
-formatter.scenario({
-  "line": 66,
-  "name": "LogOut",
-  "description": "",
-  "id": "application-login;logout",
-  "type": "scenario",
-  "keyword": "Scenario"
-});
-formatter.step({
-  "line": 67,
-  "name": "Logout",
-  "keyword": "When "
-});
-formatter.step({
-  "line": 68,
-  "name": "Home Page",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "Home.logout()"
-});
-formatter.result({
-  "duration": 20033012081,
-  "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//a[@ng-click\u003d\u0027app.logout()\u0027]\"}\n  (Session info: chrome\u003d80.0.3987.122)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027QASERVER01\u0027, ip: \u002710.2.0.23\u0027, os.name: \u0027Windows Server 2012 R2\u0027, os.arch: \u0027amd64\u0027, os.version: \u00276.3\u0027, java.version: \u00271.8.0_231\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.122, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\\Users\\sumancb\\AppData\\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:54487}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: e864af0f06ebddca2995cf0e93eb4274\n*** Element info: {Using\u003dxpath, value\u003d//a[@ng-click\u003d\u0027app.logout()\u0027]}\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)\r\n\tat java.lang.reflect.Constructor.newInstance(Unknown Source)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy15.click(Unknown Source)\r\n\tat POM.HomePage.Logout(HomePage.java:542)\r\n\tat stepDefinitions.Home.logout(Home.java:51)\r\n\tat ✽.When Logout(Hooks.feature:67)\r\n",
-  "status": "failed"
-});
-formatter.match({
-  "location": "Home.homepage()"
-});
-formatter.result({
-  "status": "skipped"
 });
 });

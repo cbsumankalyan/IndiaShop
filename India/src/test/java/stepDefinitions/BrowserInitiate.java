@@ -1,14 +1,20 @@
 package stepDefinitions;
 
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 import POM.BasePage;
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BrowserInitiate extends BasePage {
 	
-	@Given("^Open the browser$")
+	@Before
 	public void Open_the_browser() {
 		/*System.setProperty("webdriver.chrome.driver", "driver/chromedriver_win32_2.36/chromedriver.exe");
 		driver = new ChromeDriver();*/
@@ -23,6 +29,16 @@ public class BrowserInitiate extends BasePage {
 	public void navigate_to_the_application(String arg1) throws Throwable {
 		driver.get(arg1);
 		Thread.sleep(10000);
+	}
+	
+	@After
+	public void tearDown(Scenario scenario){
+		
+		if (scenario.isFailed()) {
+		      final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+		      scenario.embed(screenshot, "image/png"); 
+		 }
+		driver.close();
 	}
 	
 }

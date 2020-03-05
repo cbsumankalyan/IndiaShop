@@ -13,7 +13,7 @@ import org.openqa.selenium.support.PageFactory;
 import junit.framework.Assert;
 
 public class HomePage extends BasePage {
-	
+
 	@FindBy(xpath = "//a[@ng-click='app.logoRedirect()']")
 	private WebElement UnicityLogo;
 
@@ -88,13 +88,13 @@ public class HomePage extends BasePage {
 
 	@FindBy(xpath = "//span[contains(text(),'india')]")
 	private WebElement SelectedCountry;
-	
+
 	@FindBy(xpath = "//span[contains(@class, 'pv-align')]")
 	private WebElement CartPV;
-	
+
 	@FindBy(xpath = "//span[contains(@class, 'total-text')]")
 	private WebElement CartPrice;
-	
+
 	@FindBy(xpath = "//span[contains(@class, 'qty-icon')]")
 	private WebElement CartQty;
 
@@ -115,73 +115,74 @@ public class HomePage extends BasePage {
 
 	@FindBy(xpath = "(//div[contains(@class,'customer-id')])[2]")
 	private WebElement DistributorID;
-	
+
 	@FindBy(xpath = "//span[@class= 'search']")
 	private WebElement Search;
-	
+
 	@FindBy(xpath = "//input[contains(@ng-model, 'searchFilter')]")
 	private WebElement SearchProduct;
-	
+
 	@FindBy(xpath = "//div[@class= 'name']//a[contains(@href, '#/product-info')]")
 	private WebElement Name;
-	
+
 	@FindBy(xpath = "//span[@ng-show='p.terms.taxInclusive']")
 	private WebElement Price;
-	
+
 	@FindBy(xpath = "//div[contains(@class, 'item-number')]")
 	private WebElement ItemCode;
 
 	@FindBy(xpath = "//div[contains(@class, 'pv-amount')]")
 	private WebElement PV;
-	
+
 	@FindBy(xpath = "//button[@title='Add to Cart']")
 	private WebElement AddtoCart;
-	
+
 	@FindBy(xpath = "//a[@class='name-text uppercase ng-binding']")
 	private WebElement SearchProductClick;
-	
+
 	@FindBys(@FindBy(xpath = "//select[contains(@ng-show, 'data.qty')]//option"))
-	List <WebElement> SingleProductQty;
-	
+	List<WebElement> SingleProductQty;
+
 	@FindBy(xpath = "//button[@title='Add to Cart']")
 	private WebElement SingleAddtoCart;
-	
+
 	@FindBy(xpath = "//span[contains(@class, 'icon-cart')]")
 	private WebElement Cart;
-	
-	@FindBy(xpath="//div[contains(@title,'in a List')]")
+
+	@FindBy(xpath = "//div[contains(@title,'in a List')]")
 	private WebElement ListView;
-	
-	@FindBys(@FindBy(xpath="//a[contains(@class, 'name-word')]"))
-	List <WebElement> ListViewProductName;
-	
-	@FindBys(@FindBy(xpath="//div[contains(@class, 'pv-grid')]"))
+
+	@FindBys(@FindBy(xpath = "//a[contains(@class, 'name-word')]"))
+	List<WebElement> ListViewProductName;
+
+	@FindBys(@FindBy(xpath = "//div[contains(@class, 'pv-grid')]"))
 	List<WebElement> ListViewProductPV;
-	
-	@FindBys(@FindBy(xpath="//span[contains(@class, 'icon-minus')]"))
+
+	@FindBys(@FindBy(xpath = "//span[contains(@class, 'icon-minus')]"))
 	List<WebElement> ListViewMinus;
-	
-	@FindBys(@FindBy(xpath="//input[@ng-model='p.listQty']"))
+
+	@FindBys(@FindBy(xpath = "//input[@ng-model='p.listQty']"))
 	List<WebElement> ListViewQty;
-	
-	@FindBys(@FindBy(xpath="//span[contains(@class, 'icon-plus')]"))
+
+	@FindBys(@FindBy(xpath = "//span[contains(@class, 'icon-plus')]"))
 	List<WebElement> ListViewPlus;
-	
+
 	@FindBy(xpath = "//a[@ng-click='app.logout()']")
 	private WebElement LogOut;
-	
 
 	public HomePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-	
-	public void CommonMenu(){
+
+	public void CommonMenu(String username) throws InterruptedException, IOException {
+
+		Thread.sleep(10000);
 		Assert.assertTrue(UnicityLogo.isDisplayed());
-		Assert.assertEquals(ViewingProducts.getText(), "You are currently viewing product in Karnataka");
+		Assert.assertEquals(ViewingProducts.getText(), "You are currently viewing product in "+getTranslation(username));
 		Assert.assertEquals(SelectState.getText(), "Select State");
 	}
 
-	public void Menu() throws InterruptedException {
+	public void Menu(String username) throws InterruptedException, IOException {
 
 		String[] languages = { "EN", "HI", };
 		for (int i = 0; i < languages.length; i++) {
@@ -190,42 +191,45 @@ public class HomePage extends BasePage {
 		Thread.sleep(3000);
 		Country.click();
 		Assert.assertEquals(SelectedCountry.getText(), "India");
-		
+
 		Assert.assertEquals(CartPV.getText(), "PV: 0");
 		Assert.assertEquals(CartPrice.getText(), "₹0.00");
 		Assert.assertEquals(CartQty.getText(), "0");
-		
+
 		MyUnicity.click();
 
 		Assert.assertTrue(Unicitydotcom.isDisplayed());
 		Assert.assertTrue(Officedotcom.isDisplayed());
 		Assert.assertTrue(Library.isDisplayed());
 
-		Assert.assertEquals(DistributorName.getText(), "INDIA TRAINING");
-		Assert.assertEquals(DistributorID.getText(), "#108639101");
-	}
-	
-	public void Search() throws IOException, InterruptedException {
+		System.out.println(DistributorName.getText());
+		System.out.println(DistributorID.getText());
 		
+		Assert.assertEquals(DistributorName.getText(), getTranslation(username+"Name"));
+		Assert.assertEquals(DistributorID.getText(), getTranslation(username+"ID"));
+	}
+
+	public void Search() throws IOException, InterruptedException {
+
 		FileReader type = new FileReader(
 				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
 		Properties p = new Properties();
 		p.load(type);
-		
+
 		Search.click();
 		SearchProduct.sendKeys("Family");
-		
+
 		Assert.assertEquals("UNICITY FAMILY PACK", Name.getText());
 		Assert.assertEquals(p.getProperty(Name.getText().replace(" ", "") + "CODE"), ItemCode.getText());
 		Assert.assertEquals(p.getProperty(Name.getText().replace(" ", "") + "PRICE"), Price.getText());
 		Assert.assertEquals(p.getProperty(Name.getText().replace(" ", "") + "PV"), PV.getText().replace("PV: ", ""));
-		
+
 		Assert.assertTrue(AddtoCart.isDisplayed());
-		
+
 		for (int j = 0; j < qty.length; j++) {
 			Assert.assertEquals(ProductQty.get(j).getText(), qty[j]);
 		}
-		
+
 		SearchProductClick.click();
 
 		Assert.assertEquals("UNICITY FAMILY PACK", ProductName.getText());
@@ -246,7 +250,7 @@ public class HomePage extends BasePage {
 		Assert.assertEquals(ProductDescription.getText(), p.getProperty(ProductName.getText().replace(" ", "")));
 		Back.click();
 	}
-	
+
 	public void AllProducts() throws InterruptedException, IOException {
 		Thread.sleep(5000);
 
@@ -294,20 +298,20 @@ public class HomePage extends BasePage {
 			jse.executeScript("window.scrollBy(0,250)", "");
 			Assert.assertEquals(ProductDescription.getText(), p.getProperty(ProductName.getText().replace(" ", "")));
 			Back.click();
-//			SingleAddtoCart.click();
-//			Cart.click();	
+			// SingleAddtoCart.click();
+			// Cart.click();
 		}
 	}
-	
+
 	public void Products() throws IOException, InterruptedException {
-		
+
 		FileReader type = new FileReader(
 				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
 		Properties p = new Properties();
 		p.load(type);
-		
+
 		ProductsOnly.click();
-		
+
 		for (int i = 0; i < products.length; i++) {
 			Assert.assertEquals(Products.get(i).getText(), products[i]);
 			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "CODE"),
@@ -347,14 +351,14 @@ public class HomePage extends BasePage {
 
 		}
 	}
-	
+
 	public void Accessories() throws IOException, InterruptedException {
-		
+
 		FileReader type = new FileReader(
 				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
 		Properties p = new Properties();
 		p.load(type);
-		
+
 		Accessories.click();
 
 		for (int i = 0; i < accessories.length; i++) {
@@ -395,11 +399,11 @@ public class HomePage extends BasePage {
 			Back.click();
 		}
 	}
-	
+
 	public void ALLProductsList() throws IOException, InterruptedException {
 		ListView.click();
 		ALLProducts.click();
-		
+
 		FileReader type = new FileReader(
 				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
 		Properties p = new Properties();
@@ -411,7 +415,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "CODE"),
 					ProductItemCode.get(i).getText());
 			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "PRICE"),
-					"₹"+ProductPrices.get(i).getText().toUpperCase());
+					"₹" + ProductPrices.get(i).getText().toUpperCase());
 
 			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "PV"),
 					ListViewProductPV.get(i).getText().replace("PV: ", ""));
@@ -419,10 +423,10 @@ public class HomePage extends BasePage {
 			Assert.assertTrue(ListViewMinus.get(i).isDisplayed());
 			Assert.assertTrue(ListViewQty.get(i).isDisplayed());
 			Assert.assertTrue(ListViewPlus.get(i).isDisplayed());
-			
+
 			JavascriptExecutor jse = (JavascriptExecutor) driver;
 			jse.executeScript("arguments[0].scrollIntoView();", ListViewProductName.get(i));
-			
+
 			ListViewProductName.get(i).click();
 
 			Assert.assertEquals(allproducts[i], ProductName.getText());
@@ -443,14 +447,14 @@ public class HomePage extends BasePage {
 			Back.click();
 		}
 	}
-	
-	public void ProductsList()throws IOException, InterruptedException {
-		
+
+	public void ProductsList() throws IOException, InterruptedException {
+
 		FileReader type = new FileReader(
 				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
 		Properties p = new Properties();
 		p.load(type);
-		
+
 		ProductsOnly.click();
 		Assert.assertTrue(AddtoCart.isDisplayed());
 		for (int i = 0; i < products.length; i++) {
@@ -458,7 +462,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "CODE"),
 					ProductItemCode.get(i).getText());
 			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "PRICE"),
-					"₹"+ProductPrices.get(i).getText().toUpperCase());
+					"₹" + ProductPrices.get(i).getText().toUpperCase());
 
 			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "PV"),
 					ListViewProductPV.get(i).getText().replace("PV: ", ""));
@@ -466,10 +470,10 @@ public class HomePage extends BasePage {
 			Assert.assertTrue(ListViewMinus.get(i).isDisplayed());
 			Assert.assertTrue(ListViewQty.get(i).isDisplayed());
 			Assert.assertTrue(ListViewPlus.get(i).isDisplayed());
-			
+
 			JavascriptExecutor jse = (JavascriptExecutor) driver;
 			jse.executeScript("arguments[0].scrollIntoView();", ListViewProductName.get(i));
-			
+
 			ListViewProductName.get(i).click();
 
 			Assert.assertEquals(products[i], ProductName.getText());
@@ -490,14 +494,14 @@ public class HomePage extends BasePage {
 			Back.click();
 		}
 	}
-	
-	public void AccessoriesList()throws IOException, InterruptedException {
-		
+
+	public void AccessoriesList() throws IOException, InterruptedException {
+
 		FileReader type = new FileReader(
 				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
 		Properties p = new Properties();
 		p.load(type);
-		
+
 		Accessories.click();
 		Assert.assertTrue(AddtoCart.isDisplayed());
 		for (int i = 0; i < accessories.length; i++) {
@@ -505,7 +509,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "CODE"),
 					ProductItemCode.get(i).getText());
 			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "PRICE"),
-					"₹"+ProductPrices.get(i).getText().toUpperCase());
+					"₹" + ProductPrices.get(i).getText().toUpperCase());
 
 			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "PV"),
 					ListViewProductPV.get(i).getText().replace("PV: ", ""));
@@ -513,10 +517,10 @@ public class HomePage extends BasePage {
 			Assert.assertTrue(ListViewMinus.get(i).isDisplayed());
 			Assert.assertTrue(ListViewQty.get(i).isDisplayed());
 			Assert.assertTrue(ListViewPlus.get(i).isDisplayed());
-			
+
 			JavascriptExecutor jse = (JavascriptExecutor) driver;
 			jse.executeScript("arguments[0].scrollIntoView();", ListViewProductName.get(i));
-			
+
 			ListViewProductName.get(i).click();
 
 			Assert.assertEquals(accessories[i], ProductName.getText());
@@ -537,8 +541,8 @@ public class HomePage extends BasePage {
 			Back.click();
 		}
 	}
-	
-	public void Logout(){
+
+	public void Logout() {
 		LogOut.click();
 	}
 

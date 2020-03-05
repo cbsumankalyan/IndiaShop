@@ -23,8 +23,8 @@ public class CheckOut extends BasePage {
 	}
 	
 	@When("^Check Out$")
-	public void check_out(){
-		Home.CommonMenu();
+	public void check_out(String username) throws InterruptedException, IOException{
+		Home.CommonMenu(username);
 		checkout.checkout();
 	}
 	
