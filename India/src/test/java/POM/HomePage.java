@@ -20,9 +20,6 @@ public class HomePage extends BasePage {
 	@FindBy(xpath = "//div[@class='message ng-binding']")
 	private WebElement ViewingProducts;
 
-	@FindBy(xpath = "//a[@class='action']//span")
-	private WebElement SelectState;
-
 	@FindBy(xpath = "//div[contains(@title, 'Grid')]")
 	private WebElement Grid;
 
@@ -179,7 +176,6 @@ public class HomePage extends BasePage {
 		Thread.sleep(10000);
 		Assert.assertTrue(UnicityLogo.isDisplayed());
 		Assert.assertEquals(ViewingProducts.getText(), "You are currently viewing product in "+getTranslation(username));
-		Assert.assertEquals(SelectState.getText(), "Select State");
 	}
 
 	public void Menu(String username) throws InterruptedException, IOException {
@@ -201,9 +197,6 @@ public class HomePage extends BasePage {
 		Assert.assertTrue(Unicitydotcom.isDisplayed());
 		Assert.assertTrue(Officedotcom.isDisplayed());
 		Assert.assertTrue(Library.isDisplayed());
-
-		System.out.println(DistributorName.getText());
-		System.out.println(DistributorID.getText());
 		
 		Assert.assertEquals(DistributorName.getText(), getTranslation(username+"Name"));
 		Assert.assertEquals(DistributorID.getText(), getTranslation(username+"ID"));

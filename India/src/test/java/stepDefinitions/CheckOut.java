@@ -16,13 +16,13 @@ public class CheckOut extends BasePage {
 	CheckOutPage checkout = new CheckOutPage(driver);
 	
 	
-	@When("^Check Out Go Back$")
-	public void check_out_go_back() throws IOException, InterruptedException{
+	@When("^Cart Go Back$")
+	public void cart_go_back() throws IOException, InterruptedException{
 		checkout.GoBack();
 		Cart.checkcart();
 	}
 	
-	@When("^Check Out$")
+	@When("^Check Out (.+)$")
 	public void check_out(String username) throws InterruptedException, IOException{
 		Home.CommonMenu(username);
 		checkout.checkout();

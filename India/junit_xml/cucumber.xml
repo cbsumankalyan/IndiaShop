@@ -1,183 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="30" time="1069.839636">
-<testcase classname="Application Login" name="LoginPage" time="36.499356">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 108639101 and 1234....................................................passed
-Then Home Page 108639101....................................................passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="176.522069">
+<testcase classname="All Users" name="With Out Order" time="89.139164">
+<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Given 206914401 and 0155....................................................passed
+Then Home Page 206914401....................................................passed
+Then Add Products To Cart 206914401.........................................passed
+Then Check Product..........................................................passed
+Then Check Cart.............................................................passed
+Then Check Form Fields......................................................passed
+Then Payment Avenue.........................................................passed
+Then Review Orders..........................................................passed
+Then CCAvenue Payment Details...............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="User Login" name="LoginPage" time="35.788524">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 314237491 and youc@nw1n...............................................passed
-Then Home Page 314237491....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_2" time="36.165642">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
+<testcase classname="All Users" name="With Out Order 2" time="87.382905">
+<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
 Given 314852591 and asiaaktar...............................................passed
 Then Home Page 314852591....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_3" time="36.17972">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 312579891 and FXmpqm..................................................passed
-Then Home Page 312579891....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_4" time="36.039522">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 205146001 and baba69..................................................passed
-Then Home Page 205146001....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_5" time="36.010561">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 312709091 and JjQtYS..................................................passed
-Then Home Page 312709091....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_6" time="35.981889">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 313979091 and acSjac..................................................passed
-Then Home Page 313979091....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_7" time="36.539867">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 314573291 and 1985....................................................passed
-Then Home Page 314573291....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_8" time="35.855225">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 314304891 and PQU5RF..................................................passed
-Then Home Page 314304891....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_9" time="36.114701">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 312837491 and wGn7C9..................................................passed
-Then Home Page 312837491....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_10" time="35.657761">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 310141491 and ttR8Jy..................................................passed
-Then Home Page 310141491....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_11" time="33.486446">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 314195991 and 9vnaTy..................................................passed
-Then Home Page 314195991....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_12" time="35.787082">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 301941991 and sonu3264................................................passed
-Then Home Page 301941991....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_13" time="35.323249">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 314573491 and 7982701596..............................................passed
-Then Home Page 314573491....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_14" time="35.604997">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 309938991 and pratik143...............................................passed
-Then Home Page 309938991....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_15" time="35.432246">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 314195391 and 37yud5..................................................passed
-Then Home Page 314195391....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_16" time="35.388212">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 313691891 and 44f85294480c............................................passed
-Then Home Page 313691891....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_17" time="36.104336">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 313307391 and VuNqZj..................................................passed
-Then Home Page 313307391....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_18" time="35.4326">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 305652791 and mTVWRq..................................................passed
-Then Home Page 305652791....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_19" time="35.54395">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 314893991 and W67UN9..................................................passed
-Then Home Page 314893991....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_20" time="33.367712">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 314224491 and UXtRBx..................................................passed
-Then Home Page 314224491....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_21" time="35.498019">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 310586191 and v3BRT5..................................................passed
-Then Home Page 310586191....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_22" time="35.62623">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 304000191 and 7YbrPa..................................................passed
-Then Home Page 304000191....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_23" time="36.32891">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 200357401 and unicity1234.............................................passed
-Then Home Page 200357401....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_24" time="35.980881">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 311846191 and 7666....................................................passed
-Then Home Page 311846191....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_25" time="35.572783">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 314504491 and xHAQQY..................................................passed
-Then Home Page 314504491....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_26" time="35.51192">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 313909791 and Qn8KyY..................................................passed
-Then Home Page 313909791....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_27" time="35.855614">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 314573191 and UrT8nK..................................................passed
-Then Home Page 314573191....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_28" time="35.650212">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 312289691 and GC7Jcy..................................................passed
-Then Home Page 312289691....................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="User Login" name="LoginPage_29" time="35.511469">
-<system-out><![CDATA[Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application.passed
-Given 312930091 and C7P59f..................................................passed
-Then Home Page 312930091....................................................passed
+Then Add Products To Cart 314852591.........................................passed
+Then Check Product..........................................................passed
+Then Check Cart.............................................................passed
+Then Check Form Fields......................................................passed
+Then Payment Avenue.........................................................passed
+Then Review Orders..........................................................passed
+Then CCAvenue Payment Details...............................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

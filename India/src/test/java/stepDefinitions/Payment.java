@@ -22,7 +22,7 @@ public class Payment extends BasePage {
 		checkout.formdetails();
 	}
 	
-	@When("^Payment Fields$")
+	@When("^Payment Fields (.+)$")
 	public void payment_fields(String username) throws InterruptedException, IOException{
 		Home.CommonMenu(username);
 		payment.paymentfields();
@@ -36,5 +36,15 @@ public class Payment extends BasePage {
 	@Then("^Order Summary$")
 	public void order_summary() throws InterruptedException{
 		payment.summary();
+	}
+	
+	@Then("^Payment Essecom$")
+	public void payment_essecom() throws InterruptedException{
+		payment.Essecom();
+	}
+	
+	@Then("^Payment Avenue$")
+	public void payment_avenue() throws InterruptedException{
+		payment.CCAvenue();
 	}
 }

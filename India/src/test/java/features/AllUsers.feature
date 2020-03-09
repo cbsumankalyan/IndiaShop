@@ -2,14 +2,26 @@ Feature: All Users
 
 Scenario Outline: With Out Order
 
-Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application
+Given Navigate to the "https://shop.unicity.com/#/home" application
 Given <username> and <password>
 Then Home Page <username>
+
+Then Add Products To Cart <username>
+Then Check Product
+Then Check Cart
+
+Then Check Form Fields
+
+Then Payment Avenue
+
+Then Review Orders
+
+Then CCAvenue Payment Details
 
 
 Examples:
 |username  |password   |
-|314237491 |youc@nw1n  |
+|206914401 |0155       |
 |314852591 |asiaaktar  |
 |312579891 |FXmpqm     |
 |205146001 |baba69     |

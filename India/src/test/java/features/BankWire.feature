@@ -1,4 +1,4 @@
-Feature: Single Distributor
+Feature: BankWire
 
 Scenario Outline: BankWire
 
@@ -15,20 +15,20 @@ Then All Products in List View
 And Products in List View
 And Accessories in List View
 
-When Product Added to Cart
+When Product Added to Cart <username>
 Then Check the Cart Details
 
 When Remove Products from Cart
-Then Add Products To Cart
+Then Add Products To Cart <username>
 Then Check Product
 Then Check Cart
 
-When Check Out Go Back
-When Check Out
+When Cart Go Back
+When Check Out <username>
 Then Check Form Fields
 
 When Payment Go Back
-When Payment Fields
+When Payment Fields <username>
 Then Banks Names
 Then Order Summary
 
@@ -57,4 +57,3 @@ Then Home Page <username>
 Examples:
 |username |password   |
 |108639101|1234       |
-

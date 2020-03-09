@@ -1,5 +1,7 @@
 package stepDefinitions;
 
+import java.io.IOException;
+
 import POM.BasePage;
 import POM.HomePage;
 import POM.LoginPage;
@@ -11,7 +13,7 @@ public class Login extends BasePage {
 	HomePage Home = new HomePage(driver);
 	
 	@Given("^(.+) and (.+)$")
-	public void and(String username, String password) throws InterruptedException{
+	public void and(String username, String password) throws InterruptedException, IOException{
 		Login.Login(username, password);
 	}
 }

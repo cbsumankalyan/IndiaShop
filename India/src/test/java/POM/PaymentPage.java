@@ -20,10 +20,10 @@ public class PaymentPage extends BasePage {
 	@FindBy(id = "bankWire")
 	private WebElement BankWire;
 
-	@FindBy(id = "tppRedirect")
-	private WebElement Essecom;
+	@FindBy(xpath = "//translate[contains(text(), 'Bank 1')]")
+	private WebElement essecom;
 
-	@FindBy(id = "tppKtkRedirect")
+	@FindBy(xpath = "//translate[contains(text(), 'Bank 2')]")
 	private WebElement CCAvenue;
 
 	@FindBy(xpath = "//div[@class='ng-scope bankAccounts']/h5")
@@ -116,6 +116,23 @@ public class PaymentPage extends BasePage {
 				"2\nAccount Name: Unicity Health Private Limited\nAccount Number: 37020932720\nIFSC Number: SBIN0005778\nFull Name of Bank: SBI Bank\nBranch:\nMG Road");
 		Assert.assertEquals(AxisBank.getText(),
 				"3\nAccount Name: Unicity Health Private Limited\nAccount Number: 916020065486603\nIFSC Number: UTIB0001336\nFull Name of Bank: Axis Bank\nBranch:\nNAVRANGPURA");
+	}
+	
+	public void Essecom() throws InterruptedException{
+		Thread.sleep(5000);
+		essecom.click();
+		Assert.assertFalse(HDFCBank.isDisplayed());
+		Assert.assertFalse(SBIBank.isDisplayed());
+		Assert.assertFalse(AxisBank.isDisplayed());
+		Continue.click();
+	}
+	
+	public void CCAvenue() throws InterruptedException {
+		Thread.sleep(5000);
+		CCAvenue.click();
+		Assert.assertFalse(HDFCBank.isDisplayed());
+		Assert.assertFalse(SBIBank.isDisplayed());
+		Assert.assertFalse(AxisBank.isDisplayed());
 	}
 	
 	public void summary() throws InterruptedException {

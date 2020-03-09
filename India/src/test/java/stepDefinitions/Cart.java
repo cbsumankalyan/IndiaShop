@@ -13,7 +13,7 @@ public class Cart extends BasePage{
 	HomePage Home = new HomePage(driver);
 	CartPage cartpage = new CartPage(driver);
 	
-	@When("^Product Added to Cart$")
+	@When("^Product Added to Cart (.+)$")
 	public void  product_added_to_cart(String username) throws InterruptedException, IOException {
 		cartpage.cart();
 		Home.CommonMenu(username);
@@ -29,7 +29,7 @@ public class Cart extends BasePage{
 		cartpage.removeproduct();
 	}
 	
-	@Then("^Add Products To Cart$")
+	@Then("^Add Products To Cart (.+)$")
 	public void add_products_to_cart(String username) throws InterruptedException, IOException {
 		Home.CommonMenu(username);
 		cartpage.addproduct();
