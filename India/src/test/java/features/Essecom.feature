@@ -14,8 +14,6 @@ Then Check Form Fields
 
 Then Payment Essecom
 
-Then Order Summary
-
 Then Review Orders
 
 Then Essecom Payment Details

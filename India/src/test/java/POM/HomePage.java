@@ -170,6 +170,34 @@ public class HomePage extends BasePage {
 	public HomePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
+	
+	public void RetailMenu() throws InterruptedException{
+		Thread.sleep(10000);
+		Assert.assertTrue(UnicityLogo.isDisplayed());
+		Assert.assertEquals(ViewingProducts.getText(), "You are currently viewing product in Karnataka");
+		
+		String[] languages = { "EN", "HI", };
+		for (int i = 0; i < languages.length; i++) {
+			Assert.assertEquals(languages[i], Languages.get(i).getText());
+		}
+		Thread.sleep(3000);
+		Country.click();
+		Assert.assertEquals(SelectedCountry.getText(), "India");
+
+		Assert.assertEquals(CartPrice.getText(), "₹0.00");
+		Assert.assertEquals(CartQty.getText(), "0");
+		
+	}
+	
+	public void RetailMenuAfterUserCreated(){
+		MyUnicity.click();
+
+		Assert.assertTrue(Unicitydotcom.isDisplayed());
+		Assert.assertTrue(Officedotcom.isDisplayed());
+		
+		Assert.assertEquals(DistributorName.getText(), userdata.get("fname")+" "+userdata.get("lname"));
+		Assert.assertTrue(DistributorID.isDisplayed());
+	}
 
 	public void CommonMenu(String username) throws InterruptedException, IOException {
 
@@ -534,7 +562,272 @@ public class HomePage extends BasePage {
 			Back.click();
 		}
 	}
+	
+	public void RetailAllProducts() throws InterruptedException, IOException {
+		Thread.sleep(5000);
 
+		Assert.assertEquals(CurrentState.getText(), "You are currently viewing product in Karnataka");
+		ALLProducts.click();
+
+		FileReader type = new FileReader(
+				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
+		Properties p = new Properties();
+		p.load(type);
+
+		for (int i = 0; i < retailallproducts.length; i++) {
+			Assert.assertEquals(Products.get(i).getText(), retailallproducts[i]);
+			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "CODE"),
+					ProductItemCode.get(i).getText());
+			
+			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "RETAILPRICE"),
+					ProductPrices.get(i).getText());
+
+			for (int j = 0; j < qty.length; j++) {
+				Assert.assertEquals(ProductQty.get(j).getText(), qty[j]);
+			}
+
+			Assert.assertTrue(ProductAddtoCart.get(i).isDisplayed());
+
+			Products.get(i).click();
+
+			Assert.assertEquals(retailallproducts[i], ProductName.getText());
+			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "CODE"),
+					ProductItemNumber.getText());
+			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
+					ProductPrice.getText().replace(" ", "") + " TAX INCLUDED");
+			Thread.sleep(5000);
+			Assert.assertTrue(ShareLink.isDisplayed());
+			for (int j = 0; j < qty.length; j++) {
+				Assert.assertEquals(SingleProductQty.get(j).getText(), qty[j]);
+			}
+			Assert.assertTrue(SingleAddtoCart.isDisplayed());
+			JavascriptExecutor jse = (JavascriptExecutor) driver;
+			jse.executeScript("window.scrollBy(0,250)", "");
+			Assert.assertEquals(ProductDescription.getText(), p.getProperty(ProductName.getText().replace(" ", "")));
+			Back.click();
+		}
+	}
+
+	public void RetailProducts() throws IOException, InterruptedException {
+
+		FileReader type = new FileReader(
+				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
+		Properties p = new Properties();
+		p.load(type);
+
+		ProductsOnly.click();
+
+		for (int i = 0; i < retailproducts.length; i++) {
+			Assert.assertEquals(Products.get(i).getText(), retailproducts[i]);
+			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "CODE"),
+					ProductItemCode.get(i).getText());
+
+			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "RETAILPRICE"),
+					ProductPrices.get(i).getText());
+
+			for (int j = 0; j < qty.length; j++) {
+				Assert.assertEquals(ProductQty.get(j).getText(), qty[j]);
+			}
+
+			Assert.assertTrue(ProductAddtoCart.get(i).isDisplayed());
+
+			Products.get(i).click();
+
+			Assert.assertEquals(retailproducts[i], ProductName.getText());
+			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "CODE"),
+					ProductItemNumber.getText());
+			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
+					ProductPrice.getText().replace(" ", "") + " TAX INCLUDED");
+	
+			Thread.sleep(5000);
+			Assert.assertTrue(ShareLink.isDisplayed());
+			for (int j = 0; j < qty.length; j++) {
+				Assert.assertEquals(SingleProductQty.get(j).getText(), qty[j]);
+			}
+			Assert.assertTrue(SingleAddtoCart.isDisplayed());
+			JavascriptExecutor jse = (JavascriptExecutor) driver;
+			jse.executeScript("window.scrollBy(0,250)", "");
+			Assert.assertEquals(ProductDescription.getText(), p.getProperty(ProductName.getText().replace(" ", "")));
+			Back.click();
+
+		}
+	}
+	
+	public void RetailAccessories() throws IOException, InterruptedException {
+
+		FileReader type = new FileReader(
+				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
+		Properties p = new Properties();
+		p.load(type);
+
+		Accessories.click();
+
+		for (int i = 0; i < retailaccessories.length; i++) {
+			Assert.assertEquals(Products.get(i).getText(), retailaccessories[i]);
+			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "CODE"),
+					ProductItemCode.get(i).getText());
+
+			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "RETAILPRICE"),
+					ProductPrices.get(i).getText());
+
+			for (int j = 0; j < qty.length; j++) {
+				Assert.assertEquals(ProductQty.get(j).getText(), qty[j]);
+			}
+
+			Assert.assertTrue(ProductAddtoCart.get(i).isDisplayed());
+
+			Products.get(i).click();
+
+			Assert.assertEquals(accessories[i], ProductName.getText());
+			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "CODE"),
+					ProductItemNumber.getText());
+			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
+					ProductPrice.getText().replace(" ", "") + " TAX INCLUDED");
+	
+			Thread.sleep(5000);
+			Assert.assertTrue(ShareLink.isDisplayed());
+			for (int j = 0; j < qty.length; j++) {
+				Assert.assertEquals(SingleProductQty.get(j).getText(), qty[j]);
+			}
+			Assert.assertTrue(SingleAddtoCart.isDisplayed());
+			JavascriptExecutor jse = (JavascriptExecutor) driver;
+			jse.executeScript("window.scrollBy(0,250)", "");
+			Assert.assertEquals(ProductDescription.getText(), p.getProperty(ProductName.getText().replace(" ", "")));
+			Back.click();
+		}
+	}
+	
+	public void RetailALLProductsList() throws IOException, InterruptedException {
+		ListView.click();
+		ALLProducts.click();
+
+		FileReader type = new FileReader(
+				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
+		Properties p = new Properties();
+		p.load(type);
+		Thread.sleep(2000);
+		Assert.assertTrue(AddtoCart.isDisplayed());
+		for (int i = 0; i < retailallproducts.length; i++) {
+			Assert.assertEquals(ListViewProductName.get(i).getText(), retailallproducts[i]);
+			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "CODE"),
+					ProductItemCode.get(i).getText());
+			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "RETAILPRICE"),
+					"₹" + ProductPrices.get(i).getText().toUpperCase());
+
+
+			Assert.assertTrue(ListViewMinus.get(i).isDisplayed());
+			Assert.assertTrue(ListViewQty.get(i).isDisplayed());
+			Assert.assertTrue(ListViewPlus.get(i).isDisplayed());
+
+			JavascriptExecutor jse = (JavascriptExecutor) driver;
+			jse.executeScript("arguments[0].scrollIntoView();", ListViewProductName.get(i));
+
+			ListViewProductName.get(i).click();
+
+			Assert.assertEquals(retailallproducts[i], ProductName.getText());
+			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "CODE"),
+					ProductItemNumber.getText());
+			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
+					ProductPrice.getText().replace(" ", "") + " TAX INCLUDED");
+	
+			Thread.sleep(5000);
+			Assert.assertTrue(ShareLink.isDisplayed());
+			for (int j = 0; j < qty.length; j++) {
+				Assert.assertEquals(SingleProductQty.get(j).getText(), qty[j]);
+			}
+			Assert.assertTrue(SingleAddtoCart.isDisplayed());
+			jse.executeScript("window.scrollBy(0,250)", "");
+			Assert.assertEquals(ProductDescription.getText(), p.getProperty(ProductName.getText().replace(" ", "")));
+			Back.click();
+		}
+	}
+	
+	public void RetailProductsList() throws IOException, InterruptedException {
+
+		FileReader type = new FileReader(
+				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
+		Properties p = new Properties();
+		p.load(type);
+
+		ProductsOnly.click();
+		Assert.assertTrue(AddtoCart.isDisplayed());
+		for (int i = 0; i < retailproducts.length; i++) {
+			Assert.assertEquals(ListViewProductName.get(i).getText(), retailproducts[i]);
+			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "CODE"),
+					ProductItemCode.get(i).getText());
+			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "RETAILPRICE"),
+					"₹" + ProductPrices.get(i).getText().toUpperCase());
+
+			Assert.assertTrue(ListViewMinus.get(i).isDisplayed());
+			Assert.assertTrue(ListViewQty.get(i).isDisplayed());
+			Assert.assertTrue(ListViewPlus.get(i).isDisplayed());
+
+			JavascriptExecutor jse = (JavascriptExecutor) driver;
+			jse.executeScript("arguments[0].scrollIntoView();", ListViewProductName.get(i));
+
+			ListViewProductName.get(i).click();
+
+			Assert.assertEquals(retailproducts[i], ProductName.getText());
+			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "CODE"),
+					ProductItemNumber.getText());
+			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
+					ProductPrice.getText().replace(" ", "") + " TAX INCLUDED");
+		
+			Thread.sleep(5000);
+			Assert.assertTrue(ShareLink.isDisplayed());
+			for (int j = 0; j < qty.length; j++) {
+				Assert.assertEquals(SingleProductQty.get(j).getText(), qty[j]);
+			}
+			Assert.assertTrue(SingleAddtoCart.isDisplayed());
+			jse.executeScript("window.scrollBy(0,250)", "");
+			Assert.assertEquals(ProductDescription.getText(), p.getProperty(ProductName.getText().replace(" ", "")));
+			Back.click();
+		}
+	}
+	
+	public void RetailAccessoriesList() throws IOException, InterruptedException {
+
+		FileReader type = new FileReader(
+				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
+		Properties p = new Properties();
+		p.load(type);
+
+		Accessories.click();
+		Assert.assertTrue(AddtoCart.isDisplayed());
+		for (int i = 0; i < retailaccessories.length; i++) {
+			Assert.assertEquals(ListViewProductName.get(i).getText(), retailaccessories[i]);
+			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "CODE"),
+					ProductItemCode.get(i).getText());
+			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "RETAILPRICE"),
+					"₹" + ProductPrices.get(i).getText().toUpperCase());
+
+			Assert.assertTrue(ListViewMinus.get(i).isDisplayed());
+			Assert.assertTrue(ListViewQty.get(i).isDisplayed());
+			Assert.assertTrue(ListViewPlus.get(i).isDisplayed());
+
+			JavascriptExecutor jse = (JavascriptExecutor) driver;
+			jse.executeScript("arguments[0].scrollIntoView();", ListViewProductName.get(i));
+
+			ListViewProductName.get(i).click();
+
+			Assert.assertEquals(retailaccessories[i], ProductName.getText());
+			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "CODE"),
+					ProductItemNumber.getText());
+			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
+					ProductPrice.getText().replace(" ", "") + " TAX INCLUDED");
+			
+			Thread.sleep(5000);
+			Assert.assertTrue(ShareLink.isDisplayed());
+			for (int j = 0; j < qty.length; j++) {
+				Assert.assertEquals(SingleProductQty.get(j).getText(), qty[j]);
+			}
+			Assert.assertTrue(SingleAddtoCart.isDisplayed());
+			jse.executeScript("window.scrollBy(0,250)", "");
+			Assert.assertEquals(ProductDescription.getText(), p.getProperty(ProductName.getText().replace(" ", "")));
+			Back.click();
+		}
+	}
+	
 	public void Logout() {
 		LogOut.click();
 	}

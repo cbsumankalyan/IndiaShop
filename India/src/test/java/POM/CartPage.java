@@ -4,6 +4,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
+
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -143,8 +145,41 @@ public class CartPage extends BasePage {
 	@FindBy(xpath = "//span[@class='shipping-reflected']")
 	private WebElement ShippingReflect;
 	
-	@FindBy(xpath = "//span[@ng-show='!cartInfo.isArEditMode']")
+	@FindBy(xpath = "(//translate[text()='continue'])[1]")
 	private WebElement Continue;
+	
+	@FindBy(xpath = "(//span[contains(@class, 'icon-Unicity')])[2]")
+	private WebElement UnicityLogo;
+	
+	@FindBy(xpath = "//translate[text()='Already have an account?']")
+	private WebElement AlreadyhaveAnAccount;
+	
+	@FindBy(xpath = "//a[contains(@class, 'create-account')]")
+	private WebElement SignUP;
+	
+	@FindBy(id = "modalRefId")
+	private WebElement ReferalID;
+	
+	@FindBy(id = "modalFirstName")
+	private WebElement Fname;
+	
+	@FindBy(id = "modalLastName")
+	private WebElement Lname;
+	
+	@FindBy(id = "modalEmail")
+	private WebElement Email;
+	
+	@FindBy(id = "modalPhone")
+	private WebElement Phone;
+	
+	@FindBy(id = "modalPassword2")
+	private WebElement Password;
+	
+	@FindBy(xpath = "(//a[contains(@ng-click, 'modalData.willLogin')])[2]")
+	private WebElement ExistingLogin;
+	
+	@FindBy(xpath = "(//Button[@class = 'btn btn-success'])[2]")
+	private WebElement ClickSignUP;
 	
 	public CartPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -201,6 +236,46 @@ public class CartPage extends BasePage {
 		Assert.assertEquals(price, SUBTOTAL.getText());
 
 	}
+	
+	public void retailcartdetails() throws InterruptedException, IOException {
+
+		FileReader type = new FileReader(
+				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
+		Properties p = new Properties();
+		p.load(type);
+
+		String itemcode = CalciumMagnesiumItemCode.getText();
+		String price = CalciumMagnesiumPrice.getText().replace(" Tax Included", "").replace(" ", "");
+
+
+		Assert.assertEquals(Quantity.getText().replace("ITEMS: ", ""), "1");
+		AddtoCart.click();
+		Assert.assertEquals(Quantity.getText().replace("ITEMS: ", ""), "0");
+		Assert.assertEquals(CartQTY.getText().replace("ITEMS: ", ""), "1");
+
+		Assert.assertEquals(price, CartPrice.getText());
+
+		Cart.click();
+
+		Assert.assertTrue(ContinueShoping.isDisplayed());
+		Assert.assertTrue(YourCartItems.isDisplayed());
+
+		Assert.assertEquals(ProductName.getText(), "CALCIUM MAGNESIUM COMPLEX");
+		String[] ProductInfo = ProductPricePV.getText().split(" ");
+		Assert.assertEquals(itemcode, ProductInfo[0]);
+
+		Assert.assertEquals(p.getProperty("CALCIUM MAGNESIUM COMPLEX".replace(" ", "") + "RETAILPRICE"),
+				ProductCost.getText().toUpperCase());
+		Assert.assertEquals(price, CartCost.getText().replace("Tax Included", "").trim());
+		for (int j = 0; j < qty.length; j++) {
+			Assert.assertEquals(ProductQty.get(j).getText(), qty[j]);
+		}
+
+		Assert.assertEquals(Subtotal.getText(), "Subtotal");
+
+		Assert.assertEquals(price, SUBTOTAL.getText());
+
+	}
 
 	public void removeproduct() throws InterruptedException {
 		
@@ -213,6 +288,19 @@ public class CartPage extends BasePage {
 		Assert.assertEquals(Subtotal.getText(), "Subtotal");
 
 		Assert.assertEquals(TOTALPV.getText(), "0");
+		Assert.assertEquals(SUBTOTAL.getText(), "₹0.00");
+
+	}
+	
+	public void removeretailproduct() throws InterruptedException {
+		
+		RemoveProduct.click();
+
+		Assert.assertEquals(MustHaveProducts.getText(), "You must have items in your cart to proceed with Checkout.");
+		Assert.assertTrue(BackTOShop.isDisplayed());
+
+		Assert.assertEquals(Subtotal.getText(), "Subtotal");
+
 		Assert.assertEquals(SUBTOTAL.getText(), "₹0.00");
 
 	}
@@ -233,6 +321,26 @@ public class CartPage extends BasePage {
 		
 		Assert.assertEquals(pr, CartPrice.getText());
 		Assert.assertEquals(v, CartPV.getText());
+		
+		ProductClick.click();
+		
+		
+	}
+	
+	public void addretailproduct() throws InterruptedException {
+		
+		ContinueShoping.click();
+		Thread.sleep(5000);
+		ALLProducts.click();
+		GridView.click();
+		AddProductinGrid.click();
+		
+		String pr = ProductPrice.getText().split(" TAX ")[0];
+		Assert.assertEquals(GridQty.getText(), "1");
+		Assert.assertEquals(GridinCart.getText(), "In Cart");
+		
+		
+		Assert.assertEquals(pr, CartPrice.getText());
 		
 		ProductClick.click();
 		
@@ -277,6 +385,39 @@ public class CartPage extends BasePage {
 		PInCart.click();
 	}
 	
+	public void checkretailproduct() throws InterruptedException, IOException {
+		FileReader type = new FileReader(
+				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
+		Properties p = new Properties();
+		p.load(type);
+		Assert.assertEquals(p.getProperty(ProductNames.getText().replace(" ", "") + "CODE"),
+				ProductItemNumber.getText());
+		Assert.assertEquals(p.getProperty(ProductNames.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
+				PPrice.getText().replace(" ", "") + " TAX INCLUDED");
+
+
+		Assert.assertEquals(CartQTY.getText(), "1");
+		
+		Assert.assertEquals(p.getProperty(ProductNames.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""), CartPrice.getText().replace(",", "")+" TAX INCLUDED");
+		
+		Assert.assertEquals(PQty.getText(), "1");
+		Assert.assertEquals(PInCart.getText(), "In Cart");
+		
+		Assert.assertTrue(Back.isDisplayed());
+		Assert.assertTrue(Share.isDisplayed());
+		
+		String name = "CALCIUM MAGNESIUM COMPLEX";
+		String itemcode = ProductItemNumber.getText();
+		String price = PPrice.getText();
+		
+		productdetails.put("name", name);
+		productdetails.put("price", price);
+		productdetails.put("itemcode", itemcode);
+		productdetails.put("qty", "1");
+		
+		PInCart.click();
+	}
+	
 	public void checkcart() throws IOException, InterruptedException{
 	
 		FileReader type = new FileReader(
@@ -310,4 +451,65 @@ public class CartPage extends BasePage {
 	
 		Continue.click();
 	}
+	
+	public void checkretailcart() throws IOException, InterruptedException{
+		Thread.sleep(10000);
+		FileReader type = new FileReader(
+				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
+		Properties p = new Properties();
+		p.load(type);
+		
+		
+		Assert.assertTrue(ContinueShoping.isDisplayed());
+		Assert.assertTrue(YourCartItems.isDisplayed());
+
+		Assert.assertEquals(ProductName.getText(), productdetails.get("name"));
+		String[] ProductInfo = ProductPricePV.getText().split(" ");
+		Assert.assertEquals(productdetails.get("itemcode"), ProductInfo[0]);
+		
+		Assert.assertEquals(p.getProperty("CALCIUM MAGNESIUM COMPLEX".replace(" ", "") + "RETAILPRICE"),
+				ProductCost.getText().toUpperCase());
+		Assert.assertEquals(productdetails.get("price").replace(" ", ""), CartCost.getText().replace(",", "").replace("Tax Included", "").trim());
+		for (int j = 0; j < qty.length; j++) {
+			Assert.assertEquals(ProductQty.get(j).getText(), qty[j]);
+		}
+
+		Assert.assertEquals(Subtotal.getText(), "Subtotal");
+
+		Assert.assertEquals(productdetails.get("price").replace(" ", ""), SUBTOTAL.getText().replace(",", ""));
+		
+		Assert.assertEquals(ShippingReflect.getText(), "Total does not\nreflect shipping");
+	
+		System.out.println("Rangamma Rangamma");
+		Thread.sleep(5000);
+		Continue.click();
+	}
+	
+	public void signupretail() throws InterruptedException{
+		
+		String fname = RandomStringUtils.randomAlphabetic(6).toUpperCase();
+		String lname = RandomStringUtils.randomAlphabetic(6).toUpperCase();
+		String phone = RandomStringUtils.randomNumeric(10);
+		
+		Assert.assertTrue(UnicityLogo.isDisplayed());
+		Assert.assertEquals(AlreadyhaveAnAccount.getText(), "Already have an account?");
+		Assert.assertTrue(ExistingLogin.isDisplayed());
+		
+		Thread.sleep(5000);
+		SignUP.click();
+		ReferalID.sendKeys("108639101");
+		Fname.sendKeys(fname);
+		Lname.sendKeys(lname);
+		Phone.sendKeys(phone);
+		Email.sendKeys(fname+"@gmail.com");
+		Password.sendKeys(fname);
+		Thread.sleep(5000);
+		ClickSignUP.click();
+		
+		userdata.put("fname", fname);
+		userdata.put("lname", lname);
+		userdata.put("phone", phone);
+		userdata.put("email", fname+"@gmail.com");
+	}
+	
 }

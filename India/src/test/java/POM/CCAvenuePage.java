@@ -1,12 +1,11 @@
 package POM;
-import static org.testng.Assert.assertEquals;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
-
+import org.testng.Assert;
 import POM.BasePage;
 
 public class CCAvenuePage extends BasePage {
@@ -32,13 +31,14 @@ public class CCAvenuePage extends BasePage {
 	
 	public void ccavenue() throws InterruptedException {
 		Thread.sleep(5000);
-		assertEquals("https://secure.ccavenue.com/transaction/transaction.do?command=initiateTransaction", driver.getCurrentUrl());
+		Assert.assertEquals("https://secure.ccavenue.com/transaction/transaction.do?command=initiateTransaction", driver.getCurrentUrl());
 		CCNumber.sendKeys("4111111111111111");
 		Select select = new Select(CCMonth);
 		select.selectByVisibleText("Dec (12)");
 		CCYear.sendKeys("2021");
 		CVV.sendKeys("123");
 		MakePayment.click();
+		Assert.assertEquals("https://secure.ccavenue.com/transaction.do?command=retryTransaction", driver.getCurrentUrl());
 	}
 	
 	

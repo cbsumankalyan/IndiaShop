@@ -1,5 +1,7 @@
 package POM;
 
+import java.io.IOException;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,7 +10,7 @@ import org.testng.Assert;
 
 public class ReviewPage extends BasePage {
 
-	@FindBy(xpath = "//a[@ng-click= 'review.goBack()']")
+	@FindBy(xpath = "//translate[text()='GO BACK']")
 	private WebElement GoBack;
 
 	@FindBy(xpath = "//span[@ng-show='!review.isArEditMode']")
@@ -38,7 +40,7 @@ public class ReviewPage extends BasePage {
 	@FindBy(xpath = "(//div[@class='product-info-wrapper']/div/span)[1]")
 	private WebElement ProductName;
 
-	@FindBy(xpath = "(//div[@class='product-info']/span)[2]")
+	@FindBy(xpath = "(//div[@class='product-info']/span[@class='ng-binding'])[1]")
 	private WebElement ProductCode;
 
 	@FindBy(xpath = "(//div[contains(@class,'product-cost')]/span)[1]")
@@ -83,7 +85,7 @@ public class ReviewPage extends BasePage {
 	@FindBy(xpath = "//button[@href='#/cart']")
 	private WebElement ModifyItems;
 
-	@FindBy(xpath = "//button[@ng-click='review.submitOrder()']")
+	@FindBy(xpath = "//translate[text()='continue' or text()='Submit Order']")
 	private WebElement Continue;
 	
 	@FindBy(xpath = "//h4[@class='review-h3-def']//button[@class='btn-update']")
@@ -126,9 +128,14 @@ public class ReviewPage extends BasePage {
 		Assert.assertTrue(ModifyItems.isDisplayed());
 	}
 
-	public void shipping() {
+	public void shipping(String username) throws IOException {
 		Assert.assertEquals(Shipping.getText(),
-				"SHIPPING INFORMATION Update\nIndia Training\nNo 999 Marine Drive\nBANGALORE, KA, 560042, IN");
+				"SHIPPING INFORMATION Update\n"+getTranslation(username+"Name")+"\n"+getTranslation(username+"Address"));
+	}
+	
+	public void retailshipping() {
+		Assert.assertEquals(Shipping.getText(),
+				"SHIPPING INFORMATION Update\n"+userdata.get("fname") +" "+ userdata.get("lname")+"\n23/2 2nd floor Khandari ParcHaudin Road\nBanglaore, KA, 560042, IN");
 	}
 	
 	public void updateshippingaddress() {
@@ -136,9 +143,19 @@ public class ReviewPage extends BasePage {
 				"SHIPPING INFORMATION Update\nIndia Training\n23/2 2nd floor Khandari Parc Haudin Road\nBANGALORE, KA, 560042, IN");
 	}
 	
-	public void contact() {
+	public void updateretailshippingaddress() {
+		Assert.assertEquals(Shipping.getText(),
+				"SHIPPING INFORMATION Update\n"+userdata.get("fname")+" "+userdata.get("lname")+"\n23/2 2nd floor Khandari Parc Haudin Road\nBanglaore, KA, 560042, IN");
+	}
+	
+	public void contact(String username) throws IOException {
 		Assert.assertEquals(Contact.getText(),
-				"CONTACT INFORMATION Update\nPhone: 9845574725\nEmail: Manjunath.Shekhar@unicity.com");
+				"CONTACT INFORMATION Update\nPhone: "+getTranslation(username+"Phone")+"\nEmail: "+getTranslation(username+"Email"));
+	}
+	
+	public void retailcontact() {
+		Assert.assertEquals(Contact.getText(),
+				"CONTACT INFORMATION Update\nPhone: "+userdata.get("phone")+"\nEmail: "+userdata.get("email"));
 	}
 	
 	public void updatecontactdetails() {
@@ -148,6 +165,10 @@ public class ReviewPage extends BasePage {
 
 	public void payment() {
 		Assert.assertEquals(Payment.getText(), "PAYMENT INFORMATION Update\nPayment Type: BankWire");
+	}
+	
+	public void ccavenue() {
+		Assert.assertEquals(Payment.getText(), "PAYMENT INFORMATION Update\nPayment Type: TppKtkRedirect");
 	}
 
 	public void Orders() throws InterruptedException {
@@ -169,6 +190,27 @@ public class ReviewPage extends BasePage {
 		Assert.assertEquals(TOTAL.getText(), "TOTAL");
 		Assert.assertEquals(AmountWOVat.getText(), "** Amounts without VAT");
 		Assert.assertEquals(TotalPV.getText(), productdetails.get("pv").replace("PV: ", ""));
+
+		Continue.click();
+	}
+	
+	public void RetailOrders() throws InterruptedException {
+		Thread.sleep(10000);
+		Assert.assertEquals(ProductName.getText(), productdetails.get("name"));
+		Assert.assertEquals(ProductCode.getText(), productdetails.get("itemcode"));
+//		Assert.assertEquals(PPPrice.getText().trim(), productdetails.get("price") + "TaxIncluded");
+		Assert.assertEquals(Qty.getText().replace("QTY: ", ""), productdetails.get("qty"));
+		float pp = Float.parseFloat(ProductPrice.getText().replace("₹", "").replace(",", ""));
+		float sp = Float.parseFloat(ShippingPrice.getText().replace("₹", ""));
+		float tp = Float.parseFloat(TaxPrice.getText().replace("₹", ""));
+		float ttp = Float.parseFloat(TotalPrice.getText().replace("₹", "").replace(",", ""));
+
+		Assert.assertEquals(ttp, pp + sp + tp);
+		Assert.assertEquals(SUBTOTAL.getText(), "SUBTOTAL**:");
+		Assert.assertEquals(SHIPPING.getText(), "SHIPPING**:");
+		Assert.assertEquals(TAXES.getText(), "TAXES:");
+		Assert.assertEquals(TOTAL.getText(), "TOTAL");
+		Assert.assertEquals(AmountWOVat.getText(), "** Amounts without VAT");
 
 		Continue.click();
 	}

@@ -2,9 +2,10 @@ Feature: BankWire
 
 Scenario Outline: BankWire
 
-Given Navigate to the "http://shop.ng.unicityqa.com/master/#/home" application
+Given Navigate to the "https://shop.unicity.com/#/home" application
 Given <username> and <password>
 Then Home Page <username>
+
 Then All Products
 And Products
 And Accessories
@@ -32,9 +33,9 @@ When Payment Fields <username>
 Then Banks Names
 Then Order Summary
 
-When Review Fields
-Then Shipping Information
-Then Contact Information
+When Review Fields <username>
+Then Shipping Information <username>
+Then Contact Information <username>
 Then Payment Information
 When Update Shipping
 When Update Contact
@@ -43,16 +44,16 @@ When Go Back
 
 Then Review Orders
 
-When Placed Order Fields
+When Placed Order Fields <username>
 Then Placed Shipping Information
 Then Placed Contact Information
 Then Placed Payment Information
 
 Then Placed Orders
 
-When Return Home
-When Logout
+When Return Home <username>
 Then Home Page <username>
+When Logout
 
 Examples:
 |username |password   |

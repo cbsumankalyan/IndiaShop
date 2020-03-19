@@ -32,4 +32,9 @@ public class CheckOut extends BasePage {
 	public void check_form_fields(){
 		checkout.formdetails();
 	}
+	
+	@Then("^Check Retail Form Fields$")
+	public void check_retail_form_fields(){
+		checkout.retailformdetails();
+	}
 }

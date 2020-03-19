@@ -21,5 +21,5 @@ Then Review Orders
 Then CCAvenue Payment Details
 
 Examples:
-|username |password   |
-|108639101|1234       |
+|username  |password   |
+|108639101 |1234       |

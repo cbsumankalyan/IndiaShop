@@ -37,6 +37,7 @@ public class BrowserInitiate extends BasePage {
 		if (scenario.isFailed()) {
 		      final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 		      scenario.embed(screenshot, "image/png"); 
+		      System.out.println("fadsfasdfadsffdsarewfdas   "+scenario.getName());
 		 }
 		driver.close();
 	}

@@ -119,6 +119,11 @@ public class PlaceOrderPage extends BasePage {
 		Assert.assertEquals(Shipping.getText(),
 				"SHIPPING INFORMATION\nIndia Training\n23/2 2nd floor Khandari Parc Haudin Road\nBANGALORE, KA, 560042, IN");
 	}
+	
+	public void retailshipping() {
+		Assert.assertEquals(Shipping.getText(),
+				"SHIPPING INFORMATION\n"+userdata.get("fname")+" "+userdata.get("lname")+"\n23/2 2nd floor Khandari Parc Haudin Road\nBanglaore, KA, 560042, IN");
+	}
 
 	public void contact() {
 		Assert.assertEquals(Contact.getText(),
@@ -150,6 +155,26 @@ public class PlaceOrderPage extends BasePage {
 		Assert.assertEquals(TOTAL.getText(), "TOTAL");
 		Assert.assertEquals(AmountWOVat.getText(), "** Amounts without VAT");
 		Assert.assertEquals(TotalPV.getText(), productdetails.get("pv").replace("PV: ", ""));
+	}
+	
+	public void RetailOrders() throws InterruptedException {
+		Thread.sleep(5000);
+		Assert.assertEquals(ProductName.getText(), productdetails.get("name"));
+		Assert.assertEquals(ProductCode.getText(), productdetails.get("itemcode"));
+//		Assert.assertEquals(PPPrice.getText().trim(), productdetails.get("price") + "TaxIncluded");
+		Assert.assertEquals(Qty.getText().replace("QTY: ", ""), productdetails.get("qty"));
+		float pp = Float.parseFloat(ProductPrice.getText().replace("₹", "").replace(",", ""));
+		float sp = Float.parseFloat(ShippingPrice.getText().replace("₹", ""));
+		float tp = Float.parseFloat(TaxPrice.getText().replace("₹", ""));
+		float ttp = Float.parseFloat(TotalPrice.getText().replace("₹", "").replace(",", ""));
+
+		Assert.assertEquals(ttp, pp + sp + tp);
+
+		Assert.assertEquals(SUBTOTAL.getText(), "SUBTOTAL**:");
+		Assert.assertEquals(SHIPPING.getText(), "SHIPPING**:");
+		Assert.assertEquals(TAXES.getText(), "TAXES:");
+		Assert.assertEquals(TOTAL.getText(), "TOTAL");
+		Assert.assertEquals(AmountWOVat.getText(), "** Amounts without VAT");
 	}
 	
 	public void ReturnHome() {

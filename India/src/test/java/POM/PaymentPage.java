@@ -160,5 +160,28 @@ public class PaymentPage extends BasePage {
 		
 		Continue.click();
 	}
+	
+	public void retailsummary() throws InterruptedException {
+		Thread.sleep(10000);
+		Assert.assertEquals(OrderSummary.getText(), "ORDER SUMMARY");
+		Assert.assertEquals(ProductName.getText(), productdetails.get("name"));
+		Assert.assertEquals(ProductCode.getText(), productdetails.get("itemcode"));
+		Assert.assertEquals(Qty.getText().replace("QTY: ", ""), productdetails.get("qty"));
+	
+		float pp = Float.parseFloat(ProductPrice.getText().replace("₹", "").replace(",", ""));
+		float sp = Float.parseFloat(ShippingPrice.getText().replace("₹", ""));
+		float tp = Float.parseFloat(TaxPrice.getText().replace("₹", ""));
+		float ttp = Float.parseFloat(TotalPrice.getText().replace("₹", "").replace(",", ""));
+		
+		Assert.assertEquals(ttp, pp+sp+tp);
+		
+		Assert.assertEquals(SUBTOTAL.getText(), "SUBTOTAL**:");
+		Assert.assertEquals(SHIPPING.getText(), "SHIPPING**:");
+		Assert.assertEquals(TAXES.getText(), "TAXES:");
+		Assert.assertEquals(TOTAL.getText(), "TOTAL");
+		Assert.assertEquals(AmountWOVat.getText(), "** Amounts without VAT");
+		
+		Continue.click();
+	}
 
 }

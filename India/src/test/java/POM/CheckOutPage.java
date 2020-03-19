@@ -28,6 +28,18 @@ public class CheckOutPage extends BasePage {
 	@FindBys(@FindBy(xpath = "//span[@class='subheaders']"))
 	private List<WebElement> FormFields;
 	
+	@FindBy(id = "shippingStreet1")
+	private WebElement address1;
+	
+	@FindBy(id = "shippingStreet2")
+	private WebElement address2;
+	
+	@FindBy(id = "shippingCity")
+	private WebElement City;
+	
+	@FindBy(id = "shippingZip")
+	private WebElement Zip;
+	
 	@FindBy(xpath = "//button[@ng-click='orderInfo.nextPage()']")
 	private WebElement Continue;
 	
@@ -74,6 +86,42 @@ public class CheckOutPage extends BasePage {
 		for(int i = 0; i<FormFields.size(); i++){
 			Assert.assertEquals(FormFields.get(i).getText(), fields[i]);
 		}
+		
+		Continue.click();
+	}
+	
+	public void retailformdetails(){
+		
+		String [] fields = {
+				"FIRST NAME",
+				"LAST NAME",
+				"PHONE",
+				"EMAIL",
+				"",
+				"STREET 1",
+				"STREET 2",
+				"CITY",
+				"STATE / PROVINCE",
+				"ZIPCODE",
+				"COUNTRY",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				};
+		
+		for(int i = 0; i<FormFields.size(); i++){
+			Assert.assertEquals(FormFields.get(i).getText(), fields[i]);
+		}
+		
+		address1.sendKeys("23/2 2nd floor Khandari Parc");
+		address1.sendKeys("Haudin Road");
+		City.sendKeys("Banglaore");
+		Zip.sendKeys("560042");
 		
 		Continue.click();
 	}

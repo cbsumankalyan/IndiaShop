@@ -40,14 +40,13 @@ public class LoginPage  extends BasePage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	public void LoginDistributor() throws InterruptedException{
+	public void SelectState() throws InterruptedException{
 		Thread.sleep(10000);
 		CookieClose.click();
 		Country.click();
 		CountrySelect.click();
-		Username.sendKeys("108639101");
-		Password.sendKeys("1234");
-		UserLogin.click();
+		Select select = new Select(StateSelect);
+		select.selectByVisibleText("Karnataka");
 	}
 	
 	public void Login(String username, String password) throws InterruptedException, IOException{

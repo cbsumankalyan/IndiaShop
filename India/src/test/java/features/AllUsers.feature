@@ -16,8 +16,12 @@ Then Payment Avenue
 
 Then Review Orders
 
-Then CCAvenue Payment Details
+When Review Fields <username>
+Then Shipping Information <username>
+Then Contact Information <username>
+Then Payment Information CCAvenue
 
+Then CCAvenue Payment Details
 
 Examples:
 |username  |password   |
@@ -50,4 +54,3 @@ Examples:
 |314573191 |UrT8nK     |
 |312289691 |GC7Jcy     |
 |312930091 |C7P59f     |
-

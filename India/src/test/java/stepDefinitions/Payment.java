@@ -28,6 +28,11 @@ public class Payment extends BasePage {
 		payment.paymentfields();
 	}
 	
+	@When("^Retail Payment Fields$")
+	public void payment_fields() throws InterruptedException, IOException{
+		payment.paymentfields();
+	}
+	
 	@When("^Banks Names$")
 	public void banks_names(){
 		payment.paymentbanks();
@@ -36,6 +41,11 @@ public class Payment extends BasePage {
 	@Then("^Order Summary$")
 	public void order_summary() throws InterruptedException{
 		payment.summary();
+	}
+	
+	@Then("^Retail Order Summary$")
+	public void retail_order_summary() throws InterruptedException{
+		payment.retailsummary();
 	}
 	
 	@Then("^Payment Essecom$")

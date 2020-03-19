@@ -1,29 +1,96 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="2" time="176.522069">
-<testcase classname="All Users" name="With Out Order" time="89.139164">
-<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
-Given 206914401 and 0155....................................................passed
-Then Home Page 206914401....................................................passed
-Then Add Products To Cart 206914401.........................................passed
+<testsuite failures="3" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="222.266268">
+<testcase classname="All Users" name="With Out Order" time="90.179264">
+<failure message="java.lang.AssertionError: expected [SHIPPING INFORMATION Update&#10;PREETI SINGH&#10;] but found [SHIPPING INFORMATION Update&#10;Preeti Singh&#10;D/O RAVINDRA KUNWAR B51/1 AVAS VIKAS COLONY NEAR WATER TANK WARD NO 66&#10;GORAKHPUR, UP, 273015, IN]&#13;&#10;&#9;at org.testng.Assert.fail(Assert.java:96)&#13;&#10;&#9;at org.testng.Assert.failNotEquals(Assert.java:776)&#13;&#10;&#9;at org.testng.Assert.assertEqualsImpl(Assert.java:137)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:118)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:453)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:463)&#13;&#10;&#9;at POM.ReviewPage.shipping(ReviewPage.java:132)&#13;&#10;&#9;at stepDefinitions.Review.shipping_information(Review.java:31)&#13;&#10;&#9;at ✽.Then Shipping Information 314573191(src/test/java/features/ALLUsers.feature:20)&#13;&#10;"><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Given 314573191 and UrT8nK..................................................passed
+Then Home Page 314573191....................................................passed
+Then Add Products To Cart 314573191.........................................passed
 Then Check Product..........................................................passed
 Then Check Cart.............................................................passed
 Then Check Form Fields......................................................passed
 Then Payment Avenue.........................................................passed
 Then Review Orders..........................................................passed
-Then CCAvenue Payment Details...............................................passed
-]]></system-out>
+When Review Fields 314573191................................................passed
+Then Shipping Information 314573191.........................................failed
+Then Contact Information 314573191..........................................skipped
+Then Payment Information CCAvenue...........................................skipped
+Then CCAvenue Payment Details...............................................skipped
+
+StackTrace:
+java.lang.AssertionError: expected [SHIPPING INFORMATION Update
+PREETI SINGH
+] but found [SHIPPING INFORMATION Update
+Preeti Singh
+D/O RAVINDRA KUNWAR B51/1 AVAS VIKAS COLONY NEAR WATER TANK WARD NO 66
+GORAKHPUR, UP, 273015, IN]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at POM.ReviewPage.shipping(ReviewPage.java:132)
+	at stepDefinitions.Review.shipping_information(Review.java:31)
+	at ✽.Then Shipping Information 314573191(src/test/java/features/ALLUsers.feature:20)
+]]></failure>
 </testcase>
-<testcase classname="All Users" name="With Out Order 2" time="87.382905">
-<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
-Given 314852591 and asiaaktar...............................................passed
-Then Home Page 314852591....................................................passed
-Then Add Products To Cart 314852591.........................................passed
+<testcase classname="All Users" name="With Out Order 2" time="89.349607">
+<failure message="java.lang.AssertionError: expected [SHIPPING INFORMATION Update&#10;TUNU MAL&#10;] but found [SHIPPING INFORMATION Update&#10;TUNU MAL&#10;Block No 537,Qr No 1/55Domohani Railway Colony. Kalla Central Hospital.Bardhhaman&#10;Asansol, WB, 713340, IN]&#13;&#10;&#9;at org.testng.Assert.fail(Assert.java:96)&#13;&#10;&#9;at org.testng.Assert.failNotEquals(Assert.java:776)&#13;&#10;&#9;at org.testng.Assert.assertEqualsImpl(Assert.java:137)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:118)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:453)&#13;&#10;&#9;at org.testng.Assert.assertEquals(Assert.java:463)&#13;&#10;&#9;at POM.ReviewPage.shipping(ReviewPage.java:132)&#13;&#10;&#9;at stepDefinitions.Review.shipping_information(Review.java:31)&#13;&#10;&#9;at ✽.Then Shipping Information 312289691(src/test/java/features/ALLUsers.feature:20)&#13;&#10;"><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Given 312289691 and GC7Jcy..................................................passed
+Then Home Page 312289691....................................................passed
+Then Add Products To Cart 312289691.........................................passed
 Then Check Product..........................................................passed
 Then Check Cart.............................................................passed
 Then Check Form Fields......................................................passed
 Then Payment Avenue.........................................................passed
 Then Review Orders..........................................................passed
-Then CCAvenue Payment Details...............................................passed
-]]></system-out>
+When Review Fields 312289691................................................passed
+Then Shipping Information 312289691.........................................failed
+Then Contact Information 312289691..........................................skipped
+Then Payment Information CCAvenue...........................................skipped
+Then CCAvenue Payment Details...............................................skipped
+
+StackTrace:
+java.lang.AssertionError: expected [SHIPPING INFORMATION Update
+TUNU MAL
+] but found [SHIPPING INFORMATION Update
+TUNU MAL
+Block No 537,Qr No 1/55Domohani Railway Colony. Kalla Central Hospital.Bardhhaman
+Asansol, WB, 713340, IN]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:453)
+	at org.testng.Assert.assertEquals(Assert.java:463)
+	at POM.ReviewPage.shipping(ReviewPage.java:132)
+	at stepDefinitions.Review.shipping_information(Review.java:31)
+	at ✽.Then Shipping Information 312289691(src/test/java/features/ALLUsers.feature:20)
+]]></failure>
+</testcase>
+<testcase classname="All Users" name="With Out Order 3" time="42.737397">
+<failure message="junit.framework.ComparisonFailure: expected:&lt;[]&gt; but was:&lt;[PV: 0]&gt;&#13;&#10;&#9;at junit.framework.Assert.assertEquals(Assert.java:100)&#13;&#10;&#9;at junit.framework.Assert.assertEquals(Assert.java:107)&#13;&#10;&#9;at POM.HomePage.Menu(HomePage.java:219)&#13;&#10;&#9;at stepDefinitions.Home.homepage(Home.java:29)&#13;&#10;&#9;at ✽.Then Home Page 312930091(src/test/java/features/ALLUsers.feature:7)&#13;&#10;"><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Given 312930091 and C7P59f..................................................passed
+Then Home Page 312930091....................................................failed
+Then Add Products To Cart 312930091.........................................skipped
+Then Check Product..........................................................skipped
+Then Check Cart.............................................................skipped
+Then Check Form Fields......................................................skipped
+Then Payment Avenue.........................................................skipped
+Then Review Orders..........................................................skipped
+When Review Fields 312930091................................................skipped
+Then Shipping Information 312930091.........................................skipped
+Then Contact Information 312930091..........................................skipped
+Then Payment Information CCAvenue...........................................skipped
+Then CCAvenue Payment Details...............................................skipped
+
+StackTrace:
+junit.framework.ComparisonFailure: expected:<[]> but was:<[PV: 0]>
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at POM.HomePage.Menu(HomePage.java:219)
+	at stepDefinitions.Home.homepage(Home.java:29)
+	at ✽.Then Home Page 312930091(src/test/java/features/ALLUsers.feature:7)
+]]></failure>
 </testcase>
 </testsuite>
