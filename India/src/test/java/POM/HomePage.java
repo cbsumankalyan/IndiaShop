@@ -95,7 +95,7 @@ public class HomePage extends BasePage {
 	@FindBy(xpath = "//span[contains(@class, 'qty-icon')]")
 	private WebElement CartQty;
 
-	@FindBy(xpath = "//span[contains(@class, 'my-unicity')]")
+	@FindBy(xpath = "//span[@class= 'icon-arrow_up_color arrow']")
 	private WebElement MyUnicity;
 
 	@FindBy(xpath = "//a[contains(text(),'Unicity.com')]")
@@ -213,21 +213,23 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(languages[i], Languages.get(i).getText());
 		}
 		Thread.sleep(3000);
+		
+		MyUnicity.click();
+		Assert.assertTrue(Unicitydotcom.isDisplayed());
+		Assert.assertTrue(Officedotcom.isDisplayed());
+		Assert.assertTrue(Library.isDisplayed());
+		Assert.assertEquals(DistributorName.getText(), getTranslation(username+"Name").toUpperCase());
+		Assert.assertEquals(DistributorID.getText(), getTranslation(username+"ID"));
+		Thread.sleep(5000);
+		
 		Country.click();
+		Thread.sleep(5000);
 		Assert.assertEquals(SelectedCountry.getText(), "India");
 
 		Assert.assertEquals(CartPV.getText(), "PV: 0");
 		Assert.assertEquals(CartPrice.getText(), "₹0.00");
 		Assert.assertEquals(CartQty.getText(), "0");
-
-		MyUnicity.click();
-
-		Assert.assertTrue(Unicitydotcom.isDisplayed());
-		Assert.assertTrue(Officedotcom.isDisplayed());
-		Assert.assertTrue(Library.isDisplayed());
-		
-		Assert.assertEquals(DistributorName.getText(), getTranslation(username+"Name"));
-		Assert.assertEquals(DistributorID.getText(), getTranslation(username+"ID"));
+	
 	}
 
 	public void Search() throws IOException, InterruptedException {

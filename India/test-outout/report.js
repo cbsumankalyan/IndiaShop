@@ -1,16 +1,16 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/java/features/ALLUsers.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/java/features/BankWire.feature");
 formatter.feature({
   "line": 1,
-  "name": "All Users",
+  "name": "BankWire",
   "description": "",
-  "id": "all-users",
+  "id": "bankwire",
   "keyword": "Feature"
 });
 formatter.scenarioOutline({
   "line": 3,
-  "name": "With Out Order",
+  "name": "BankWire",
   "description": "",
-  "id": "all-users;with-out-order",
+  "id": "bankwire;bankwire",
   "type": "scenario_outline",
   "keyword": "Scenario Outline"
 });
@@ -30,661 +30,456 @@ formatter.step({
   "keyword": "Then "
 });
 formatter.step({
-  "line": 9,
-  "name": "Add Products To Cart \u003cusername\u003e",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 10,
-  "name": "Check Product",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 11,
-  "name": "Check Cart",
-  "keyword": "Then "
-});
-formatter.step({
+  "comments": [
+    {
+      "line": 9,
+      "value": "#Then All Products"
+    },
+    {
+      "line": 10,
+      "value": "#And Products"
+    },
+    {
+      "line": 11,
+      "value": "#And Accessories"
+    },
+    {
+      "line": 12,
+      "value": "#"
+    }
+  ],
   "line": 13,
-  "name": "Check Form Fields",
-  "keyword": "Then "
+  "name": "Search Product",
+  "keyword": "When "
 });
 formatter.step({
   "line": 15,
-  "name": "Payment Avenue",
+  "name": "All Products in List View",
   "keyword": "Then "
+});
+formatter.step({
+  "line": 16,
+  "name": "Products in List View",
+  "keyword": "And "
 });
 formatter.step({
   "line": 17,
-  "name": "Review Orders",
-  "keyword": "Then "
+  "name": "Accessories in List View",
+  "keyword": "And "
 });
 formatter.step({
   "line": 19,
-  "name": "Review Fields \u003cusername\u003e",
+  "name": "Product Added to Cart \u003cusername\u003e",
   "keyword": "When "
 });
 formatter.step({
   "line": 20,
-  "name": "Shipping Information \u003cusername\u003e",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 21,
-  "name": "Contact Information \u003cusername\u003e",
+  "name": "Check the Cart Details",
   "keyword": "Then "
 });
 formatter.step({
   "line": 22,
-  "name": "Payment Information CCAvenue",
+  "name": "Remove Products from Cart",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 23,
+  "name": "Add Products To Cart \u003cusername\u003e",
   "keyword": "Then "
 });
 formatter.step({
   "line": 24,
-  "name": "CCAvenue Payment Details",
+  "name": "Check Product",
   "keyword": "Then "
 });
+formatter.step({
+  "line": 25,
+  "name": "Check Cart",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 27,
+  "name": "Cart Go Back",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 28,
+  "name": "Check Out \u003cusername\u003e",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 29,
+  "name": "Check Form Fields",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 31,
+  "name": "Payment Go Back",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 32,
+  "name": "Payment Fields \u003cusername\u003e",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 33,
+  "name": "Banks Names",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 34,
+  "name": "Order Summary",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 36,
+  "name": "Review Fields \u003cusername\u003e",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 37,
+  "name": "Shipping Information \u003cusername\u003e",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 38,
+  "name": "Contact Information \u003cusername\u003e",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 39,
+  "name": "Payment Information",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 40,
+  "name": "Update Shipping",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 41,
+  "name": "Update Contact",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 42,
+  "name": "Update Payment",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 43,
+  "name": "Go Back",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 45,
+  "name": "Review Orders",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 47,
+  "name": "Placed Order Fields \u003cusername\u003e",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 48,
+  "name": "Placed Shipping Information",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 49,
+  "name": "Placed Contact Information",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 50,
+  "name": "Placed Payment Information",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 52,
+  "name": "Placed Orders",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 54,
+  "name": "Return Home \u003cusername\u003e",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 55,
+  "name": "Logout",
+  "keyword": "When "
+});
 formatter.examples({
-  "line": 26,
+  "line": 57,
   "name": "",
   "description": "",
-  "id": "all-users;with-out-order;",
+  "id": "bankwire;bankwire;",
   "rows": [
     {
       "cells": [
         "username",
         "password"
       ],
-      "line": 27,
-      "id": "all-users;with-out-order;;1"
-    },
-    {
-      "comments": [
-        {
-          "line": 28,
-          "value": "#|206914401 |0155       |"
-        },
-        {
-          "line": 29,
-          "value": "#|314852591 |asiaaktar  |"
-        },
-        {
-          "line": 30,
-          "value": "#|312579891 |FXmpqm     |"
-        },
-        {
-          "line": 31,
-          "value": "#|205146001 |baba69     |"
-        },
-        {
-          "line": 32,
-          "value": "#|312709091 |JjQtYS     |"
-        },
-        {
-          "line": 33,
-          "value": "#|313979091 |acSjac     |"
-        },
-        {
-          "line": 34,
-          "value": "#|314573291 |1985       |"
-        },
-        {
-          "line": 35,
-          "value": "#|314304891 |PQU5RF\t   |"
-        },
-        {
-          "line": 36,
-          "value": "#|312837491 |wGn7C9     |"
-        },
-        {
-          "line": 37,
-          "value": "#|310141491 |ttR8Jy     |"
-        },
-        {
-          "line": 38,
-          "value": "#|314195991 |9vnaTy     |"
-        },
-        {
-          "line": 39,
-          "value": "#|301941991 |sonu3264   |"
-        },
-        {
-          "line": 40,
-          "value": "#|314573491 |7982701596 |"
-        },
-        {
-          "line": 41,
-          "value": "#|309938991 |pratik143  |"
-        },
-        {
-          "line": 42,
-          "value": "#|314195391 |37yud5     |"
-        },
-        {
-          "line": 43,
-          "value": "#|313691891 |44f85294480c    |"
-        },
-        {
-          "line": 44,
-          "value": "#|313307391 |VuNqZj     |"
-        },
-        {
-          "line": 45,
-          "value": "#|305652791 |mTVWRq     |"
-        },
-        {
-          "line": 46,
-          "value": "#|314893991 |W67UN9     |"
-        },
-        {
-          "line": 47,
-          "value": "#|314224491 |UXtRBx     |"
-        },
-        {
-          "line": 48,
-          "value": "#|310586191 |v3BRT5     |"
-        },
-        {
-          "line": 49,
-          "value": "#|304000191 |7YbrPa     |"
-        },
-        {
-          "line": 50,
-          "value": "#|200357401 |unicity1234|"
-        },
-        {
-          "line": 51,
-          "value": "#|311846191 |7666       |"
-        },
-        {
-          "line": 52,
-          "value": "#|314504491 |xHAQQY     |"
-        },
-        {
-          "line": 53,
-          "value": "#|313909791 |Qn8KyY     |"
-        }
-      ],
-      "cells": [
-        "314573191",
-        "UrT8nK"
-      ],
-      "line": 54,
-      "id": "all-users;with-out-order;;2"
+      "line": 58,
+      "id": "bankwire;bankwire;;1"
     },
     {
       "cells": [
-        "312289691",
-        "GC7Jcy"
+        "108639101",
+        "1234"
       ],
-      "line": 55,
-      "id": "all-users;with-out-order;;3"
-    },
-    {
-      "cells": [
-        "312930091",
-        "C7P59f"
-      ],
-      "line": 56,
-      "id": "all-users;with-out-order;;4"
+      "line": 59,
+      "id": "bankwire;bankwire;;2"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 4260153822,
+  "duration": 4300942764,
   "status": "passed"
 });
 formatter.scenario({
+  "line": 59,
+  "name": "BankWire",
+  "description": "",
+  "id": "bankwire;bankwire;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 5,
+  "name": "Navigate to the \"https://shop.unicity.com/#/home\" application",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "108639101 and 1234",
+  "matchedColumns": [
+    0,
+    1
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 7,
+  "name": "Home Page 108639101",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.step({
   "comments": [
     {
-      "line": 28,
-      "value": "#|206914401 |0155       |"
+      "line": 9,
+      "value": "#Then All Products"
     },
     {
-      "line": 29,
-      "value": "#|314852591 |asiaaktar  |"
+      "line": 10,
+      "value": "#And Products"
     },
     {
-      "line": 30,
-      "value": "#|312579891 |FXmpqm     |"
+      "line": 11,
+      "value": "#And Accessories"
     },
     {
-      "line": 31,
-      "value": "#|205146001 |baba69     |"
-    },
-    {
-      "line": 32,
-      "value": "#|312709091 |JjQtYS     |"
-    },
-    {
-      "line": 33,
-      "value": "#|313979091 |acSjac     |"
-    },
-    {
-      "line": 34,
-      "value": "#|314573291 |1985       |"
-    },
-    {
-      "line": 35,
-      "value": "#|314304891 |PQU5RF\t   |"
-    },
-    {
-      "line": 36,
-      "value": "#|312837491 |wGn7C9     |"
-    },
-    {
-      "line": 37,
-      "value": "#|310141491 |ttR8Jy     |"
-    },
-    {
-      "line": 38,
-      "value": "#|314195991 |9vnaTy     |"
-    },
-    {
-      "line": 39,
-      "value": "#|301941991 |sonu3264   |"
-    },
-    {
-      "line": 40,
-      "value": "#|314573491 |7982701596 |"
-    },
-    {
-      "line": 41,
-      "value": "#|309938991 |pratik143  |"
-    },
-    {
-      "line": 42,
-      "value": "#|314195391 |37yud5     |"
-    },
-    {
-      "line": 43,
-      "value": "#|313691891 |44f85294480c    |"
-    },
-    {
-      "line": 44,
-      "value": "#|313307391 |VuNqZj     |"
-    },
-    {
-      "line": 45,
-      "value": "#|305652791 |mTVWRq     |"
-    },
-    {
-      "line": 46,
-      "value": "#|314893991 |W67UN9     |"
-    },
-    {
-      "line": 47,
-      "value": "#|314224491 |UXtRBx     |"
-    },
-    {
-      "line": 48,
-      "value": "#|310586191 |v3BRT5     |"
-    },
-    {
-      "line": 49,
-      "value": "#|304000191 |7YbrPa     |"
-    },
-    {
-      "line": 50,
-      "value": "#|200357401 |unicity1234|"
-    },
-    {
-      "line": 51,
-      "value": "#|311846191 |7666       |"
-    },
-    {
-      "line": 52,
-      "value": "#|314504491 |xHAQQY     |"
-    },
-    {
-      "line": 53,
-      "value": "#|313909791 |Qn8KyY     |"
+      "line": 12,
+      "value": "#"
     }
   ],
+  "line": 13,
+  "name": "Search Product",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 15,
+  "name": "All Products in List View",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 16,
+  "name": "Products in List View",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 17,
+  "name": "Accessories in List View",
+  "keyword": "And "
+});
+formatter.step({
+  "line": 19,
+  "name": "Product Added to Cart 108639101",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 20,
+  "name": "Check the Cart Details",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 22,
+  "name": "Remove Products from Cart",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 23,
+  "name": "Add Products To Cart 108639101",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 24,
+  "name": "Check Product",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 25,
+  "name": "Check Cart",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 27,
+  "name": "Cart Go Back",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 28,
+  "name": "Check Out 108639101",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 29,
+  "name": "Check Form Fields",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 31,
+  "name": "Payment Go Back",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 32,
+  "name": "Payment Fields 108639101",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 33,
+  "name": "Banks Names",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 34,
+  "name": "Order Summary",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 36,
+  "name": "Review Fields 108639101",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 37,
+  "name": "Shipping Information 108639101",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 38,
+  "name": "Contact Information 108639101",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 39,
+  "name": "Payment Information",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 40,
+  "name": "Update Shipping",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 41,
+  "name": "Update Contact",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 42,
+  "name": "Update Payment",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 43,
+  "name": "Go Back",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 45,
+  "name": "Review Orders",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 47,
+  "name": "Placed Order Fields 108639101",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "When "
+});
+formatter.step({
+  "line": 48,
+  "name": "Placed Shipping Information",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 49,
+  "name": "Placed Contact Information",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 50,
+  "name": "Placed Payment Information",
+  "keyword": "Then "
+});
+formatter.step({
+  "line": 52,
+  "name": "Placed Orders",
+  "keyword": "Then "
+});
+formatter.step({
   "line": 54,
-  "name": "With Out Order",
-  "description": "",
-  "id": "all-users;with-out-order;;2",
-  "type": "scenario",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 5,
-  "name": "Navigate to the \"https://shop.unicity.com/#/home\" application",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 6,
-  "name": "314573191 and UrT8nK",
-  "matchedColumns": [
-    0,
-    1
-  ],
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 7,
-  "name": "Home Page 314573191",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 9,
-  "name": "Add Products To Cart 314573191",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 10,
-  "name": "Check Product",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 11,
-  "name": "Check Cart",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 13,
-  "name": "Check Form Fields",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 15,
-  "name": "Payment Avenue",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 17,
-  "name": "Review Orders",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 19,
-  "name": "Review Fields 314573191",
+  "name": "Return Home 108639101",
   "matchedColumns": [
     0
   ],
   "keyword": "When "
 });
 formatter.step({
-  "line": 20,
-  "name": "Shipping Information 314573191",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 21,
-  "name": "Contact Information 314573191",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 22,
-  "name": "Payment Information CCAvenue",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 24,
-  "name": "CCAvenue Payment Details",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "https://shop.unicity.com/#/home",
-      "offset": 17
-    }
-  ],
-  "location": "BrowserInitiate.navigate_to_the_application(String)"
-});
-formatter.result({
-  "duration": 11854944730,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "314573191",
-      "offset": 0
-    },
-    {
-      "val": "UrT8nK",
-      "offset": 14
-    }
-  ],
-  "location": "Login.and(String,String)"
-});
-formatter.result({
-  "duration": 14241953487,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "314573191",
-      "offset": 10
-    }
-  ],
-  "location": "Home.homepage(String)"
-});
-formatter.result({
-  "duration": 13842365305,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "314573191",
-      "offset": 21
-    }
-  ],
-  "location": "Cart.add_products_to_cart(String)"
-});
-formatter.result({
-  "duration": 16571074194,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Cart.check_product()"
-});
-formatter.result({
-  "duration": 726304620,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Cart.check_cart()"
-});
-formatter.result({
-  "duration": 899818582,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CheckOut.check_form_fields()"
-});
-formatter.result({
-  "duration": 975593366,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Payment.payment_avenue()"
-});
-formatter.result({
-  "duration": 5194656166,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Review.review_orders()"
-});
-formatter.result({
-  "duration": 10870092689,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "314573191",
-      "offset": 14
-    }
-  ],
-  "location": "Review.review_fields(String)"
-});
-formatter.result({
-  "duration": 10375297173,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "314573191",
-      "offset": 21
-    }
-  ],
-  "location": "Review.shipping_information(String)"
-});
-formatter.result({
-  "duration": 53256579,
-  "error_message": "java.lang.AssertionError: expected [SHIPPING INFORMATION Update\nPREETI SINGH\n] but found [SHIPPING INFORMATION Update\nPreeti Singh\nD/O RAVINDRA KUNWAR B51/1 AVAS VIKAS COLONY NEAR WATER TANK WARD NO 66\nGORAKHPUR, UP, 273015, IN]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:453)\r\n\tat org.testng.Assert.assertEquals(Assert.java:463)\r\n\tat POM.ReviewPage.shipping(ReviewPage.java:132)\r\n\tat stepDefinitions.Review.shipping_information(Review.java:31)\r\n\tat ✽.Then Shipping Information 314573191(src/test/java/features/ALLUsers.feature:20)\r\n",
-  "status": "failed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "314573191",
-      "offset": 20
-    }
-  ],
-  "location": "Review.contact_information(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Review.payment_information_ccavenue()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "CCAvenue.ccavenue_payment_details()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.embedding("image/png", "embedded0.png");
-formatter.after({
-  "duration": 313753015,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 3638015692,
-  "status": "passed"
-});
-formatter.scenario({
   "line": 55,
-  "name": "With Out Order",
-  "description": "",
-  "id": "all-users;with-out-order;;3",
-  "type": "scenario",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 5,
-  "name": "Navigate to the \"https://shop.unicity.com/#/home\" application",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 6,
-  "name": "312289691 and GC7Jcy",
-  "matchedColumns": [
-    0,
-    1
-  ],
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 7,
-  "name": "Home Page 312289691",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 9,
-  "name": "Add Products To Cart 312289691",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 10,
-  "name": "Check Product",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 11,
-  "name": "Check Cart",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 13,
-  "name": "Check Form Fields",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 15,
-  "name": "Payment Avenue",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 17,
-  "name": "Review Orders",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 19,
-  "name": "Review Fields 312289691",
-  "matchedColumns": [
-    0
-  ],
+  "name": "Logout",
   "keyword": "When "
-});
-formatter.step({
-  "line": 20,
-  "name": "Shipping Information 312289691",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 21,
-  "name": "Contact Information 312289691",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 22,
-  "name": "Payment Information CCAvenue",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 24,
-  "name": "CCAvenue Payment Details",
-  "keyword": "Then "
 });
 formatter.match({
   "arguments": [
@@ -696,381 +491,326 @@ formatter.match({
   "location": "BrowserInitiate.navigate_to_the_application(String)"
 });
 formatter.result({
-  "duration": 12077784813,
+  "duration": 12281660400,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "312289691",
+      "val": "108639101",
       "offset": 0
     },
     {
-      "val": "GC7Jcy",
+      "val": "1234",
       "offset": 14
     }
   ],
   "location": "Login.and(String,String)"
 });
 formatter.result({
-  "duration": 14043345104,
+  "duration": 14501501015,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "312289691",
+      "val": "108639101",
       "offset": 10
     }
   ],
   "location": "Home.homepage(String)"
 });
 formatter.result({
-  "duration": 13737691083,
+  "duration": 23758089607,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Home.search_product()"
+});
+formatter.result({
+  "duration": 8066422670,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Home.all_products_in_list_view()"
+});
+formatter.result({
+  "duration": 177412419338,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Home.products_in_list_view()"
+});
+formatter.result({
+  "duration": 144139322999,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Home.accessories_in_list_view()"
+});
+formatter.result({
+  "duration": 34357434758,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "312289691",
+      "val": "108639101",
+      "offset": 22
+    }
+  ],
+  "location": "Cart.product_added_to_cart(String)"
+});
+formatter.result({
+  "duration": 15732602652,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Cart.check_the_cart_details()"
+});
+formatter.result({
+  "duration": 1340553251,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Cart.remove_products_from_cart()"
+});
+formatter.result({
+  "duration": 1003220909,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "108639101",
       "offset": 21
     }
   ],
   "location": "Cart.add_products_to_cart(String)"
 });
 formatter.result({
-  "duration": 16599617792,
+  "duration": 17458987058,
   "status": "passed"
 });
 formatter.match({
   "location": "Cart.check_product()"
 });
 formatter.result({
-  "duration": 702423213,
+  "duration": 663811980,
   "status": "passed"
 });
 formatter.match({
   "location": "Cart.check_cart()"
 });
 formatter.result({
-  "duration": 889204385,
+  "duration": 821364327,
   "status": "passed"
 });
 formatter.match({
-  "location": "CheckOut.check_form_fields()"
+  "location": "CheckOut.cart_go_back()"
 });
 formatter.result({
-  "duration": 1128154563,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Payment.payment_avenue()"
-});
-formatter.result({
-  "duration": 5184728478,
-  "status": "passed"
-});
-formatter.match({
-  "location": "Review.review_orders()"
-});
-formatter.result({
-  "duration": 10679184366,
+  "duration": 972138216,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "312289691",
-      "offset": 14
-    }
-  ],
-  "location": "Review.review_fields(String)"
-});
-formatter.result({
-  "duration": 10332674418,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "312289691",
-      "offset": 21
-    }
-  ],
-  "location": "Review.shipping_information(String)"
-});
-formatter.result({
-  "duration": 37809526,
-  "error_message": "java.lang.AssertionError: expected [SHIPPING INFORMATION Update\nTUNU MAL\n] but found [SHIPPING INFORMATION Update\nTUNU MAL\nBlock No 537,Qr No 1/55Domohani Railway Colony. Kalla Central Hospital.Bardhhaman\nAsansol, WB, 713340, IN]\r\n\tat org.testng.Assert.fail(Assert.java:96)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:137)\r\n\tat org.testng.Assert.assertEquals(Assert.java:118)\r\n\tat org.testng.Assert.assertEquals(Assert.java:453)\r\n\tat org.testng.Assert.assertEquals(Assert.java:463)\r\n\tat POM.ReviewPage.shipping(ReviewPage.java:132)\r\n\tat stepDefinitions.Review.shipping_information(Review.java:31)\r\n\tat ✽.Then Shipping Information 312289691(src/test/java/features/ALLUsers.feature:20)\r\n",
-  "status": "failed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "312289691",
-      "offset": 20
-    }
-  ],
-  "location": "Review.contact_information(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Review.payment_information_ccavenue()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "CCAvenue.ccavenue_payment_details()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.embedding("image/png", "embedded1.png");
-formatter.after({
-  "duration": 298973695,
-  "status": "passed"
-});
-formatter.before({
-  "duration": 3377236802,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 56,
-  "name": "With Out Order",
-  "description": "",
-  "id": "all-users;with-out-order;;4",
-  "type": "scenario",
-  "keyword": "Scenario Outline"
-});
-formatter.step({
-  "line": 5,
-  "name": "Navigate to the \"https://shop.unicity.com/#/home\" application",
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 6,
-  "name": "312930091 and C7P59f",
-  "matchedColumns": [
-    0,
-    1
-  ],
-  "keyword": "Given "
-});
-formatter.step({
-  "line": 7,
-  "name": "Home Page 312930091",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 9,
-  "name": "Add Products To Cart 312930091",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 10,
-  "name": "Check Product",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 11,
-  "name": "Check Cart",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 13,
-  "name": "Check Form Fields",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 15,
-  "name": "Payment Avenue",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 17,
-  "name": "Review Orders",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 19,
-  "name": "Review Fields 312930091",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "When "
-});
-formatter.step({
-  "line": 20,
-  "name": "Shipping Information 312930091",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 21,
-  "name": "Contact Information 312930091",
-  "matchedColumns": [
-    0
-  ],
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 22,
-  "name": "Payment Information CCAvenue",
-  "keyword": "Then "
-});
-formatter.step({
-  "line": 24,
-  "name": "CCAvenue Payment Details",
-  "keyword": "Then "
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "https://shop.unicity.com/#/home",
-      "offset": 17
-    }
-  ],
-  "location": "BrowserInitiate.navigate_to_the_application(String)"
-});
-formatter.result({
-  "duration": 11645281830,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "312930091",
-      "offset": 0
-    },
-    {
-      "val": "C7P59f",
-      "offset": 14
-    }
-  ],
-  "location": "Login.and(String,String)"
-});
-formatter.result({
-  "duration": 14077000173,
-  "status": "passed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "312930091",
+      "val": "108639101",
       "offset": 10
     }
   ],
-  "location": "Home.homepage(String)"
+  "location": "CheckOut.check_out(String)"
 });
 formatter.result({
-  "duration": 13323862889,
-  "error_message": "junit.framework.ComparisonFailure: expected:\u003c[]\u003e but was:\u003c[PV: 0]\u003e\r\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\r\n\tat junit.framework.Assert.assertEquals(Assert.java:107)\r\n\tat POM.HomePage.Menu(HomePage.java:219)\r\n\tat stepDefinitions.Home.homepage(Home.java:29)\r\n\tat ✽.Then Home Page 312930091(src/test/java/features/ALLUsers.feature:7)\r\n",
-  "status": "failed"
-});
-formatter.match({
-  "arguments": [
-    {
-      "val": "312930091",
-      "offset": 21
-    }
-  ],
-  "location": "Cart.add_products_to_cart(String)"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Cart.check_product()"
-});
-formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Cart.check_cart()"
-});
-formatter.result({
-  "status": "skipped"
+  "duration": 10302698925,
+  "status": "passed"
 });
 formatter.match({
   "location": "CheckOut.check_form_fields()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 1287777526,
+  "status": "passed"
 });
 formatter.match({
-  "location": "Payment.payment_avenue()"
+  "location": "Payment.payment_go_back()"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.match({
-  "location": "Review.review_orders()"
-});
-formatter.result({
-  "status": "skipped"
+  "duration": 6606737585,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "312930091",
+      "val": "108639101",
+      "offset": 15
+    }
+  ],
+  "location": "Payment.payment_fields(String)"
+});
+formatter.result({
+  "duration": 10234266653,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Payment.banks_names()"
+});
+formatter.result({
+  "duration": 177355672,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Payment.order_summary()"
+});
+formatter.result({
+  "duration": 11009014195,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "108639101",
       "offset": 14
     }
   ],
   "location": "Review.review_fields(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 10968098106,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "312930091",
+      "val": "108639101",
       "offset": 21
     }
   ],
   "location": "Review.shipping_information(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 35641631,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "312930091",
+      "val": "108639101",
       "offset": 20
     }
   ],
   "location": "Review.contact_information(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 48614441,
+  "status": "passed"
 });
 formatter.match({
-  "location": "Review.payment_information_ccavenue()"
+  "location": "Review.payment_information()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 43099770,
+  "status": "passed"
 });
 formatter.match({
-  "location": "CCAvenue.ccavenue_payment_details()"
+  "location": "Review.update_shipping()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 18260534836,
+  "status": "passed"
 });
-formatter.embedding("image/png", "embedded2.png");
+formatter.match({
+  "location": "Review.update_contact()"
+});
+formatter.result({
+  "duration": 17504991577,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Review.update_payment()"
+});
+formatter.result({
+  "duration": 21236897056,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Review.go_back()"
+});
+formatter.result({
+  "duration": 22111372042,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Review.review_orders()"
+});
+formatter.result({
+  "duration": 10590124877,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "108639101",
+      "offset": 20
+    }
+  ],
+  "location": "PlaceOrder.placed_order_fields(String)"
+});
+formatter.result({
+  "duration": 15519735910,
+  "status": "passed"
+});
+formatter.match({
+  "location": "PlaceOrder.placed_shipping_information()"
+});
+formatter.result({
+  "duration": 37083765,
+  "status": "passed"
+});
+formatter.match({
+  "location": "PlaceOrder.placed_contact_information()"
+});
+formatter.result({
+  "duration": 49165695,
+  "status": "passed"
+});
+formatter.match({
+  "location": "PlaceOrder.placed_payment_information()"
+});
+formatter.result({
+  "duration": 43915557,
+  "status": "passed"
+});
+formatter.match({
+  "location": "PlaceOrder.placed()"
+});
+formatter.result({
+  "duration": 5435691891,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "108639101",
+      "offset": 12
+    }
+  ],
+  "location": "PlaceOrder.return_home(String)"
+});
+formatter.result({
+  "duration": 29668478010,
+  "status": "passed"
+});
+formatter.match({
+  "location": "Home.logout()"
+});
+formatter.result({
+  "duration": 106366811,
+  "status": "passed"
+});
 formatter.after({
-  "duration": 314014988,
+  "duration": 171947,
   "status": "passed"
 });
 });

@@ -52,7 +52,6 @@ Then Placed Payment Information
 Then Placed Orders
 
 When Return Home <username>
-Then Home Page <username>
 When Logout
 
 Examples:

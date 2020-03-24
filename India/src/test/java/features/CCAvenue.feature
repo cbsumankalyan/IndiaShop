@@ -16,8 +16,6 @@ Then Payment Avenue
 
 Then Order Summary
 
-Then Review Orders
-
 Then CCAvenue Payment Details
 
 Examples:
