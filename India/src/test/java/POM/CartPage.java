@@ -11,8 +11,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
-
-import junit.framework.Assert;
+import org.testng.Assert;
 
 public class CartPage extends BasePage {
 
@@ -222,7 +221,7 @@ public class CartPage extends BasePage {
 		Assert.assertEquals(itemcode, ProductInfo[0]);
 		Assert.assertEquals(pv, ("PV: " + ProductInfo[2]));
 
-		Assert.assertEquals(p.getProperty("CALCIUM MAGNESIUM COMPLEX".replace(" ", "") + "PRICE"),
+		Assert.assertEquals("₹"+p.getProperty("CALCIUM MAGNESIUM COMPLEX".replace(" ", "") + "PRICE"),
 				ProductCost.getText().toUpperCase());
 		Assert.assertEquals(price, CartCost.getText().replace("Tax Included", "").trim());
 		for (int j = 0; j < qty.length; j++) {
@@ -264,7 +263,7 @@ public class CartPage extends BasePage {
 		String[] ProductInfo = ProductPricePV.getText().split(" ");
 		Assert.assertEquals(itemcode, ProductInfo[0]);
 
-		Assert.assertEquals(p.getProperty("CALCIUM MAGNESIUM COMPLEX".replace(" ", "") + "RETAILPRICE"),
+		Assert.assertEquals("₹"+p.getProperty("CALCIUM MAGNESIUM COMPLEX".replace(" ", "") + "RETAILPRICE"),
 				ProductCost.getText().toUpperCase());
 		Assert.assertEquals(price, CartCost.getText().replace("Tax Included", "").trim());
 		for (int j = 0; j < qty.length; j++) {
@@ -352,17 +351,16 @@ public class CartPage extends BasePage {
 				"C:/Users/sumancb/git/IndiaShop/India/src/test/java/property/catalog.properties");
 		Properties p = new Properties();
 		p.load(type);
-		
 		Assert.assertEquals(p.getProperty(ProductNames.getText().replace(" ", "") + "CODE"),
 				ProductItemNumber.getText());
-		Assert.assertEquals(p.getProperty(ProductNames.getText().replace(" ", "") + "PRICE").replace(",", ""),
+		Assert.assertEquals("₹"+p.getProperty(ProductNames.getText().replace(" ", "") + "PRICE").replace(",", ""),
 				PPrice.getText().replace(" ", "") + " TAX INCLUDED");
 		Assert.assertEquals(p.getProperty(ProductNames.getText().replace(" ", "") + "PV"),
 				Productpv.getText().replace("PV: ", ""));
 
 		Assert.assertEquals(CartQTY.getText(), "1");
 		
-		Assert.assertEquals(p.getProperty(ProductNames.getText().replace(" ", "") + "PRICE").replace(",", ""), CartPrice.getText()+" TAX INCLUDED");
+		Assert.assertEquals("₹"+p.getProperty(ProductNames.getText().replace(" ", "") + "PRICE").replace(",", ""), CartPrice.getText()+" TAX INCLUDED");
 		Assert.assertEquals("PV: "+(p.getProperty(ProductNames.getText().replace(" ", "") + "PV")), CartPV.getText());
 		
 		Assert.assertEquals(PQty.getText(), "1");
@@ -392,13 +390,13 @@ public class CartPage extends BasePage {
 		p.load(type);
 		Assert.assertEquals(p.getProperty(ProductNames.getText().replace(" ", "") + "CODE"),
 				ProductItemNumber.getText());
-		Assert.assertEquals(p.getProperty(ProductNames.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
+		Assert.assertEquals("₹"+p.getProperty(ProductNames.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
 				PPrice.getText().replace(" ", "") + " TAX INCLUDED");
 
 
 		Assert.assertEquals(CartQTY.getText(), "1");
 		
-		Assert.assertEquals(p.getProperty(ProductNames.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""), CartPrice.getText().replace(",", "")+" TAX INCLUDED");
+		Assert.assertEquals("₹"+p.getProperty(ProductNames.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""), CartPrice.getText().replace(",", "")+" TAX INCLUDED");
 		
 		Assert.assertEquals(PQty.getText(), "1");
 		Assert.assertEquals(PInCart.getText(), "In Cart");
@@ -434,7 +432,7 @@ public class CartPage extends BasePage {
 		Assert.assertEquals(productdetails.get("itemcode"), ProductInfo[0]);
 		Assert.assertEquals(productdetails.get("pv"), ("PV: " + ProductInfo[2]));
 
-		Assert.assertEquals(p.getProperty("CALCIUM MAGNESIUM COMPLEX".replace(" ", "") + "PRICE"),
+		Assert.assertEquals("₹"+p.getProperty("CALCIUM MAGNESIUM COMPLEX".replace(" ", "") + "PRICE"),
 				ProductCost.getText().toUpperCase());
 		Assert.assertEquals(productdetails.get("price").replace(" ", ""), CartCost.getText().replace("Tax Included", "").trim());
 		for (int j = 0; j < qty.length; j++) {
@@ -467,7 +465,7 @@ public class CartPage extends BasePage {
 		String[] ProductInfo = ProductPricePV.getText().split(" ");
 		Assert.assertEquals(productdetails.get("itemcode"), ProductInfo[0]);
 		
-		Assert.assertEquals(p.getProperty("CALCIUM MAGNESIUM COMPLEX".replace(" ", "") + "RETAILPRICE"),
+		Assert.assertEquals("₹"+p.getProperty("CALCIUM MAGNESIUM COMPLEX".replace(" ", "") + "RETAILPRICE"),
 				ProductCost.getText().toUpperCase());
 		Assert.assertEquals(productdetails.get("price").replace(" ", ""), CartCost.getText().replace(",", "").replace("Tax Included", "").trim());
 		for (int j = 0; j < qty.length; j++) {

@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
-import junit.framework.Assert;
+import org.testng.Assert;
 
 public class HomePage extends BasePage {
 
@@ -244,7 +244,7 @@ public class HomePage extends BasePage {
 
 		Assert.assertEquals("UNICITY FAMILY PACK", Name.getText());
 		Assert.assertEquals(p.getProperty(Name.getText().replace(" ", "") + "CODE"), ItemCode.getText());
-		Assert.assertEquals(p.getProperty(Name.getText().replace(" ", "") + "PRICE"), Price.getText());
+		Assert.assertEquals("₹"+p.getProperty(Name.getText().replace(" ", "") + "PRICE"), Price.getText());
 		Assert.assertEquals(p.getProperty(Name.getText().replace(" ", "") + "PV"), PV.getText().replace("PV: ", ""));
 
 		Assert.assertTrue(AddtoCart.isDisplayed());
@@ -258,7 +258,7 @@ public class HomePage extends BasePage {
 		Assert.assertEquals("UNICITY FAMILY PACK", ProductName.getText());
 		Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "CODE"),
 				ProductItemNumber.getText());
-		Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "PRICE").replace(",", ""),
+		Assert.assertEquals("₹"+p.getProperty(ProductName.getText().replace(" ", "") + "PRICE").replace(",", ""),
 				ProductPrice.getText().replace(" ", "") + " TAX INCLUDED");
 		Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "PV"),
 				Productpv.getText().replace("PV: ", ""));
@@ -290,7 +290,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "CODE"),
 					ProductItemCode.get(i).getText());
 
-			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "PRICE"),
+			Assert.assertEquals("₹"+p.getProperty(Products.get(i).getText().replace(" ", "") + "PRICE"),
 					ProductPrices.get(i).getText());
 
 			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "PV"),
@@ -307,7 +307,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(allproducts[i], ProductName.getText());
 			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "CODE"),
 					ProductItemNumber.getText());
-			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "PRICE").replace(",", ""),
+			Assert.assertEquals("₹"+p.getProperty(ProductName.getText().replace(" ", "") + "PRICE").replace(",", ""),
 					ProductPrice.getText().replace(" ", "") + " TAX INCLUDED");
 			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "PV"),
 					Productpv.getText().replace("PV: ", ""));
@@ -340,7 +340,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "CODE"),
 					ProductItemCode.get(i).getText());
 
-			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "PRICE"),
+			Assert.assertEquals("₹"+p.getProperty(Products.get(i).getText().replace(" ", "") + "PRICE"),
 					ProductPrices.get(i).getText());
 
 			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "PV"),
@@ -357,7 +357,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(products[i], ProductName.getText());
 			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "CODE"),
 					ProductItemNumber.getText());
-			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "PRICE").replace(",", ""),
+			Assert.assertEquals("₹"+p.getProperty(ProductName.getText().replace(" ", "") + "PRICE").replace(",", ""),
 					ProductPrice.getText().replace(" ", "") + " TAX INCLUDED");
 			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "PV"),
 					Productpv.getText().replace("PV: ", ""));
@@ -389,7 +389,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "CODE"),
 					ProductItemCode.get(i).getText());
 
-			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "PRICE"),
+			Assert.assertEquals("₹"+p.getProperty(Products.get(i).getText().replace(" ", "") + "PRICE"),
 					ProductPrices.get(i).getText());
 
 			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "PV"),
@@ -406,7 +406,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(accessories[i], ProductName.getText());
 			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "CODE"),
 					ProductItemNumber.getText());
-			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "PRICE").replace(",", ""),
+			Assert.assertEquals("₹"+p.getProperty(ProductName.getText().replace(" ", "") + "PRICE").replace(",", ""),
 					ProductPrice.getText().replace(" ", "") + " TAX INCLUDED");
 			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "PV"),
 					Productpv.getText().replace("PV: ", ""));
@@ -437,7 +437,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(ListViewProductName.get(i).getText(), allproducts[i]);
 			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "CODE"),
 					ProductItemCode.get(i).getText());
-			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "PRICE"),
+			Assert.assertEquals("₹"+p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "PRICE"),
 					"₹" + ProductPrices.get(i).getText().toUpperCase());
 
 			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "PV"),
@@ -455,7 +455,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(allproducts[i], ProductName.getText());
 			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "CODE"),
 					ProductItemNumber.getText());
-			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "PRICE").replace(",", ""),
+			Assert.assertEquals("₹"+p.getProperty(ProductName.getText().replace(" ", "") + "PRICE").replace(",", ""),
 					ProductPrice.getText().replace(" ", "") + " TAX INCLUDED");
 			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "PV"),
 					Productpv.getText().replace("PV: ", ""));
@@ -484,7 +484,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(ListViewProductName.get(i).getText(), products[i]);
 			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "CODE"),
 					ProductItemCode.get(i).getText());
-			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "PRICE"),
+			Assert.assertEquals("₹"+p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "PRICE"),
 					"₹" + ProductPrices.get(i).getText().toUpperCase());
 
 			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "PV"),
@@ -502,7 +502,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(products[i], ProductName.getText());
 			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "CODE"),
 					ProductItemNumber.getText());
-			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "PRICE").replace(",", ""),
+			Assert.assertEquals("₹"+p.getProperty(ProductName.getText().replace(" ", "") + "PRICE").replace(",", ""),
 					ProductPrice.getText().replace(" ", "") + " TAX INCLUDED");
 			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "PV"),
 					Productpv.getText().replace("PV: ", ""));
@@ -531,7 +531,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(ListViewProductName.get(i).getText(), accessories[i]);
 			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "CODE"),
 					ProductItemCode.get(i).getText());
-			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "PRICE"),
+			Assert.assertEquals("₹"+p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "PRICE"),
 					"₹" + ProductPrices.get(i).getText().toUpperCase());
 
 			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "PV"),
@@ -549,7 +549,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(accessories[i], ProductName.getText());
 			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "CODE"),
 					ProductItemNumber.getText());
-			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "PRICE").replace(",", ""),
+			Assert.assertEquals("₹"+p.getProperty(ProductName.getText().replace(" ", "") + "PRICE").replace(",", ""),
 					ProductPrice.getText().replace(" ", "") + " TAX INCLUDED");
 			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "PV"),
 					Productpv.getText().replace("PV: ", ""));
@@ -581,7 +581,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "CODE"),
 					ProductItemCode.get(i).getText());
 			
-			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "RETAILPRICE"),
+			Assert.assertEquals("₹"+p.getProperty(Products.get(i).getText().replace(" ", "") + "RETAILPRICE"),
 					ProductPrices.get(i).getText());
 
 			for (int j = 0; j < qty.length; j++) {
@@ -595,7 +595,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(retailallproducts[i], ProductName.getText());
 			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "CODE"),
 					ProductItemNumber.getText());
-			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
+			Assert.assertEquals("₹"+p.getProperty(ProductName.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
 					ProductPrice.getText().replace(" ", "") + " TAX INCLUDED");
 			Thread.sleep(5000);
 			Assert.assertTrue(ShareLink.isDisplayed());
@@ -624,7 +624,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "CODE"),
 					ProductItemCode.get(i).getText());
 
-			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "RETAILPRICE"),
+			Assert.assertEquals("₹"+p.getProperty(Products.get(i).getText().replace(" ", "") + "RETAILPRICE"),
 					ProductPrices.get(i).getText());
 
 			for (int j = 0; j < qty.length; j++) {
@@ -638,7 +638,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(retailproducts[i], ProductName.getText());
 			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "CODE"),
 					ProductItemNumber.getText());
-			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
+			Assert.assertEquals("₹"+p.getProperty(ProductName.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
 					ProductPrice.getText().replace(" ", "") + " TAX INCLUDED");
 	
 			Thread.sleep(5000);
@@ -669,7 +669,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "CODE"),
 					ProductItemCode.get(i).getText());
 
-			Assert.assertEquals(p.getProperty(Products.get(i).getText().replace(" ", "") + "RETAILPRICE"),
+			Assert.assertEquals("₹"+p.getProperty(Products.get(i).getText().replace(" ", "") + "RETAILPRICE"),
 					ProductPrices.get(i).getText());
 
 			for (int j = 0; j < qty.length; j++) {
@@ -683,7 +683,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(accessories[i], ProductName.getText());
 			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "CODE"),
 					ProductItemNumber.getText());
-			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
+			Assert.assertEquals("₹"+p.getProperty(ProductName.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
 					ProductPrice.getText().replace(" ", "") + " TAX INCLUDED");
 	
 			Thread.sleep(5000);
@@ -713,7 +713,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(ListViewProductName.get(i).getText(), retailallproducts[i]);
 			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "CODE"),
 					ProductItemCode.get(i).getText());
-			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "RETAILPRICE"),
+			Assert.assertEquals("₹"+p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "RETAILPRICE"),
 					"₹" + ProductPrices.get(i).getText().toUpperCase());
 
 
@@ -729,7 +729,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(retailallproducts[i], ProductName.getText());
 			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "CODE"),
 					ProductItemNumber.getText());
-			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
+			Assert.assertEquals("₹"+p.getProperty(ProductName.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
 					ProductPrice.getText().replace(" ", "") + " TAX INCLUDED");
 	
 			Thread.sleep(5000);
@@ -757,7 +757,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(ListViewProductName.get(i).getText(), retailproducts[i]);
 			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "CODE"),
 					ProductItemCode.get(i).getText());
-			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "RETAILPRICE"),
+			Assert.assertEquals("₹"+p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "RETAILPRICE"),
 					"₹" + ProductPrices.get(i).getText().toUpperCase());
 
 			Assert.assertTrue(ListViewMinus.get(i).isDisplayed());
@@ -772,7 +772,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(retailproducts[i], ProductName.getText());
 			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "CODE"),
 					ProductItemNumber.getText());
-			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
+			Assert.assertEquals("₹"+p.getProperty(ProductName.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
 					ProductPrice.getText().replace(" ", "") + " TAX INCLUDED");
 		
 			Thread.sleep(5000);
@@ -800,7 +800,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(ListViewProductName.get(i).getText(), retailaccessories[i]);
 			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "CODE"),
 					ProductItemCode.get(i).getText());
-			Assert.assertEquals(p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "RETAILPRICE"),
+			Assert.assertEquals("₹"+p.getProperty(ListViewProductName.get(i).getText().replace(" ", "") + "RETAILPRICE"),
 					"₹" + ProductPrices.get(i).getText().toUpperCase());
 
 			Assert.assertTrue(ListViewMinus.get(i).isDisplayed());
@@ -815,7 +815,7 @@ public class HomePage extends BasePage {
 			Assert.assertEquals(retailaccessories[i], ProductName.getText());
 			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "CODE"),
 					ProductItemNumber.getText());
-			Assert.assertEquals(p.getProperty(ProductName.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
+			Assert.assertEquals("₹"+p.getProperty(ProductName.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
 					ProductPrice.getText().replace(" ", "") + " TAX INCLUDED");
 			
 			Thread.sleep(5000);

@@ -129,8 +129,8 @@ public class ReviewPage extends BasePage {
 	}
 
 	public void shipping(String username) throws IOException {
-		Assert.assertEquals(Shipping.getText(),
-				"SHIPPING INFORMATION Update\n"+getTranslation(username+"Name")+"\n"+getTranslation(username+"Address"));
+		Assert.assertEquals(Shipping.getText().toLowerCase(),
+				"shipping information update\n"+getTranslation(username+"Name").toLowerCase()+"\n"+getTranslation(username+"Address").toLowerCase());
 	}
 	
 	public void retailshipping() {
@@ -140,7 +140,7 @@ public class ReviewPage extends BasePage {
 	
 	public void updateshippingaddress() {
 		Assert.assertEquals(Shipping.getText(),
-				"SHIPPING INFORMATION Update\nIndia Training\n23/2 2nd floor Khandari Parc Haudin Road\nBANGALORE, KA, 560042, IN");
+				"SHIPPING INFORMATION Update\nIndia Training\n23/2 2nd floor Khandari Parc Haudin Road\nBangalore, KA, 560042, IN");
 	}
 	
 	public void updateretailshippingaddress() {
@@ -149,8 +149,8 @@ public class ReviewPage extends BasePage {
 	}
 	
 	public void contact(String username) throws IOException {
-		Assert.assertEquals(Contact.getText(),
-				"CONTACT INFORMATION Update\nPhone: "+getTranslation(username+"Phone")+"\nEmail: "+getTranslation(username+"Email"));
+		Assert.assertEquals(Contact.getText().toLowerCase(),
+				"contact information update\nphone: "+getTranslation(username+"Phone")+"\nEmail: "+getTranslation(username+"Email").toLowerCase());
 	}
 	
 	public void retailcontact() {

@@ -1,7 +1,6 @@
 package stepDefinitions;
 
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -16,9 +15,7 @@ public class BrowserInitiate extends BasePage {
 	
 	@Before
 	public void Open_the_browser() {
-		/*System.setProperty("webdriver.chrome.driver", "driver/chromedriver_win32_2.36/chromedriver.exe");
-		driver = new ChromeDriver();*/
-		
+	
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
@@ -37,9 +34,13 @@ public class BrowserInitiate extends BasePage {
 		if (scenario.isFailed()) {
 		      final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 		      scenario.embed(screenshot, "image/png"); 
-		      System.out.println("fadsfasdfadsffdsarewfdas   "+scenario.getName());
+		      System.out.println("Scenerio Name - "+scenario.getName());
 		 }
 		driver.close();
 	}
+	
+
+	
+	
 	
 }
