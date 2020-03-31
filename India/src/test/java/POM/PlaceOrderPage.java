@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
+import org.junit.Assert;
 
 public class PlaceOrderPage extends BasePage {
 	
@@ -146,7 +146,7 @@ public class PlaceOrderPage extends BasePage {
 		float tp = Float.parseFloat(TaxPrice.getText().replace("₹", ""));
 		float ttp = Float.parseFloat(TotalPrice.getText().replace("₹", "").replace(",", ""));
 
-		Assert.assertEquals(ttp, pp + sp + tp);
+		Assert.assertEquals(ttp, pp + sp + tp, ttp);
 
 		Assert.assertEquals(SUBTOTAL.getText(), "SUBTOTAL**:");
 		Assert.assertEquals(SHIPPING.getText(), "SHIPPING**:");
@@ -168,7 +168,7 @@ public class PlaceOrderPage extends BasePage {
 		float tp = Float.parseFloat(TaxPrice.getText().replace("₹", ""));
 		float ttp = Float.parseFloat(TotalPrice.getText().replace("₹", "").replace(",", ""));
 
-		Assert.assertEquals(ttp, pp + sp + tp);
+		Assert.assertEquals(ttp, pp + sp + tp, ttp);
 
 		Assert.assertEquals(SUBTOTAL.getText(), "SUBTOTAL**:");
 		Assert.assertEquals(SHIPPING.getText(), "SHIPPING**:");

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
+import org.junit.Assert;
 
 public class ReviewPage extends BasePage {
 
@@ -150,7 +150,7 @@ public class ReviewPage extends BasePage {
 	
 	public void contact(String username) throws IOException {
 		Assert.assertEquals(Contact.getText().toLowerCase(),
-				"contact information update\nphone: "+getTranslation(username+"Phone")+"\nEmail: "+getTranslation(username+"Email").toLowerCase());
+				"contact information update\nphone: "+getTranslation(username+"Phone")+"\nemail: "+getTranslation(username+"Email").toLowerCase());
 	}
 	
 	public void retailcontact() {
@@ -182,7 +182,7 @@ public class ReviewPage extends BasePage {
 		float tp = Float.parseFloat(TaxPrice.getText().replace("₹", ""));
 		float ttp = Float.parseFloat(TotalPrice.getText().replace("₹", "").replace(",", ""));
 
-		Assert.assertEquals(ttp, pp + sp + tp);
+		Assert.assertEquals(ttp, pp + sp + tp, ttp);
 		Assert.assertEquals(SUBTOTAL.getText(), "SUBTOTAL**:");
 		Assert.assertEquals(SHIPPING.getText(), "SHIPPING**:");
 		Assert.assertEquals(TAXES.getText(), "TAXES:");
@@ -205,7 +205,7 @@ public class ReviewPage extends BasePage {
 		float tp = Float.parseFloat(TaxPrice.getText().replace("₹", ""));
 		float ttp = Float.parseFloat(TotalPrice.getText().replace("₹", "").replace(",", ""));
 
-		Assert.assertEquals(ttp, pp + sp + tp);
+		Assert.assertEquals(ttp, pp + sp + tp, ttp);
 		Assert.assertEquals(SUBTOTAL.getText(), "SUBTOTAL**:");
 		Assert.assertEquals(SHIPPING.getText(), "SHIPPING**:");
 		Assert.assertEquals(TAXES.getText(), "TAXES:");
