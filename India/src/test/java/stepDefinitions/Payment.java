@@ -34,7 +34,7 @@ public class Payment extends BasePage {
 	}
 	
 	@When("^Banks Names$")
-	public void banks_names(){
+	public void banks_names() throws InterruptedException{
 		payment.paymentbanks();
 	}
 	

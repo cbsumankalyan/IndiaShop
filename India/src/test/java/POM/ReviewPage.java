@@ -168,7 +168,7 @@ public class ReviewPage extends BasePage {
 	}
 	
 	public void ccavenue() {
-		Assert.assertEquals(Payment.getText(), "PAYMENT INFORMATION Update\nPayment Type: TppKtkRedirect");
+		Assert.assertEquals(Payment.getText(), "PAYMENT INFORMATION Update\nPayment Type: TppKtkRedirect::CCAvenue");
 	}
 
 	public void Orders() throws InterruptedException {
@@ -176,7 +176,7 @@ public class ReviewPage extends BasePage {
 		Assert.assertEquals(ProductName.getText(), productdetails.get("name"));
 		Assert.assertEquals(ProductCode.getText(), productdetails.get("itemcode"));
 //		Assert.assertEquals(PPPrice.getText().trim(), productdetails.get("price") + "TaxIncluded");
-		Assert.assertEquals(Qty.getText().replace("QTY: ", ""), productdetails.get("qty"));
+		Assert.assertEquals(Qty.getText().replace("Qty: ", ""), productdetails.get("qty"));
 		float pp = Float.parseFloat(ProductPrice.getText().replace("₹", ""));
 		float sp = Float.parseFloat(ShippingPrice.getText().replace("₹", ""));
 		float tp = Float.parseFloat(TaxPrice.getText().replace("₹", ""));
@@ -188,7 +188,7 @@ public class ReviewPage extends BasePage {
 		Assert.assertEquals(TAXES.getText(), "TAXES:");
 		Assert.assertEquals(PVTOTAL.getText(), "PV TOTAL:");
 		Assert.assertEquals(TOTAL.getText(), "TOTAL");
-		Assert.assertEquals(AmountWOVat.getText(), "** Amounts without VAT");
+		Assert.assertEquals(AmountWOVat.getText(), "** Amounts without GST");
 		Assert.assertEquals(TotalPV.getText(), productdetails.get("pv").replace("PV: ", ""));
 
 		Continue.click();
@@ -199,7 +199,7 @@ public class ReviewPage extends BasePage {
 		Assert.assertEquals(ProductName.getText(), productdetails.get("name"));
 		Assert.assertEquals(ProductCode.getText(), productdetails.get("itemcode"));
 //		Assert.assertEquals(PPPrice.getText().trim(), productdetails.get("price") + "TaxIncluded");
-		Assert.assertEquals(Qty.getText().replace("QTY: ", ""), productdetails.get("qty"));
+		Assert.assertEquals(Qty.getText().replace("Qty: ", ""), productdetails.get("qty"));
 		float pp = Float.parseFloat(ProductPrice.getText().replace("₹", "").replace(",", ""));
 		float sp = Float.parseFloat(ShippingPrice.getText().replace("₹", ""));
 		float tp = Float.parseFloat(TaxPrice.getText().replace("₹", ""));
@@ -210,7 +210,7 @@ public class ReviewPage extends BasePage {
 		Assert.assertEquals(SHIPPING.getText(), "SHIPPING**:");
 		Assert.assertEquals(TAXES.getText(), "TAXES:");
 		Assert.assertEquals(TOTAL.getText(), "TOTAL");
-		Assert.assertEquals(AmountWOVat.getText(), "** Amounts without VAT");
+		Assert.assertEquals(AmountWOVat.getText(), "** Amounts without GST");
 
 		Continue.click();
 	}

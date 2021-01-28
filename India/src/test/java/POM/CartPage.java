@@ -21,8 +21,8 @@ public class CartPage extends BasePage {
 	@FindBy(xpath = "//div[contains(@title, 'List')]")
 	private WebElement List;
 
-	@FindBy(xpath = "//*[text()='Calcium Magnesium Complex']/parent::div/parent::div/following-sibling::div/div[2]/span[2]")
-	private WebElement CalciumMagnesium;
+	@FindBy(xpath = "//*[text()='Activate (30 Sachets)']/parent::div/parent::div/following-sibling::div/div[2]/span[2]")
+	private WebElement Activate;
 
 	@FindBy(xpath = "//div[contains(@class, 'items-qty')]")
 	private WebElement Quantity;
@@ -33,14 +33,14 @@ public class CartPage extends BasePage {
 	@FindBy(xpath = "//span[contains(@class,'qty-icon')]")
 	private WebElement CartQTY;
 
-	@FindBy(xpath = "//*[text()='Calcium Magnesium Complex']/parent::div/parent::div/following-sibling::div/div/div[2]/div[1]")
-	private WebElement CalciumMagnesiumPrice;
+	@FindBy(xpath = "//*[text()='Activate (30 Sachets)']/parent::div/parent::div/following-sibling::div/div/div[2]/div[1]")
+	private WebElement ActivatePrice;
 
-	@FindBy(xpath = "//*[text()='Calcium Magnesium Complex']/parent::div/parent::div/following-sibling::div/div/div[2]/div[2]")
-	private WebElement CalciumMagnesiumPV;
+	@FindBy(xpath = "//*[text()='Activate (30 Sachets)']/parent::div/parent::div/following-sibling::div/div/div[2]/div[2]")
+	private WebElement ActivatePV;
 
-	@FindBy(xpath = "//*[text()='Calcium Magnesium Complex']/parent::div/parent::div/following-sibling::div/div/div[1]")
-	private WebElement CalciumMagnesiumItemCode;
+	@FindBy(xpath = "//*[text()='Activate (30 Sachets)']/parent::div/parent::div/following-sibling::div/div/div[1]")
+	private WebElement ActivateItemCode;
 
 	@FindBy(xpath = "//span[contains(@class,'pv-align')]")
 	private WebElement CartPV;
@@ -99,25 +99,25 @@ public class CartPage extends BasePage {
 	@FindBy(xpath = "//div[contains(@title, 'View Products in a Grid')]")
 	private WebElement GridView;
 	
-	@FindBy(xpath = "//a[text()= ' Calcium Magnesium Complex ']/parent::div/parent::div/following-sibling::div/div[2]")
+	@FindBy(xpath = "//a[text()= ' Activate (30 Sachets) ']/parent::div/parent::div/following-sibling::div/div[2]")
 	private WebElement AddProductinGrid;
 	
-	@FindBy(xpath = "//a[text()= ' Calcium Magnesium Complex ']/parent::div/parent::div")
+	@FindBy(xpath = "//a[text()= ' Activate (30 Sachets) ']/parent::div/parent::div")
 	private WebElement ProductClick;
 	
-	@FindBy(xpath = "//a[text()= ' Calcium Magnesium Complex ']/parent::div/parent::div/following-sibling::div/div/div/button/b")
+	@FindBy(xpath = "//a[text()= ' Activate (30 Sachets) ']/parent::div/parent::div/following-sibling::div/div/div/button/b")
 	private WebElement GridQty;
 	
-	@FindBy(xpath = "//a[text()= ' Calcium Magnesium Complex ']/parent::div/parent::div/following-sibling::div/div/div/button/translate")
+	@FindBy(xpath = "//a[text()= ' Activate (30 Sachets) ']/parent::div/parent::div/following-sibling::div/div/div/button/translate")
 	private WebElement GridinCart;
 	
-	@FindBy(xpath = "//a[text()= ' Calcium Magnesium Complex ']/following-sibling::div[1]")
+	@FindBy(xpath = "//a[text()= ' Activate (30 Sachets) ']/following-sibling::div[1]")
 	private WebElement ProductPrice;
 	
 	@FindBy(xpath = "//h2")
 	private WebElement ProductNames;
 	
-	@FindBy(xpath = "//a[text()= ' Calcium Magnesium Complex ']/following-sibling::div[2]/div[contains(@class, 'pv-amount')]")
+	@FindBy(xpath = "//a[text()= ' Activate (30 Sachets) ']/following-sibling::div[2]/div[contains(@class, 'pv-amount')]")
 	private WebElement ProductPV;
 	
 	@FindBy(xpath = "//span[contains(@class,'item-number')]")
@@ -185,11 +185,12 @@ public class CartPage extends BasePage {
 	}
 
 	public void cart() throws InterruptedException {
-
+		System.out.println("Suman Kalyan Chakravathi 1");
 		Thread.sleep(5000);
-		ALLProducts.click();
-		List.click();
-		CalciumMagnesium.click();
+		System.out.println("Suman Kalyan Chakravathi 2");
+		ALLProducts.click();System.out.println("Suman Kalyan Chakravathi 3");
+		List.click();System.out.println("Suman Kalyan Chakravathi 4");
+		Activate.click();System.out.println("Suman Kalyan Chakravathi 5");
 	}
 
 	public void cartdetails() throws InterruptedException, IOException {
@@ -199,9 +200,9 @@ public class CartPage extends BasePage {
 		Properties p = new Properties();
 		p.load(type);
 
-		String itemcode = CalciumMagnesiumItemCode.getText();
-		String price = CalciumMagnesiumPrice.getText().replace(" Tax Included", "").replace(" ", "");
-		String pv = CalciumMagnesiumPV.getText();
+		String itemcode = ActivateItemCode.getText();
+		String price = ActivatePrice.getText().replace(" Tax Included", "").replace(" ", "");
+		String pv = ActivatePV.getText();
 
 		Assert.assertEquals(Quantity.getText().replace("ITEMS: ", ""), "1");
 		AddtoCart.click();
@@ -216,12 +217,12 @@ public class CartPage extends BasePage {
 		Assert.assertTrue(ContinueShoping.isDisplayed());
 		Assert.assertTrue(YourCartItems.isDisplayed());
 
-		Assert.assertEquals(ProductName.getText(), "CALCIUM MAGNESIUM COMPLEX");
+		Assert.assertEquals(ProductName.getText(), "ACTIVATE (30 SACHETS)");
 		String[] ProductInfo = ProductPricePV.getText().split(" ");
 		Assert.assertEquals(itemcode, ProductInfo[0]);
 		Assert.assertEquals(pv, ("PV: " + ProductInfo[2]));
 
-		Assert.assertEquals("₹"+p.getProperty("CALCIUM MAGNESIUM COMPLEX".replace(" ", "") + "PRICE"),
+		Assert.assertEquals("₹"+p.getProperty("ACTIVATE (30 SACHETS)".replace(" ", "") + "PRICE"),
 				ProductCost.getText().toUpperCase());
 		Assert.assertEquals(price, CartCost.getText().replace("Tax Included", "").trim());
 		for (int j = 0; j < qty.length; j++) {
@@ -231,7 +232,7 @@ public class CartPage extends BasePage {
 		Assert.assertEquals(TotalPV.getText(), "Total PV");
 		Assert.assertEquals(Subtotal.getText(), "Subtotal");
 
-		Assert.assertEquals(p.getProperty("CALCIUM MAGNESIUM COMPLEX".replace(" ", "") + "PV"), TOTALPV.getText());
+		Assert.assertEquals(p.getProperty("ACTIVATE (30 SACHETS)".replace(" ", "") + "PV"), TOTALPV.getText());
 		Assert.assertEquals(price, SUBTOTAL.getText());
 
 	}
@@ -243,8 +244,8 @@ public class CartPage extends BasePage {
 		Properties p = new Properties();
 		p.load(type);
 
-		String itemcode = CalciumMagnesiumItemCode.getText();
-		String price = CalciumMagnesiumPrice.getText().replace(" Tax Included", "").replace(" ", "");
+		String itemcode = ActivateItemCode.getText();
+		String price = ActivatePrice.getText().replace(" Tax Included", "").replace(" ", "");
 
 
 		Assert.assertEquals(Quantity.getText().replace("ITEMS: ", ""), "1");
@@ -259,11 +260,11 @@ public class CartPage extends BasePage {
 		Assert.assertTrue(ContinueShoping.isDisplayed());
 		Assert.assertTrue(YourCartItems.isDisplayed());
 
-		Assert.assertEquals(ProductName.getText(), "CALCIUM MAGNESIUM COMPLEX");
+		Assert.assertEquals(ProductName.getText(), "ACTIVATE (30 SACHETS)");
 		String[] ProductInfo = ProductPricePV.getText().split(" ");
 		Assert.assertEquals(itemcode, ProductInfo[0]);
 
-		Assert.assertEquals("₹"+p.getProperty("CALCIUM MAGNESIUM COMPLEX".replace(" ", "") + "RETAILPRICE"),
+		Assert.assertEquals("₹"+p.getProperty("ACTIVATE (30 SACHETS)".replace(" ", "") + "RETAILPRICE"),
 				ProductCost.getText().toUpperCase());
 		Assert.assertEquals(price, CartCost.getText().replace("Tax Included", "").trim());
 		for (int j = 0; j < qty.length; j++) {
@@ -369,7 +370,7 @@ public class CartPage extends BasePage {
 		Assert.assertTrue(Back.isDisplayed());
 		Assert.assertTrue(Share.isDisplayed());
 		
-		String name = "CALCIUM MAGNESIUM COMPLEX";
+		String name = "ACTIVATE (30 SACHETS)";
 		String itemcode = ProductItemNumber.getText();
 		String price = PPrice.getText();
 		String pv = Productpv.getText();
@@ -404,7 +405,7 @@ public class CartPage extends BasePage {
 		Assert.assertTrue(Back.isDisplayed());
 		Assert.assertTrue(Share.isDisplayed());
 		
-		String name = "CALCIUM MAGNESIUM COMPLEX";
+		String name = "ACTIVATE (30 SACHETS)";
 		String itemcode = ProductItemNumber.getText();
 		String price = PPrice.getText();
 		
@@ -432,7 +433,7 @@ public class CartPage extends BasePage {
 		Assert.assertEquals(productdetails.get("itemcode"), ProductInfo[0]);
 		Assert.assertEquals(productdetails.get("pv"), ("PV: " + ProductInfo[2]));
 
-		Assert.assertEquals("₹"+p.getProperty("CALCIUM MAGNESIUM COMPLEX".replace(" ", "") + "PRICE"),
+		Assert.assertEquals("₹"+p.getProperty("ACTIVATE (30 SACHETS)".replace(" ", "") + "PRICE"),
 				ProductCost.getText().toUpperCase());
 		Assert.assertEquals(productdetails.get("price").replace(" ", ""), CartCost.getText().replace("Tax Included", "").trim());
 		for (int j = 0; j < qty.length; j++) {
@@ -442,7 +443,7 @@ public class CartPage extends BasePage {
 		Assert.assertEquals(TotalPV.getText(), "Total PV");
 		Assert.assertEquals(Subtotal.getText(), "Subtotal");
 
-		Assert.assertEquals(p.getProperty("CALCIUM MAGNESIUM COMPLEX".replace(" ", "") + "PV"), TOTALPV.getText());
+		Assert.assertEquals(p.getProperty("ACTIVATE (30 SACHETS)".replace(" ", "") + "PV"), TOTALPV.getText());
 		Assert.assertEquals(productdetails.get("price").replace(" ", ""), SUBTOTAL.getText());
 		
 		Assert.assertEquals(ShippingReflect.getText(), "Total does not\nreflect shipping");
@@ -465,7 +466,7 @@ public class CartPage extends BasePage {
 		String[] ProductInfo = ProductPricePV.getText().split(" ");
 		Assert.assertEquals(productdetails.get("itemcode"), ProductInfo[0]);
 		
-		Assert.assertEquals("₹"+p.getProperty("CALCIUM MAGNESIUM COMPLEX".replace(" ", "") + "RETAILPRICE"),
+		Assert.assertEquals("₹"+p.getProperty("ACTIVATE (30 SACHETS)".replace(" ", "") + "RETAILPRICE"),
 				ProductCost.getText().toUpperCase());
 		Assert.assertEquals(productdetails.get("price").replace(" ", ""), CartCost.getText().replace(",", "").replace("Tax Included", "").trim());
 		for (int j = 0; j < qty.length; j++) {
@@ -489,7 +490,8 @@ public class CartPage extends BasePage {
 		String lname = RandomStringUtils.randomAlphabetic(6).toUpperCase();
 		String phone = RandomStringUtils.randomNumeric(10);
 		
-		Assert.assertTrue(UnicityLogo.isDisplayed());
+//		Assert.assertTrue(UnicityLogo.isDisplayed());
+		System.out.println("Raja______===="+AlreadyhaveAnAccount.getText());
 		Assert.assertEquals(AlreadyhaveAnAccount.getText(), "Already have an account?");
 		Assert.assertTrue(ExistingLogin.isDisplayed());
 		

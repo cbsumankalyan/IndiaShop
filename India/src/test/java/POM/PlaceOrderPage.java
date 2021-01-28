@@ -105,8 +105,7 @@ public class PlaceOrderPage extends BasePage {
 		Assert.assertEquals(YourOrderHasBeenPlaced.getText(), "Your Order Has Been Placed");
 		System.out.println(OrderPlacedNumber.getText());
 		Assert.assertEquals(Order.getText(), "Order #");
-		System.out.println(OrderSuccessfullyPlaced.getText());
-		Assert.assertEquals(PleaseTransferFunds.getText(), "Please Transfer Funds to the Following Account:");
+		/*Assert.assertEquals(PleaseTransferFunds.getText(), "Please Transfer Funds to the Following Account:");*/
 		Assert.assertEquals(ReviewOrder.getText(), "REVIEW ORDER");
 		Assert.assertEquals(ForQuestionsContactCS.getText(), "For questions regarding your order please contact Customer Service.");
 		
@@ -139,7 +138,7 @@ public class PlaceOrderPage extends BasePage {
 		Assert.assertEquals(ProductName.getText(), productdetails.get("name"));
 		Assert.assertEquals(ProductCode.getText(), productdetails.get("itemcode"));
 //		Assert.assertEquals(PPPrice.getText().trim(), productdetails.get("price") + "TaxIncluded");
-		Assert.assertEquals(Qty.getText().replace("QTY: ", ""), productdetails.get("qty"));
+		Assert.assertEquals(Qty.getText().replace("Qty: ", ""), productdetails.get("qty"));
 		System.out.println("dsafasfsadf");
 		float pp = Float.parseFloat(ProductPrice.getText().replace("₹", ""));
 		float sp = Float.parseFloat(ShippingPrice.getText().replace("₹", ""));
@@ -153,7 +152,7 @@ public class PlaceOrderPage extends BasePage {
 		Assert.assertEquals(TAXES.getText(), "TAXES:");
 		Assert.assertEquals(PVTOTAL.getText(), "PV TOTAL:");
 		Assert.assertEquals(TOTAL.getText(), "TOTAL");
-		Assert.assertEquals(AmountWOVat.getText(), "** Amounts without VAT");
+		Assert.assertEquals(AmountWOVat.getText(), "** Amounts without GST");
 		Assert.assertEquals(TotalPV.getText(), productdetails.get("pv").replace("PV: ", ""));
 	}
 	
@@ -161,8 +160,8 @@ public class PlaceOrderPage extends BasePage {
 		Thread.sleep(5000);
 		Assert.assertEquals(ProductName.getText(), productdetails.get("name"));
 		Assert.assertEquals(ProductCode.getText(), productdetails.get("itemcode"));
-//		Assert.assertEquals(PPPrice.getText().trim(), productdetails.get("price") + "TaxIncluded");
-		Assert.assertEquals(Qty.getText().replace("QTY: ", ""), productdetails.get("qty"));
+		/*Assert.assertEquals(PPPrice.getText().trim(), productdetails.get("price") + "TaxIncluded");*/
+		Assert.assertEquals(Qty.getText().replace("Qty: ", ""), productdetails.get("qty"));
 		float pp = Float.parseFloat(ProductPrice.getText().replace("₹", "").replace(",", ""));
 		float sp = Float.parseFloat(ShippingPrice.getText().replace("₹", ""));
 		float tp = Float.parseFloat(TaxPrice.getText().replace("₹", ""));
@@ -174,7 +173,7 @@ public class PlaceOrderPage extends BasePage {
 		Assert.assertEquals(SHIPPING.getText(), "SHIPPING**:");
 		Assert.assertEquals(TAXES.getText(), "TAXES:");
 		Assert.assertEquals(TOTAL.getText(), "TOTAL");
-		Assert.assertEquals(AmountWOVat.getText(), "** Amounts without VAT");
+		Assert.assertEquals(AmountWOVat.getText(), "** Amounts without GST");
 	}
 	
 	public void ReturnHome() {
