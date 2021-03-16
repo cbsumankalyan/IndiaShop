@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Properties;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -99,25 +100,25 @@ public class CartPage extends BasePage {
 	@FindBy(xpath = "//div[contains(@title, 'View Products in a Grid')]")
 	private WebElement GridView;
 	
-	@FindBy(xpath = "//a[text()= ' Activate (30 Sachets) ']/parent::div/parent::div/following-sibling::div/div[2]")
+	@FindBy(xpath = "//a[text()= ' Activate (30 Sachets) ']/parent::div/following-sibling::div/div[2]")
 	private WebElement AddProductinGrid;
 	
-	@FindBy(xpath = "//a[text()= ' Activate (30 Sachets) ']/parent::div/parent::div")
+	@FindBy(xpath = "//a[text()= ' Activate (30 Sachets) ' and @ng-show='app.isShopping']")
 	private WebElement ProductClick;
 	
-	@FindBy(xpath = "//a[text()= ' Activate (30 Sachets) ']/parent::div/parent::div/following-sibling::div/div/div/button/b")
+	@FindBy(xpath = "//a[text()= ' Activate (30 Sachets) ']/parent::div/following-sibling::div[1]/following-sibling::div/div/div/button/b")
 	private WebElement GridQty;
 	
-	@FindBy(xpath = "//a[text()= ' Activate (30 Sachets) ']/parent::div/parent::div/following-sibling::div/div/div/button/translate")
+	@FindBy(xpath = "//a[text()= ' Activate (30 Sachets) ']/parent::div/following-sibling::div[1]/following-sibling::div/div/div/button/translate")
 	private WebElement GridinCart;
 	
-	@FindBy(xpath = "//a[text()= ' Activate (30 Sachets) ']/following-sibling::div[1]")
+	@FindBy(xpath = "//a[text()= ' Activate (30 Sachets) ']/parent::div/following-sibling::div[1]/div/div/div/span[2]")
 	private WebElement ProductPrice;
 	
 	@FindBy(xpath = "//h2")
 	private WebElement ProductNames;
 	
-	@FindBy(xpath = "//a[text()= ' Activate (30 Sachets) ']/following-sibling::div[2]/div[contains(@class, 'pv-amount')]")
+	@FindBy(xpath = "//a[text()= ' Activate (30 Sachets) ']/parent::div/following-sibling::div[1]/div/div/div/div/span[3]")
 	private WebElement ProductPV;
 	
 	@FindBy(xpath = "//span[contains(@class,'item-number')]")
@@ -185,12 +186,13 @@ public class CartPage extends BasePage {
 	}
 
 	public void cart() throws InterruptedException {
-		System.out.println("Suman Kalyan Chakravathi 1");
-		Thread.sleep(5000);
-		System.out.println("Suman Kalyan Chakravathi 2");
-		ALLProducts.click();System.out.println("Suman Kalyan Chakravathi 3");
-		List.click();System.out.println("Suman Kalyan Chakravathi 4");
-		Activate.click();System.out.println("Suman Kalyan Chakravathi 5");
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		Thread.sleep(10000);System.out.println("SUMAN");
+		ALLProducts.click();System.out.println("KALYAN");
+		jse.executeScript("arguments[0].scrollIntoView();", List);
+		List.click();System.out.println("CHAKRAVATHI");
+		jse.executeScript("arguments[0].scrollIntoView();", Activate);System.out.println("DHANA");
+		Activate.click();System.out.println("LOHITHA");
 	}
 
 	public void cartdetails() throws InterruptedException, IOException {
@@ -223,7 +225,7 @@ public class CartPage extends BasePage {
 		Assert.assertEquals(pv, ("PV: " + ProductInfo[2]));
 
 		Assert.assertEquals("₹"+p.getProperty("ACTIVATE (30 SACHETS)".replace(" ", "") + "PRICE"),
-				ProductCost.getText().toUpperCase());
+				ProductCost.getText());
 		Assert.assertEquals(price, CartCost.getText().replace("Tax Included", "").trim());
 		for (int j = 0; j < qty.length; j++) {
 			Assert.assertEquals(ProductQty.get(j).getText(), qty[j]);
@@ -265,7 +267,7 @@ public class CartPage extends BasePage {
 		Assert.assertEquals(itemcode, ProductInfo[0]);
 
 		Assert.assertEquals("₹"+p.getProperty("ACTIVATE (30 SACHETS)".replace(" ", "") + "RETAILPRICE"),
-				ProductCost.getText().toUpperCase());
+				ProductCost.getText());
 		Assert.assertEquals(price, CartCost.getText().replace("Tax Included", "").trim());
 		for (int j = 0; j < qty.length; j++) {
 			Assert.assertEquals(ProductQty.get(j).getText(), qty[j]);
@@ -306,14 +308,18 @@ public class CartPage extends BasePage {
 	}
 	
 	public void addproduct() throws InterruptedException {
-		
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		ContinueShoping.click();
 		Thread.sleep(5000);
 		ALLProducts.click();
+		jse.executeScript("arguments[0].scrollIntoView();", GridView);
 		GridView.click();
+		
+		jse.executeScript("arguments[0].scrollIntoView();", AddProductinGrid);
+		Thread.sleep(5000);
 		AddProductinGrid.click();
 		
-		String pr = ProductPrice.getText().split(" TAX ")[0];
+		String pr = ProductPrice.getText().split(" Tax ")[0];
 		String v = ProductPV.getText();
 		Assert.assertEquals(GridQty.getText(), "1");
 		Assert.assertEquals(GridinCart.getText(), "In Cart");
@@ -328,14 +334,17 @@ public class CartPage extends BasePage {
 	}
 	
 	public void addretailproduct() throws InterruptedException {
-		
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		ContinueShoping.click();
 		Thread.sleep(5000);
 		ALLProducts.click();
+		jse.executeScript("arguments[0].scrollIntoView();", GridView);
 		GridView.click();
+		jse.executeScript("arguments[0].scrollIntoView();", AddProductinGrid);
+		Thread.sleep(5000);
 		AddProductinGrid.click();
 		
-		String pr = ProductPrice.getText().split(" TAX ")[0];
+		String pr = ProductPrice.getText().split(" Tax ")[0];
 		Assert.assertEquals(GridQty.getText(), "1");
 		Assert.assertEquals(GridinCart.getText(), "In Cart");
 		
@@ -355,13 +364,13 @@ public class CartPage extends BasePage {
 		Assert.assertEquals(p.getProperty(ProductNames.getText().replace(" ", "") + "CODE"),
 				ProductItemNumber.getText());
 		Assert.assertEquals("₹"+p.getProperty(ProductNames.getText().replace(" ", "") + "PRICE").replace(",", ""),
-				PPrice.getText().replace(" ", "") + " TAX INCLUDED");
+				PPrice.getText().replace(" ", "") + " Tax Included");
 		Assert.assertEquals(p.getProperty(ProductNames.getText().replace(" ", "") + "PV"),
 				Productpv.getText().replace("PV: ", ""));
 
 		Assert.assertEquals(CartQTY.getText(), "1");
 		
-		Assert.assertEquals("₹"+p.getProperty(ProductNames.getText().replace(" ", "") + "PRICE").replace(",", ""), CartPrice.getText()+" TAX INCLUDED");
+		Assert.assertEquals("₹"+p.getProperty(ProductNames.getText().replace(" ", "") + "PRICE").replace(",", ""), CartPrice.getText()+" Tax Included");
 		Assert.assertEquals("PV: "+(p.getProperty(ProductNames.getText().replace(" ", "") + "PV")), CartPV.getText());
 		
 		Assert.assertEquals(PQty.getText(), "1");
@@ -392,12 +401,12 @@ public class CartPage extends BasePage {
 		Assert.assertEquals(p.getProperty(ProductNames.getText().replace(" ", "") + "CODE"),
 				ProductItemNumber.getText());
 		Assert.assertEquals("₹"+p.getProperty(ProductNames.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""),
-				PPrice.getText().replace(" ", "") + " TAX INCLUDED");
+				PPrice.getText().replace(" ", "") + " Tax Included");
 
 
 		Assert.assertEquals(CartQTY.getText(), "1");
 		
-		Assert.assertEquals("₹"+p.getProperty(ProductNames.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""), CartPrice.getText().replace(",", "")+" TAX INCLUDED");
+		Assert.assertEquals("₹"+p.getProperty(ProductNames.getText().replace(" ", "") + "RETAILPRICE").replace(",", ""), CartPrice.getText().replace(",", "")+" Tax Included");
 		
 		Assert.assertEquals(PQty.getText(), "1");
 		Assert.assertEquals(PInCart.getText(), "In Cart");
@@ -434,7 +443,7 @@ public class CartPage extends BasePage {
 		Assert.assertEquals(productdetails.get("pv"), ("PV: " + ProductInfo[2]));
 
 		Assert.assertEquals("₹"+p.getProperty("ACTIVATE (30 SACHETS)".replace(" ", "") + "PRICE"),
-				ProductCost.getText().toUpperCase());
+				ProductCost.getText());
 		Assert.assertEquals(productdetails.get("price").replace(" ", ""), CartCost.getText().replace("Tax Included", "").trim());
 		for (int j = 0; j < qty.length; j++) {
 			Assert.assertEquals(ProductQty.get(j).getText(), qty[j]);
@@ -467,7 +476,7 @@ public class CartPage extends BasePage {
 		Assert.assertEquals(productdetails.get("itemcode"), ProductInfo[0]);
 		
 		Assert.assertEquals("₹"+p.getProperty("ACTIVATE (30 SACHETS)".replace(" ", "") + "RETAILPRICE"),
-				ProductCost.getText().toUpperCase());
+				ProductCost.getText());
 		Assert.assertEquals(productdetails.get("price").replace(" ", ""), CartCost.getText().replace(",", "").replace("Tax Included", "").trim());
 		for (int j = 0; j < qty.length; j++) {
 			Assert.assertEquals(ProductQty.get(j).getText(), qty[j]);

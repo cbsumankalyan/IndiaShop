@@ -24,7 +24,6 @@ Then CCAvenue Payment Details
 Examples:
 |username  |password   |state         |
 |206914401 |0155       |Andama Nicobar|
-|312579891 |FXmpqm     |Arunachal Pradesh|
 |315576891 |7KPjwz     |Assam            |
 |314213791 |tMvt8B     |Chandigarh       |
 |312837491 |wGn7C9     |Delhi            |
