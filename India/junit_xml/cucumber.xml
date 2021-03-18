@@ -1,6 +1,230 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="964.420122">
-<testcase classname="BankWire" name="BankWire" time="964.420122">
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="18" time="3689.73478">
+<testcase classname="All Users" name="Andama Nicobar User" time="127.236785">
+<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Given 206914401 and 0155....................................................passed
+Then Home Page 206914401....................................................passed
+Then Add Products To Cart 206914401.........................................passed
+Then Check Product..........................................................passed
+Then Check Cart.............................................................passed
+Then Check Form Fields......................................................passed
+Then Review Orders..........................................................passed
+When Review Fields 206914401................................................passed
+Then Shipping Information 206914401.........................................passed
+Then Contact Information 206914401..........................................passed
+Then Payment Information CCAvenue...........................................passed
+Then CCAvenue Payment Details...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="All Users" name="Assam User" time="120.207135">
+<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Given 315576891 and 7KPjwz..................................................passed
+Then Home Page 315576891....................................................passed
+Then Add Products To Cart 315576891.........................................passed
+Then Check Product..........................................................passed
+Then Check Cart.............................................................passed
+Then Check Form Fields......................................................passed
+Then Review Orders..........................................................passed
+When Review Fields 315576891................................................passed
+Then Shipping Information 315576891.........................................passed
+Then Contact Information 315576891..........................................passed
+Then Payment Information CCAvenue...........................................passed
+Then CCAvenue Payment Details...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="All Users" name="Chandigarh User" time="119.460308">
+<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Given 314213791 and tMvt8B..................................................passed
+Then Home Page 314213791....................................................passed
+Then Add Products To Cart 314213791.........................................passed
+Then Check Product..........................................................passed
+Then Check Cart.............................................................passed
+Then Check Form Fields......................................................passed
+Then Review Orders..........................................................passed
+When Review Fields 314213791................................................passed
+Then Shipping Information 314213791.........................................passed
+Then Contact Information 314213791..........................................passed
+Then Payment Information CCAvenue...........................................passed
+Then CCAvenue Payment Details...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="All Users" name="Delhi User" time="122.069568">
+<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Given 312837491 and wGn7C9..................................................passed
+Then Home Page 312837491....................................................passed
+Then Add Products To Cart 312837491.........................................passed
+Then Check Product..........................................................passed
+Then Check Cart.............................................................passed
+Then Check Form Fields......................................................passed
+Then Review Orders..........................................................passed
+When Review Fields 312837491................................................passed
+Then Shipping Information 312837491.........................................passed
+Then Contact Information 312837491..........................................passed
+Then Payment Information CCAvenue...........................................passed
+Then CCAvenue Payment Details...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="All Users" name="Gujarat User" time="119.249124">
+<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Given 314195991 and 9vnaTy..................................................passed
+Then Home Page 314195991....................................................passed
+Then Add Products To Cart 314195991.........................................passed
+Then Check Product..........................................................passed
+Then Check Cart.............................................................passed
+Then Check Form Fields......................................................passed
+Then Review Orders..........................................................passed
+When Review Fields 314195991................................................passed
+Then Shipping Information 314195991.........................................passed
+Then Contact Information 314195991..........................................passed
+Then Payment Information CCAvenue...........................................passed
+Then CCAvenue Payment Details...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="All Users" name="Haryana User" time="120.378827">
+<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Given 301941991 and sonu3264................................................passed
+Then Home Page 301941991....................................................passed
+Then Add Products To Cart 301941991.........................................passed
+Then Check Product..........................................................passed
+Then Check Cart.............................................................passed
+Then Check Form Fields......................................................passed
+Then Review Orders..........................................................passed
+When Review Fields 301941991................................................passed
+Then Shipping Information 301941991.........................................passed
+Then Contact Information 301941991..........................................passed
+Then Payment Information CCAvenue...........................................passed
+Then CCAvenue Payment Details...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="All Users" name="Himachal Pradesh User" time="124.20667">
+<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Given 316562491 and 8894112602..............................................passed
+Then Home Page 316562491....................................................passed
+Then Add Products To Cart 316562491.........................................passed
+Then Check Product..........................................................passed
+Then Check Cart.............................................................passed
+Then Check Form Fields......................................................passed
+Then Review Orders..........................................................passed
+When Review Fields 316562491................................................passed
+Then Shipping Information 316562491.........................................passed
+Then Contact Information 316562491..........................................passed
+Then Payment Information CCAvenue...........................................passed
+Then CCAvenue Payment Details...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="All Users" name="Maharastra User" time="123.16563">
+<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Given 195836101 and anushka123..............................................passed
+Then Home Page 195836101....................................................passed
+Then Add Products To Cart 195836101.........................................passed
+Then Check Product..........................................................passed
+Then Check Cart.............................................................passed
+Then Check Form Fields......................................................passed
+Then Review Orders..........................................................passed
+When Review Fields 195836101................................................passed
+Then Shipping Information 195836101.........................................passed
+Then Contact Information 195836101..........................................passed
+Then Payment Information CCAvenue...........................................passed
+Then CCAvenue Payment Details...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="All Users" name="Meghalaya User" time="118.195841">
+<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Given 313307391 and VuNqZj..................................................passed
+Then Home Page 313307391....................................................passed
+Then Add Products To Cart 313307391.........................................passed
+Then Check Product..........................................................passed
+Then Check Cart.............................................................passed
+Then Check Form Fields......................................................passed
+Then Review Orders..........................................................passed
+When Review Fields 313307391................................................passed
+Then Shipping Information 313307391.........................................passed
+Then Contact Information 313307391..........................................passed
+Then Payment Information CCAvenue...........................................passed
+Then CCAvenue Payment Details...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="All Users" name="Nagaland User" time="122.900572">
+<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Given 305652791 and mTVWRq..................................................passed
+Then Home Page 305652791....................................................passed
+Then Add Products To Cart 305652791.........................................passed
+Then Check Product..........................................................passed
+Then Check Cart.............................................................passed
+Then Check Form Fields......................................................passed
+Then Review Orders..........................................................passed
+When Review Fields 305652791................................................passed
+Then Shipping Information 305652791.........................................passed
+Then Contact Information 305652791..........................................passed
+Then Payment Information CCAvenue...........................................passed
+Then CCAvenue Payment Details...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="All Users" name="Punjab User" time="121.774975">
+<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Given 314678591 and OM1234..................................................passed
+Then Home Page 314678591....................................................passed
+Then Add Products To Cart 314678591.........................................passed
+Then Check Product..........................................................passed
+Then Check Cart.............................................................passed
+Then Check Form Fields......................................................passed
+Then Review Orders..........................................................passed
+When Review Fields 314678591................................................passed
+Then Shipping Information 314678591.........................................passed
+Then Contact Information 314678591..........................................passed
+Then Payment Information CCAvenue...........................................passed
+Then CCAvenue Payment Details...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="All Users" name="Rajasthan User" time="121.930281">
+<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Given 304000191 and 7YbrPa..................................................passed
+Then Home Page 304000191....................................................passed
+Then Add Products To Cart 304000191.........................................passed
+Then Check Product..........................................................passed
+Then Check Cart.............................................................passed
+Then Check Form Fields......................................................passed
+Then Review Orders..........................................................passed
+When Review Fields 304000191................................................passed
+Then Shipping Information 304000191.........................................passed
+Then Contact Information 304000191..........................................passed
+Then Payment Information CCAvenue...........................................passed
+Then CCAvenue Payment Details...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="All Users" name="Sikkim User" time="121.755474">
+<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Given 200357401 and unicity1234.............................................passed
+Then Home Page 200357401....................................................passed
+Then Add Products To Cart 200357401.........................................passed
+Then Check Product..........................................................passed
+Then Check Cart.............................................................passed
+Then Check Form Fields......................................................passed
+Then Review Orders..........................................................passed
+When Review Fields 200357401................................................passed
+Then Shipping Information 200357401.........................................passed
+Then Contact Information 200357401..........................................passed
+Then Payment Information CCAvenue...........................................passed
+Then CCAvenue Payment Details...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="All Users" name="Uttar Pradesh User" time="118.904265">
+<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Given 316104791 and asif....................................................passed
+Then Home Page 316104791....................................................passed
+Then Add Products To Cart 316104791.........................................passed
+Then Check Product..........................................................passed
+Then Check Cart.............................................................passed
+Then Check Form Fields......................................................passed
+Then Review Orders..........................................................passed
+When Review Fields 316104791................................................passed
+Then Shipping Information 316104791.........................................passed
+Then Contact Information 316104791..........................................passed
+Then Payment Information CCAvenue...........................................passed
+Then CCAvenue Payment Details...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="BankWire" name="BankWire" time="967.921749">
 <system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
 Given 108639101 and 1234....................................................passed
 Then Home Page 108639101....................................................passed
@@ -39,6 +263,102 @@ Then Placed Contact Information.............................................pass
 Then Placed Payment Information.............................................passed
 Then Placed Orders..........................................................passed
 When Return Home 108639101..................................................passed
+When Logout.................................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="CCAvenue" name="CCAvenue Payment" time="118.356697">
+<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Given 108639101 and 1234....................................................passed
+Then Home Page 108639101....................................................passed
+Then Add Products To Cart 108639101.........................................passed
+Then Check Product..........................................................passed
+Then Check Cart.............................................................passed
+Then Check Form Fields......................................................passed
+Then Payment Avenue.........................................................passed
+Then Order Summary..........................................................passed
+Then CCAvenue Payment Details...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Essecom" name="Essecom Payment" time="107.617491">
+<failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//translate[contains(text(), 'Bank 2')]&quot;}&#10;  (Session info: chrome=89.0.4389.82)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_111'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56330}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 892ead486b45cce87570f9de56848686&#10;*** Element info: {Using=xpath, value=//translate[contains(text(), 'Bank 2')]}&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)&#13;&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:353)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;&#10;&#9;at com.sun.proxy.$Proxy17.click(Unknown Source)&#13;&#10;&#9;at POM.PaymentPage.Essecom(PaymentPage.java:123)&#13;&#10;&#9;at stepDefinitions.Payment.payment_essecom(Payment.java:53)&#13;&#10;&#9;at ✽.Then Payment Essecom(Essecom.feature:15)&#13;&#10;"><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Given 108639101 and 1234....................................................passed
+Then Home Page 108639101....................................................passed
+Then Add Products To Cart 108639101.........................................passed
+Then Check Product..........................................................passed
+Then Check Cart.............................................................passed
+Then Check Form Fields......................................................passed
+Then Payment Essecom........................................................failed
+Then Review Orders..........................................................skipped
+Then Essecom Payment Details................................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//translate[contains(text(), 'Bank 2')]"}
+  (Session info: chrome=89.0.4389.82)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_111'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56330}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 892ead486b45cce87570f9de56848686
+*** Element info: {Using=xpath, value=//translate[contains(text(), 'Bank 2')]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy17.click(Unknown Source)
+	at POM.PaymentPage.Essecom(PaymentPage.java:123)
+	at stepDefinitions.Payment.payment_essecom(Payment.java:53)
+	at ✽.Then Payment Essecom(Essecom.feature:15)
+]]></failure>
+</testcase>
+<testcase classname="Retail" name="Retail With Order" time="794.403388">
+<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+Then Select State...........................................................passed
+Then Retail Home Page.......................................................passed
+Then Retail All Products....................................................passed
+Then Retail Products........................................................passed
+Then Retail Accessories.....................................................passed
+Then Retail All Products in List View.......................................passed
+Then Retail Products in List View...........................................passed
+Then Retail Accessories in List View........................................passed
+When Added Retail Product to Cart...........................................passed
+Then Check the Retail Cart Details..........................................passed
+When Remove Retail Products from Cart.......................................passed
+Then Add Retail Products To Cart............................................passed
+Then Check Retail Product...................................................passed
+Then Check Retail Cart......................................................passed
+Then Sign Up Retail Customer................................................passed
+Then Check Retail Form Fields...............................................passed
+When Retail Payment Fields..................................................passed
+Then Banks Names............................................................passed
+Then Retail Order Summary...................................................passed
+When Retail Review Fields...................................................passed
+Then Retail Shipping Information............................................passed
+Then Retail Contact Information.............................................passed
+Then Payment Information....................................................passed
+When Retail Update Shipping.................................................passed
+When Retail Update Contact..................................................passed
+When Retail Update Payment..................................................passed
+When Retail Go Back.........................................................passed
+Then Retail Review Orders...................................................passed
+When Retail Placed Order Fields.............................................passed
+Then Placed Retail Shipping Information.....................................passed
+Then Placed Contact Information.............................................passed
+Then Placed Payment Information.............................................passed
+Then Retail Placed Orders...................................................passed
+When Retail Return Home.....................................................passed
 When Logout.................................................................passed
 ]]></system-out>
 </testcase>
