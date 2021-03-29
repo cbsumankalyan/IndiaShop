@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="18" time="3689.73478">
-<testcase classname="All Users" name="Andama Nicobar User" time="127.236785">
+<testsuite failures="8" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="18" time="2141.167529">
+<testcase classname="All Users" name="Andama Nicobar User" time="134.811557">
 <system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
 Given 206914401 and 0155....................................................passed
 Then Home Page 206914401....................................................passed
@@ -16,7 +16,7 @@ Then Payment Information CCAvenue...........................................pass
 Then CCAvenue Payment Details...............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="All Users" name="Assam User" time="120.207135">
+<testcase classname="All Users" name="Assam User" time="120.685781">
 <system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
 Given 315576891 and 7KPjwz..................................................passed
 Then Home Page 315576891....................................................passed
@@ -32,24 +32,53 @@ Then Payment Information CCAvenue...........................................pass
 Then CCAvenue Payment Details...............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="All Users" name="Chandigarh User" time="119.460308">
-<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+<testcase classname="All Users" name="Chandigarh User" time="64.908162">
+<failure message="org.openqa.selenium.ElementNotInteractableException: element not interactable&#10;  (Session info: chrome=89.0.4389.82)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_111'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:58650}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 75931cfbfca934cda4987f5db2ad4b95&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)&#13;&#10;&#9;at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)&#13;&#10;&#9;at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;&#10;&#9;at java.lang.reflect.Method.invoke(Method.java:498)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)&#13;&#10;&#9;at com.sun.proxy.$Proxy17.click(Unknown Source)&#13;&#10;&#9;at POM.HomePage.Menu(HomePage.java:223)&#13;&#10;&#9;at stepDefinitions.Home.homepage(Home.java:29)&#13;&#10;&#9;at ✽.Then Home Page 314213791(AllUsers.feature:7)&#13;&#10;"><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
 Given 314213791 and tMvt8B..................................................passed
-Then Home Page 314213791....................................................passed
-Then Add Products To Cart 314213791.........................................passed
-Then Check Product..........................................................passed
-Then Check Cart.............................................................passed
-Then Check Form Fields......................................................passed
-Then Review Orders..........................................................passed
-When Review Fields 314213791................................................passed
-Then Shipping Information 314213791.........................................passed
-Then Contact Information 314213791..........................................passed
-Then Payment Information CCAvenue...........................................passed
-Then CCAvenue Payment Details...............................................passed
-]]></system-out>
+Then Home Page 314213791....................................................failed
+Then Add Products To Cart 314213791.........................................skipped
+Then Check Product..........................................................skipped
+Then Check Cart.............................................................skipped
+Then Check Form Fields......................................................skipped
+Then Review Orders..........................................................skipped
+When Review Fields 314213791................................................skipped
+Then Shipping Information 314213791.........................................skipped
+Then Contact Information 314213791..........................................skipped
+Then Payment Information CCAvenue...........................................skipped
+Then CCAvenue Payment Details...............................................skipped
+
+StackTrace:
+org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=89.0.4389.82)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_111'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:58650}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 75931cfbfca934cda4987f5db2ad4b95
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy17.click(Unknown Source)
+	at POM.HomePage.Menu(HomePage.java:223)
+	at stepDefinitions.Home.homepage(Home.java:29)
+	at ✽.Then Home Page 314213791(AllUsers.feature:7)
+]]></failure>
 </testcase>
-<testcase classname="All Users" name="Delhi User" time="122.069568">
-<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+<testcase classname="All Users" name="Delhi User" time="117.196979">
+<failure message="org.junit.ComparisonFailure: expected:&lt;https://s[ecure.ccavenue.com/transaction/transaction.do?command=initiateTransaction]&gt; but was:&lt;https://s[hop.unicity.com/#/review]&gt;&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:115)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:144)&#13;&#10;&#9;at POM.CCAvenuePage.ccavenue(CCAvenuePage.java:34)&#13;&#10;&#9;at stepDefinitions.CCAvenue.ccavenue_payment_details(CCAvenue.java:16)&#13;&#10;&#9;at ✽.Then CCAvenue Payment Details(AllUsers.feature:22)&#13;&#10;"><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
 Given 312837491 and wGn7C9..................................................passed
 Then Home Page 312837491....................................................passed
 Then Add Products To Cart 312837491.........................................passed
@@ -61,10 +90,18 @@ When Review Fields 312837491................................................pass
 Then Shipping Information 312837491.........................................passed
 Then Contact Information 312837491..........................................passed
 Then Payment Information CCAvenue...........................................passed
-Then CCAvenue Payment Details...............................................passed
-]]></system-out>
+Then CCAvenue Payment Details...............................................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<https://s[ecure.ccavenue.com/transaction/transaction.do?command=initiateTransaction]> but was:<https://s[hop.unicity.com/#/review]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at POM.CCAvenuePage.ccavenue(CCAvenuePage.java:34)
+	at stepDefinitions.CCAvenue.ccavenue_payment_details(CCAvenue.java:16)
+	at ✽.Then CCAvenue Payment Details(AllUsers.feature:22)
+]]></failure>
 </testcase>
-<testcase classname="All Users" name="Gujarat User" time="119.249124">
+<testcase classname="All Users" name="Gujarat User" time="120.742779">
 <system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
 Given 314195991 and 9vnaTy..................................................passed
 Then Home Page 314195991....................................................passed
@@ -80,8 +117,8 @@ Then Payment Information CCAvenue...........................................pass
 Then CCAvenue Payment Details...............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="All Users" name="Haryana User" time="120.378827">
-<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+<testcase classname="All Users" name="Haryana User" time="118.112526">
+<failure message="org.junit.ComparisonFailure: expected:&lt;https://s[ecure.ccavenue.com/transaction/transaction.do?command=initiateTransaction]&gt; but was:&lt;https://s[hop.unicity.com/#/review]&gt;&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:115)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:144)&#13;&#10;&#9;at POM.CCAvenuePage.ccavenue(CCAvenuePage.java:34)&#13;&#10;&#9;at stepDefinitions.CCAvenue.ccavenue_payment_details(CCAvenue.java:16)&#13;&#10;&#9;at ✽.Then CCAvenue Payment Details(AllUsers.feature:22)&#13;&#10;"><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
 Given 301941991 and sonu3264................................................passed
 Then Home Page 301941991....................................................passed
 Then Add Products To Cart 301941991.........................................passed
@@ -93,11 +130,19 @@ When Review Fields 301941991................................................pass
 Then Shipping Information 301941991.........................................passed
 Then Contact Information 301941991..........................................passed
 Then Payment Information CCAvenue...........................................passed
-Then CCAvenue Payment Details...............................................passed
-]]></system-out>
+Then CCAvenue Payment Details...............................................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<https://s[ecure.ccavenue.com/transaction/transaction.do?command=initiateTransaction]> but was:<https://s[hop.unicity.com/#/review]>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at POM.CCAvenuePage.ccavenue(CCAvenuePage.java:34)
+	at stepDefinitions.CCAvenue.ccavenue_payment_details(CCAvenue.java:16)
+	at ✽.Then CCAvenue Payment Details(AllUsers.feature:22)
+]]></failure>
 </testcase>
-<testcase classname="All Users" name="Himachal Pradesh User" time="124.20667">
-<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+<testcase classname="All Users" name="Himachal Pradesh User" time="126.996627">
+<failure message="org.junit.ComparisonFailure: expected:&lt;...enue.com/transaction[.do?command=retry]Transaction&gt; but was:&lt;...enue.com/transaction[/transaction.do?command=initiate]Transaction&gt;&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:115)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:144)&#13;&#10;&#9;at POM.CCAvenuePage.ccavenue(CCAvenuePage.java:41)&#13;&#10;&#9;at stepDefinitions.CCAvenue.ccavenue_payment_details(CCAvenue.java:16)&#13;&#10;&#9;at ✽.Then CCAvenue Payment Details(AllUsers.feature:22)&#13;&#10;"><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
 Given 316562491 and 8894112602..............................................passed
 Then Home Page 316562491....................................................passed
 Then Add Products To Cart 316562491.........................................passed
@@ -109,10 +154,18 @@ When Review Fields 316562491................................................pass
 Then Shipping Information 316562491.........................................passed
 Then Contact Information 316562491..........................................passed
 Then Payment Information CCAvenue...........................................passed
-Then CCAvenue Payment Details...............................................passed
-]]></system-out>
+Then CCAvenue Payment Details...............................................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<...enue.com/transaction[.do?command=retry]Transaction> but was:<...enue.com/transaction[/transaction.do?command=initiate]Transaction>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at POM.CCAvenuePage.ccavenue(CCAvenuePage.java:41)
+	at stepDefinitions.CCAvenue.ccavenue_payment_details(CCAvenue.java:16)
+	at ✽.Then CCAvenue Payment Details(AllUsers.feature:22)
+]]></failure>
 </testcase>
-<testcase classname="All Users" name="Maharastra User" time="123.16563">
+<testcase classname="All Users" name="Maharastra User" time="126.504098">
 <system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
 Given 195836101 and anushka123..............................................passed
 Then Home Page 195836101....................................................passed
@@ -128,7 +181,7 @@ Then Payment Information CCAvenue...........................................pass
 Then CCAvenue Payment Details...............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="All Users" name="Meghalaya User" time="118.195841">
+<testcase classname="All Users" name="Meghalaya User" time="118.375339">
 <system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
 Given 313307391 and VuNqZj..................................................passed
 Then Home Page 313307391....................................................passed
@@ -144,8 +197,8 @@ Then Payment Information CCAvenue...........................................pass
 Then CCAvenue Payment Details...............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="All Users" name="Nagaland User" time="122.900572">
-<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+<testcase classname="All Users" name="Nagaland User" time="122.939784">
+<failure message="org.junit.ComparisonFailure: expected:&lt;...enue.com/transaction[.do?command=retry]Transaction&gt; but was:&lt;...enue.com/transaction[/transaction.do?command=initiate]Transaction&gt;&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:115)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:144)&#13;&#10;&#9;at POM.CCAvenuePage.ccavenue(CCAvenuePage.java:41)&#13;&#10;&#9;at stepDefinitions.CCAvenue.ccavenue_payment_details(CCAvenue.java:16)&#13;&#10;&#9;at ✽.Then CCAvenue Payment Details(AllUsers.feature:22)&#13;&#10;"><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
 Given 305652791 and mTVWRq..................................................passed
 Then Home Page 305652791....................................................passed
 Then Add Products To Cart 305652791.........................................passed
@@ -157,10 +210,18 @@ When Review Fields 305652791................................................pass
 Then Shipping Information 305652791.........................................passed
 Then Contact Information 305652791..........................................passed
 Then Payment Information CCAvenue...........................................passed
-Then CCAvenue Payment Details...............................................passed
-]]></system-out>
+Then CCAvenue Payment Details...............................................failed
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<...enue.com/transaction[.do?command=retry]Transaction> but was:<...enue.com/transaction[/transaction.do?command=initiate]Transaction>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at POM.CCAvenuePage.ccavenue(CCAvenuePage.java:41)
+	at stepDefinitions.CCAvenue.ccavenue_payment_details(CCAvenue.java:16)
+	at ✽.Then CCAvenue Payment Details(AllUsers.feature:22)
+]]></failure>
 </testcase>
-<testcase classname="All Users" name="Punjab User" time="121.774975">
+<testcase classname="All Users" name="Punjab User" time="123.287491">
 <system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
 Given 314678591 and OM1234..................................................passed
 Then Home Page 314678591....................................................passed
@@ -176,7 +237,7 @@ Then Payment Information CCAvenue...........................................pass
 Then CCAvenue Payment Details...............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="All Users" name="Rajasthan User" time="121.930281">
+<testcase classname="All Users" name="Rajasthan User" time="123.403748">
 <system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
 Given 304000191 and 7YbrPa..................................................passed
 Then Home Page 304000191....................................................passed
@@ -192,7 +253,7 @@ Then Payment Information CCAvenue...........................................pass
 Then CCAvenue Payment Details...............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="All Users" name="Sikkim User" time="121.755474">
+<testcase classname="All Users" name="Sikkim User" time="117.297835">
 <system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
 Given 200357401 and unicity1234.............................................passed
 Then Home Page 200357401....................................................passed
@@ -208,7 +269,7 @@ Then Payment Information CCAvenue...........................................pass
 Then CCAvenue Payment Details...............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="All Users" name="Uttar Pradesh User" time="118.904265">
+<testcase classname="All Users" name="Uttar Pradesh User" time="119.156206">
 <system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
 Given 316104791 and asif....................................................passed
 Then Home Page 316104791....................................................passed
@@ -224,49 +285,57 @@ Then Payment Information CCAvenue...........................................pass
 Then CCAvenue Payment Details...............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="BankWire" name="BankWire" time="967.921749">
-<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+<testcase classname="BankWire" name="BankWire" time="138.77527">
+<failure message="org.junit.ComparisonFailure: expected:&lt;L[EAN COMPLETE (25] SACHETS)&gt; but was:&lt;L[C BASE (20] SACHETS)&gt;&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:115)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:144)&#13;&#10;&#9;at POM.HomePage.AllProducts(HomePage.java:295)&#13;&#10;&#9;at stepDefinitions.Home.all_producst(Home.java:34)&#13;&#10;&#9;at ✽.Then All Products(BankWire.feature:9)&#13;&#10;"><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
 Given 108639101 and 1234....................................................passed
 Then Home Page 108639101....................................................passed
-Then All Products...........................................................passed
-And Products................................................................passed
-And Accessories.............................................................passed
-When Search Product.........................................................passed
-Then All Products in List View..............................................passed
-And Products in List View...................................................passed
-And Accessories in List View................................................passed
-When Product Added to Cart 108639101........................................passed
-Then Check the Cart Details.................................................passed
-When Remove Products from Cart..............................................passed
-Then Add Products To Cart 108639101.........................................passed
-Then Check Product..........................................................passed
-Then Check Cart.............................................................passed
-When Cart Go Back...........................................................passed
-When Check Out 108639101....................................................passed
-Then Check Form Fields......................................................passed
-When Payment Go Back........................................................passed
-When Payment Fields 108639101...............................................passed
-Then Banks Names............................................................passed
-Then Order Summary..........................................................passed
-When Review Fields 108639101................................................passed
-Then Shipping Information 108639101.........................................passed
-Then Contact Information 108639101..........................................passed
-Then Payment Information....................................................passed
-When Update Shipping........................................................passed
-When Update Contact.........................................................passed
-When Update Payment.........................................................passed
-When Go Back................................................................passed
-Then Review Orders..........................................................passed
-When Placed Order Fields 108639101..........................................passed
-Then Placed Shipping Information............................................passed
-Then Placed Contact Information.............................................passed
-Then Placed Payment Information.............................................passed
-Then Placed Orders..........................................................passed
-When Return Home 108639101..................................................passed
-When Logout.................................................................passed
-]]></system-out>
+Then All Products...........................................................failed
+And Products................................................................skipped
+And Accessories.............................................................skipped
+When Search Product.........................................................skipped
+Then All Products in List View..............................................skipped
+And Products in List View...................................................skipped
+And Accessories in List View................................................skipped
+When Product Added to Cart 108639101........................................skipped
+Then Check the Cart Details.................................................skipped
+When Remove Products from Cart..............................................skipped
+Then Add Products To Cart 108639101.........................................skipped
+Then Check Product..........................................................skipped
+Then Check Cart.............................................................skipped
+When Cart Go Back...........................................................skipped
+When Check Out 108639101....................................................skipped
+Then Check Form Fields......................................................skipped
+When Payment Go Back........................................................skipped
+When Payment Fields 108639101...............................................skipped
+Then Banks Names............................................................skipped
+Then Order Summary..........................................................skipped
+When Review Fields 108639101................................................skipped
+Then Shipping Information 108639101.........................................skipped
+Then Contact Information 108639101..........................................skipped
+Then Payment Information....................................................skipped
+When Update Shipping........................................................skipped
+When Update Contact.........................................................skipped
+When Update Payment.........................................................skipped
+When Go Back................................................................skipped
+Then Review Orders..........................................................skipped
+When Placed Order Fields 108639101..........................................skipped
+Then Placed Shipping Information............................................skipped
+Then Placed Contact Information.............................................skipped
+Then Placed Payment Information.............................................skipped
+Then Placed Orders..........................................................skipped
+When Return Home 108639101..................................................skipped
+When Logout.................................................................skipped
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<L[EAN COMPLETE (25] SACHETS)> but was:<L[C BASE (20] SACHETS)>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at POM.HomePage.AllProducts(HomePage.java:295)
+	at stepDefinitions.Home.all_producst(Home.java:34)
+	at ✽.Then All Products(BankWire.feature:9)
+]]></failure>
 </testcase>
-<testcase classname="CCAvenue" name="CCAvenue Payment" time="118.356697">
+<testcase classname="CCAvenue" name="CCAvenue Payment" time="121.479322">
 <system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
 Given 108639101 and 1234....................................................passed
 Then Home Page 108639101....................................................passed
@@ -279,8 +348,8 @@ Then Order Summary..........................................................pass
 Then CCAvenue Payment Details...............................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Essecom" name="Essecom Payment" time="107.617491">
-<failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//translate[contains(text(), 'Bank 2')]&quot;}&#10;  (Session info: chrome=89.0.4389.82)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_111'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56330}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 892ead486b45cce87570f9de56848686&#10;*** Element info: {Using=xpath, value=//translate[contains(text(), 'Bank 2')]}&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)&#13;&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:353)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;&#10;&#9;at com.sun.proxy.$Proxy17.click(Unknown Source)&#13;&#10;&#9;at POM.PaymentPage.Essecom(PaymentPage.java:123)&#13;&#10;&#9;at stepDefinitions.Payment.payment_essecom(Payment.java:53)&#13;&#10;&#9;at ✽.Then Payment Essecom(Essecom.feature:15)&#13;&#10;"><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+<testcase classname="Essecom" name="Essecom Payment" time="105.688074">
+<failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//translate[contains(text(), 'Bank 2')]&quot;}&#10;  (Session info: chrome=89.0.4389.82)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_111'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:60270}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 153cd8fbb47285a71241a82a83221cab&#10;*** Element info: {Using=xpath, value=//translate[contains(text(), 'Bank 2')]}&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;&#10;&#9;at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;&#10;&#9;at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;&#10;&#9;at java.lang.reflect.Constructor.newInstance(Constructor.java:423)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)&#13;&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:353)&#13;&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;&#10;&#9;at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;&#10;&#9;at com.sun.proxy.$Proxy17.click(Unknown Source)&#13;&#10;&#9;at POM.PaymentPage.Essecom(PaymentPage.java:123)&#13;&#10;&#9;at stepDefinitions.Payment.payment_essecom(Payment.java:53)&#13;&#10;&#9;at ✽.Then Payment Essecom(Essecom.feature:15)&#13;&#10;"><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
 Given 108639101 and 1234....................................................passed
 Then Home Page 108639101....................................................passed
 Then Add Products To Cart 108639101.........................................passed
@@ -298,8 +367,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'QASERVER01', ip: '10.2.0.23', os.name: 'Windows Server 2012 R2', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_111'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:56330}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 892ead486b45cce87570f9de56848686
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\Users\sumancb\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:60270}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 153cd8fbb47285a71241a82a83221cab
 *** Element info: {Using=xpath, value=//translate[contains(text(), 'Bank 2')]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -323,43 +392,51 @@ Session ID: 892ead486b45cce87570f9de56848686
 	at ✽.Then Payment Essecom(Essecom.feature:15)
 ]]></failure>
 </testcase>
-<testcase classname="Retail" name="Retail With Order" time="794.403388">
-<system-out><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
+<testcase classname="Retail" name="Retail With Order" time="120.805951">
+<failure message="org.junit.ComparisonFailure: expected:&lt;L[EAN COMPLETE (25] SACHETS)&gt; but was:&lt;L[C BASE (20] SACHETS)&gt;&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:115)&#13;&#10;&#9;at org.junit.Assert.assertEquals(Assert.java:144)&#13;&#10;&#9;at POM.HomePage.RetailAllProducts(HomePage.java:586)&#13;&#10;&#9;at stepDefinitions.Home.retail_all_producst(Home.java:49)&#13;&#10;&#9;at ✽.Then Retail All Products(Retail.feature:10)&#13;&#10;"><![CDATA[Given Navigate to the "https://shop.unicity.com/#/home" application.........passed
 Then Select State...........................................................passed
 Then Retail Home Page.......................................................passed
-Then Retail All Products....................................................passed
-Then Retail Products........................................................passed
-Then Retail Accessories.....................................................passed
-Then Retail All Products in List View.......................................passed
-Then Retail Products in List View...........................................passed
-Then Retail Accessories in List View........................................passed
-When Added Retail Product to Cart...........................................passed
-Then Check the Retail Cart Details..........................................passed
-When Remove Retail Products from Cart.......................................passed
-Then Add Retail Products To Cart............................................passed
-Then Check Retail Product...................................................passed
-Then Check Retail Cart......................................................passed
-Then Sign Up Retail Customer................................................passed
-Then Check Retail Form Fields...............................................passed
-When Retail Payment Fields..................................................passed
-Then Banks Names............................................................passed
-Then Retail Order Summary...................................................passed
-When Retail Review Fields...................................................passed
-Then Retail Shipping Information............................................passed
-Then Retail Contact Information.............................................passed
-Then Payment Information....................................................passed
-When Retail Update Shipping.................................................passed
-When Retail Update Contact..................................................passed
-When Retail Update Payment..................................................passed
-When Retail Go Back.........................................................passed
-Then Retail Review Orders...................................................passed
-When Retail Placed Order Fields.............................................passed
-Then Placed Retail Shipping Information.....................................passed
-Then Placed Contact Information.............................................passed
-Then Placed Payment Information.............................................passed
-Then Retail Placed Orders...................................................passed
-When Retail Return Home.....................................................passed
-When Logout.................................................................passed
-]]></system-out>
+Then Retail All Products....................................................failed
+Then Retail Products........................................................skipped
+Then Retail Accessories.....................................................skipped
+Then Retail All Products in List View.......................................skipped
+Then Retail Products in List View...........................................skipped
+Then Retail Accessories in List View........................................skipped
+When Added Retail Product to Cart...........................................skipped
+Then Check the Retail Cart Details..........................................skipped
+When Remove Retail Products from Cart.......................................skipped
+Then Add Retail Products To Cart............................................skipped
+Then Check Retail Product...................................................skipped
+Then Check Retail Cart......................................................skipped
+Then Sign Up Retail Customer................................................skipped
+Then Check Retail Form Fields...............................................skipped
+When Retail Payment Fields..................................................skipped
+Then Banks Names............................................................skipped
+Then Retail Order Summary...................................................skipped
+When Retail Review Fields...................................................skipped
+Then Retail Shipping Information............................................skipped
+Then Retail Contact Information.............................................skipped
+Then Payment Information....................................................skipped
+When Retail Update Shipping.................................................skipped
+When Retail Update Contact..................................................skipped
+When Retail Update Payment..................................................skipped
+When Retail Go Back.........................................................skipped
+Then Retail Review Orders...................................................skipped
+When Retail Placed Order Fields.............................................skipped
+Then Placed Retail Shipping Information.....................................skipped
+Then Placed Contact Information.............................................skipped
+Then Placed Payment Information.............................................skipped
+Then Retail Placed Orders...................................................skipped
+When Retail Return Home.....................................................skipped
+When Logout.................................................................skipped
+
+StackTrace:
+org.junit.ComparisonFailure: expected:<L[EAN COMPLETE (25] SACHETS)> but was:<L[C BASE (20] SACHETS)>
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at POM.HomePage.RetailAllProducts(HomePage.java:586)
+	at stepDefinitions.Home.retail_all_producst(Home.java:49)
+	at ✽.Then Retail All Products(Retail.feature:10)
+]]></failure>
 </testcase>
 </testsuite>
