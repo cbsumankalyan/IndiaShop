@@ -25,7 +25,6 @@ Examples:
 |username  |password   |state         |
 |206914401 |0155       |Andama Nicobar|
 |315576891 |7KPjwz     |Assam            |
-|314213791 |tMvt8B     |Chandigarh       |
 |312837491 |wGn7C9     |Delhi            |
 |314195991 |9vnaTy     |Gujarat          |
 |301941991 |sonu3264   |Haryana          |
