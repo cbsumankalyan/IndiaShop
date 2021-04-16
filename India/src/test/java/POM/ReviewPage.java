@@ -85,7 +85,7 @@ public class ReviewPage extends BasePage {
 	@FindBy(xpath = "//button[@href='#/cart']")
 	private WebElement ModifyItems;
 
-	@FindBy(xpath = "//translate[text()='continue' or text()='Submit Order']")
+	@FindBy(xpath = "//button[@ng-click='review.submitOrder()']/translate[text()='Submit Order']")
 	private WebElement Continue;
 	
 	@FindBy(xpath = "//h4[@class='review-h3-def']//button[@class='btn-update']")
@@ -191,7 +191,7 @@ public class ReviewPage extends BasePage {
 		Assert.assertEquals(AmountWOVat.getText(), "** Amounts without GST");
 		Assert.assertEquals(TotalPV.getText(), productdetails.get("pv").replace("PV: ", ""));
 
-		Continue.click();
+		Continue.click();Thread.sleep(10000);
 	}
 	
 	public void RetailOrders() throws InterruptedException {
